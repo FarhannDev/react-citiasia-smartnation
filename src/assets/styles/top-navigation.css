@@ -1,0 +1,70 @@
+.custom-app-top-navigation {
+  width: 100%;
+  min-height: 60px;
+  background-color: #fff;
+  box-shadow: 0px 0.917px 0.917px 0px rgba(0, 0, 0, 0.12),
+    0px 0px 0px 0.917px rgba(103, 110, 118, 0.16),
+    0px 1.833px 4.583px 0px rgba(103, 110, 118, 0.08);
+}
+
+.custom-app-top-navigation .container {
+  width: 1200px;
+  height: auto;
+}
+
+.custom-app-top-navigation
+  .custom-app-top-navigation__brand
+  .custom-app-top-navigation__brand-logo {
+  width: 83.667px;
+  height: 26.528px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.custom-app-top-navigation .custom-app-top-navigation__link {
+  color: var(--Font-600, #5d5d5d);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  transition: ease 500ms;
+}
+
+.custom-app-top-navigation .custom-app-top-navigation__link-active {
+  color: var(--Danger-600, #ce2f2f);
+  border-bottom: 1.833px solid var(--Primary-600, #d71149);
+}
+
+.custom-app-top-navigation .custom-app-top-navigation__link:hover {
+  color: var(--Danger-600, #ce2f2f);
+  background-color: #fff0f2;
+  border-radius: 4px;
+  border-bottom: none;
+}
+.custom-app-top-navigation .custom-app-top-navigation__link:focus {
+  color: var(--Danger-600, #ce2f2f);
+}
+.custom-app-top-navigation .custom-app-top-navigation__link:active {
+  color: var(--Danger-600, #ce2f2f);
+  /* border-bottom: 1.833px solid var(--Primary-600, #d71149); */
+}
+
+.navbar .navbar-collapse {
+  -webkit-transition: background-color 300ms ease-out !important;
+  -moz-transition: background-color 300ms ease-out !important;
+  -o-transition: background-color 300ms ease-out !important;
+  transition: background-color 300ms ease-out !important;
+  /* margin-left: 10px; */
+}
+
+.navbar .navbar-toggler {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler:focus {
+  transition: ease-in-out 500ms;
+}
