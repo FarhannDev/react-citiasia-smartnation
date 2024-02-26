@@ -1,0 +1,135 @@
+/* Section about us */
+.sectionAboutSmartnation {
+  width: 100%;
+  height: auto;
+  background: var(--Primary-800, #a60b40);
+  padding-top: 7em;
+  padding-bottom: 5em;
+}
+
+.sectionAboutSmartnationContainer {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+}
+
+.aboutSmartnationHeading {
+  color: var(--Primary-600, #fff);
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140.5%; /* 43.555px */
+}
+
+.aboutSmartnationText {
+  color: var(--Font-600, #fff);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 151%; /* 37.75px */
+}
+
+.aboutSmartnationLogo {
+  width: 300px;
+  height: 250px;
+  height: auto;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  object-position: center;
+  filter: drop-shadow(30px 10px #a60b40);
+  margin-bottom: 30px;
+}
+
+/* 
+ * Section mitra 
+*/
+.sectionAboutSmartnationMitra {
+  width: 100%;
+  height: auto;
+  background: var(--Primary-800, #fff);
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.sectionAboutSmartnationMitraHeading {
+  text-align: start;
+  color: var(--Primary-600, #d71149);
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140.5%; /* 43.555px */
+}
+
+/*
+  * Section Team
+ */
+.sectionAboutSmartnationTeam {
+  width: 100%;
+  height: auto;
+  background: var(--Primary-800, #fff);
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.sectionAboutSmartnationTeamHeading {
+  text-align: center;
+  color: var(--Primary-600, #d71149);
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140.5%; /* 43.555px */
+}
+
+.sectionAboutSmartnationTeamProfileImage {
+  width: 500px;
+  height: 320px !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
+  border: none;
+  border-radius: 12px;
+  background-color: #262626;
+}
+.sectionAboutSmartnationTeamProfileName {
+  color: var(--Font-800, #454545);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  padding-top: 8px;
+}
+.sectionAboutSmartnationTeamProfileJob {
+  color: var(--Font-600, #5d5d5d);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  padding-top: 8px;
+}
+.sectionAboutSmartnationTeamProfileDescription {
+  padding-top: 13px;
+  color: var(--Font-600, #5d5d5d);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+}
+
+@media (min-width: 1200px) {
+  .sectionAboutSmartnationContainer {
+    width: 1200px !important;
+    margin: 0 auto !important;
+    height: auto;
+  }
+}

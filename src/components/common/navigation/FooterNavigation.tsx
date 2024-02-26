@@ -135,7 +135,7 @@ const FooterNavigation = () => {
                 </Link>
                 <Link
                   className="mb-3 link-offset-2 link-underline link-underline-opacity-0 text-white fs-6"
-                  to="/"
+                  to="/about"
                 >
                   Tentang Kami
                 </Link>
