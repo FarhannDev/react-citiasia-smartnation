@@ -1,9 +1,9 @@
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import '../../../assets/styles/dropdown-btn_select_languange.css';
 import { DropdownHeader, Stack } from 'react-bootstrap';
 
+import '../../../assets/styles/dropdown-btn_select_languange.css';
 interface Language {
   name: string;
   code: number | string;
@@ -15,7 +15,7 @@ const language: Language[] = [
   { name: 'Inggris', code: 'EN', logo: '/images/logo/logo_english.png' },
 ];
 
-type DropdownButtonSelectLanguangeProps = {};
+// type DropdownButtonSelectLanguangeProps = {};
 
 export default function DropdownButtonSelectLanguange() {
   return (

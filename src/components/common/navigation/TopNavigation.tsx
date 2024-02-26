@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import '../../../assets/styles/top-navigation.css';
 import SearchBar from '../searchBar/SearchBar';
 import DropdownButtonSelectLanguange from '../button/DropdownButtonSelectLanguange';
+import '@/assets/styles/top-navigation.css';
 
 export default function TopNavigation() {
   return (
@@ -24,13 +24,13 @@ export default function TopNavigation() {
           >
             <Nav className="d-flex justify-content-arround g-2 ">
               <Link
-                className="nav-link custom-app-top-navigation__link  mx-lg-3"
+                className="nav-link custom-app-top-navigation__link custom-app-top-navigation__link-active  mx-lg-3"
                 to="/"
               >
                 Beranda
               </Link>
               <Link
-                className="nav-link custom-app-top-navigation__link mx-lg-3"
+                className="nav-link custom-app-top-navigation__link  mx-lg-3"
                 to="/"
               >
                 Berita
@@ -46,12 +46,6 @@ export default function TopNavigation() {
                 to="/"
               >
                 Podcast
-              </Link>
-              <Link
-                className="nav-link custom-app-top-navigation__link mx-lg-3"
-                to="/"
-              >
-                Forum
               </Link>
               <Link
                 className="nav-link custom-app-top-navigation__link mx-lg-3"

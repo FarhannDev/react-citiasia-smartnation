@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import '../../../assets/styles/search-bar.css';
+import '@/assets/styles/search-bar.css';
 
 type SearchBarProps = {
   placeholderText: string;

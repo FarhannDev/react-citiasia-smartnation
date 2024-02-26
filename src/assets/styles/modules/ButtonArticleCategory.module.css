@@ -1,0 +1,16 @@
+.buttonArticleCategory {
+  text-decoration: none;
+  display: flex;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.858px;
+  border-radius: 4px;
+  background: var(--Primary-600, #d71149);
+  color: var(--Background, #fff);
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 12px */
+}

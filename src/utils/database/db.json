@@ -1,13 +1,10 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
-  ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
-  ],
-  "profile": {
-    "name": "typicode"
+  "jsonapi": {
+    "version": "1.1",
+    "ext": ["https://jsonapi.org/ext/atomic"],
+    "profile": [
+      "http://example.com/profiles/flexible-pagination",
+      "http://example.com/profiles/resource-versioning"
+    ]
   }
 }

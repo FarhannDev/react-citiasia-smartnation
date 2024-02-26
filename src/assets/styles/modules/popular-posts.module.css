@@ -1,0 +1,49 @@
+.popularPostsItem {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 16px;
+  margin-bottom: 35px;
+}
+
+.popularPostsItemStart {
+  color: var(--Primary-600, #d71149);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  margin-right: 12px;
+  /* padding-top: 8px; */
+}
+
+.popularPostsItemTitle {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  align-self: stretch;
+  overflow: hidden;
+  color: var(--Font-600, #5d5d5d);
+  text-overflow: ellipsis;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 18px */
+  text-decoration: none;
+  transition: ease 300ms;
+}
+.popularPostsItemTitle:hover {
+  color: var(--Primary-600, #d71149);
+  text-decoration: underline;
+}
+
+.popularPostsItemHeading {
+  color: var(--Primary-600, #d71149);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+  text-decoration-line: underline;
+}
