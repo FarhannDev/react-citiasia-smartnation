@@ -41,7 +41,7 @@ export default function TopNavigation() {
             </Link>
             <Link
               className="nav-link custom-app-top-navigation__link mx-lg-3"
-              to="/"
+              to="/podcasts"
             >
               Podcast
             </Link>

@@ -1,0 +1,116 @@
+/* Section about us */
+.sectionPodcastSmartnation {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  padding-top: 7em;
+  padding-bottom: 5em;
+}
+.podcastSmartnationContainer {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+}
+.podcastSmartnationHeading {
+  color: var(--Font-600, #5d5d5d);
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+/* 
+  PodcastRowItem 
+*/
+.podcastRowItem {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  align-content: center;
+  /* align-items: center; */
+  gap: 12px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(103, 110, 118, 0.08),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.podcastRowItemImage {
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  object-position: center;
+  border: 0;
+}
+
+.podcastRowItemBody {
+  padding-top: 13px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1 0 0;
+}
+.podcastRowItemBodyTitle {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  align-self: stretch;
+  overflow: hidden;
+  color: var(--Font-600, #565e73);
+  text-overflow: ellipsis;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.016px;
+  text-decoration: none;
+  transition: ease 300ms;
+}
+.podcastRowItemBodyTitle:hover {
+  color: var(--Primary-600, #d71149);
+}
+
+/* PodcastSearchBar */
+.podcastSearchBarInput {
+  background-color: #fff;
+  height: 50px;
+  border-radius: 12px 0 0px 12px !important;
+  border: 0.917px solid var(--Font-400, #888) !important;
+  border-right: 0 !important ;
+  color: var(--Font-300, #b0b0b0);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 14.4px */
+  text-transform: capitalize;
+}
+
+.podcastSearchBarButton {
+  border-radius: 0 12px 12px 0 !important;
+  border: 0.917px solid var(--Font-400, #888) !important;
+  border-left: 0 !important;
+}
+
+@media (min-width: 1200px) {
+  .podcastSmartnationContainer {
+    width: 1200px !important;
+    margin: 0 auto !important;
+    height: auto;
+  }
+}
