@@ -3,6 +3,7 @@ import AppLayout from './layouts/AppLayout';
 import Home from './pages/Home';
 import AboutIndexPage from './pages/about/AboutIndexPage';
 import PodcastsIndexPage from './pages/podcasts/PodcastsIndexPage';
+import ContactIndexPage from './pages/contact/ContactIndexPage';
 
 export default function App() {
   const publicRoutes = (
@@ -11,6 +12,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/podcasts" element={<PodcastsIndexPage />} />
         <Route path="/about" element={<AboutIndexPage />} />
+        <Route path="/contact" element={<ContactIndexPage />} />
       </Routes>
     </AppLayout>
   );
