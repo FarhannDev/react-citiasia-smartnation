@@ -1,11 +1,11 @@
 export interface Categories {
-  id: string | number;
-  name: string;
-  description: string;
-  slug: string;
-  taxonomy: string;
-  parent: number;
-  count: number;
+  id: string | number
+  name: string
+  description: string
+  slug: string
+  taxonomy: string
+  parent: number
+  count: number
 }
 
 const categories: Categories[] = [
@@ -93,7 +93,7 @@ const categories: Categories[] = [
   {
     id: 89,
     count: 0,
-    description: `Citiasia Center for Smart Nation (CCSN) menyelenggarakan Indonesia Smart City Investment Forum (ISCIF) Talkshow, yang sekaligus menjadi ajang pengumuman pemenang 4th Indonesia Smart Nation Award (ISNA). ISCIF mengusung tema "Smart City 2020: Driving Innovation and Productivity during the Global Pandemic" yang mengundang pemimpin daerah, pengambil kebijakan, akademisi, dan praktisi smart city untuk berbagi pengalaman dan inovasi pembangunan yang relevan dengan tantangan pandemi serta menciptakan platform berharga untuk pertukaran ide.`,
+    description: 'Citiasia Center for Smart Nation (CCSN) menyelenggarakan Indonesia Smart City Investment Forum (ISCIF) Talkshow, yang sekaligus menjadi ajang pengumuman pemenang 4th Indonesia Smart Nation Award (ISNA). ISCIF mengusung tema "Smart City 2020: Driving Innovation and Productivity during the Global Pandemic" yang mengundang pemimpin daerah, pengambil kebijakan, akademisi, dan praktisi smart city untuk berbagi pengalaman dan inovasi pembangunan yang relevan dengan tantangan pandemi serta menciptakan platform berharga untuk pertukaran ide.',
     name: 'ISCIF',
     slug: 'iscif-events',
     taxonomy: 'category',
@@ -128,7 +128,7 @@ const categories: Categories[] = [
   {
     id: 92,
     count: 0,
-    description: `Indonesia Smart Nation Award (ISNA) diselenggarakan untuk kedua kalinya pada tahun 2016, pada kesempatan ini Citiasia, Inc. menyampaikan hasil riset mengenai indeks daerah dan pengakuan terhadap prestasi lokal yang dirangkum dalam Indonesia Smart Nation Index 2016. Indeks yang disusun oleh Citiasia Center for Smart Nations (CCSN) ini mengevaluasi seluruh wilayah di Indonesia (34 provinsi, 412 kabupaten, dan 93 kota) dengan menggunakan data resmi dari berbagai sumber, menganalisis 72 media cetak nasional dan lokal serta 100 media online untuk mendorong dan mewujudkan cita-cita bersama dalam mewujudkan Indonesia Smart Nation.`,
+    description: 'Indonesia Smart Nation Award (ISNA) diselenggarakan untuk kedua kalinya pada tahun 2016, pada kesempatan ini Citiasia, Inc. menyampaikan hasil riset mengenai indeks daerah dan pengakuan terhadap prestasi lokal yang dirangkum dalam Indonesia Smart Nation Index 2016. Indeks yang disusun oleh Citiasia Center for Smart Nations (CCSN) ini mengevaluasi seluruh wilayah di Indonesia (34 provinsi, 412 kabupaten, dan 93 kota) dengan menggunakan data resmi dari berbagai sumber, menganalisis 72 media cetak nasional dan lokal serta 100 media online untuk mendorong dan mewujudkan cita-cita bersama dalam mewujudkan Indonesia Smart Nation.',
     name: 'ISNA 2016',
     slug: 'isna-2016',
     taxonomy: 'category',
@@ -137,7 +137,7 @@ const categories: Categories[] = [
   {
     id: 93,
     count: 2,
-    description: `Indonesia Smart Nation Awards (ISNA) ke-3 2018 sukses digelar pada Kamis, 3 Mei 2018 di Nusantara 2 Hall, ICE BSD City, Tangerang. ISNA 2018 diisi dengan kegiatan talkshow yang bertema “Creating Competitive and Sustainable Cities for Tourism, Trade & Investment”, Acara tersebut dihadiri langsung oleh Menteri Pariwisata Arief Yahya dan lebih dari 50 kepala daerah, praktisi di bidang pariwisata, investasi, dan ICT. ISNA berhasil dilaksanakan atas kerjasama dengan Citiasia Center for Smart Nation (CCSN), Debindo, Visit Wonderful Indonesia (ViWI) dan Kementerian Pariwisata Republik Indonesia.`,
+    description: 'Indonesia Smart Nation Awards (ISNA) ke-3 2018 sukses digelar pada Kamis, 3 Mei 2018 di Nusantara 2 Hall, ICE BSD City, Tangerang. ISNA 2018 diisi dengan kegiatan talkshow yang bertema “Creating Competitive and Sustainable Cities for Tourism, Trade & Investment”, Acara tersebut dihadiri langsung oleh Menteri Pariwisata Arief Yahya dan lebih dari 50 kepala daerah, praktisi di bidang pariwisata, investasi, dan ICT. ISNA berhasil dilaksanakan atas kerjasama dengan Citiasia Center for Smart Nation (CCSN), Debindo, Visit Wonderful Indonesia (ViWI) dan Kementerian Pariwisata Republik Indonesia.',
     name: 'ISNA 2018',
     slug: 'isna-2018',
     taxonomy: 'category',
@@ -146,7 +146,7 @@ const categories: Categories[] = [
   {
     id: 94,
     count: 11,
-    description: `Indonesia Smart Nation Award ke-4 2020 diselenggarakan bersamaan dengan Indonesia Smart City Investment Forum (ISCIF) 2020 secara daring melalui platform konferensi Zoom Virtu-Ex pada tanggal 5 Oktober 2020. Tema ISCIF 2020 dan ISNA ke-4 adalah “Smart City 2020: Driving Innovation & Productivity During The Global Pandemic.” Citiasia Center for Smart Nation (CCSN) melakukan survei mengenai inovasi yang diinisiasi oleh pemerintah kota dan kabupaten sebagai respon terhadap pandemi COVID-19, dengan lebih dari 500  kabupaten dan kota di seluruh Indonesia yang berpartisipasi dan menghasilkan lebih dari 180 inovasi.`,
+    description: 'Indonesia Smart Nation Award ke-4 2020 diselenggarakan bersamaan dengan Indonesia Smart City Investment Forum (ISCIF) 2020 secara daring melalui platform konferensi Zoom Virtu-Ex pada tanggal 5 Oktober 2020. Tema ISCIF 2020 dan ISNA ke-4 adalah “Smart City 2020: Driving Innovation & Productivity During The Global Pandemic.” Citiasia Center for Smart Nation (CCSN) melakukan survei mengenai inovasi yang diinisiasi oleh pemerintah kota dan kabupaten sebagai respon terhadap pandemi COVID-19, dengan lebih dari 500  kabupaten dan kota di seluruh Indonesia yang berpartisipasi dan menghasilkan lebih dari 180 inovasi.',
     name: 'ISNA 2020',
     slug: 'isna-2020',
     taxonomy: 'category',
@@ -205,7 +205,7 @@ const categories: Categories[] = [
   {
     id: 129,
     count: 3,
-    description: `Citiasia Inc. menyediakan layanan pelatihan yang disesuaikan dengan kebutuhan dan bidang industri klien kami. Kami menggabungkan teori implementatif dengan solusi praktis yang relevan untuk klien, pendekatan ini berfokus pada hasil untuk meningkatkan efektivitas dan relevansi pelatihan bagi klien kami.`,
+    description: 'Citiasia Inc. menyediakan layanan pelatihan yang disesuaikan dengan kebutuhan dan bidang industri klien kami. Kami menggabungkan teori implementatif dengan solusi praktis yang relevan untuk klien, pendekatan ini berfokus pada hasil untuk meningkatkan efektivitas dan relevansi pelatihan bagi klien kami.',
     name: 'Training',
     slug: 'training',
     taxonomy: 'category',

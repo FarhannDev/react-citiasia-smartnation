@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   FaXTwitter,
   FaFacebookF,
@@ -11,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 import styles from '@/assets/styles/modules/app.module.css';
 
-const FooterNavigation = () => {
+function FooterNavigation() {
   return (
     <footer className={styles.customfooterNavigation}>
       <Container className={styles.customfooterNavigationContainer}>
@@ -159,6 +158,6 @@ const FooterNavigation = () => {
       </Container>
     </footer>
   );
-};
+}
 
 export default FooterNavigation;

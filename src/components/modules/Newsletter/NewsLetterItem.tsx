@@ -1,8 +1,7 @@
-import React from 'react';
-import styles from '@/assets/styles/modules/NewsLetterItem.module.css';
 import { InputGroup, Form, Button } from 'react-bootstrap';
+import styles from '@/assets/styles/modules/NewsLetterItem.module.css';
 
-const NewsLetterItem = () => {
+function NewsLetterItem() {
   return (
     <>
       <div className={styles.newsLetterSubcribe}>
@@ -31,6 +30,6 @@ const NewsLetterItem = () => {
       </div>
     </>
   );
-};
+}
 
 export default NewsLetterItem;

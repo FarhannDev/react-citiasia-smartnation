@@ -1,9 +1,9 @@
 import { nanoid } from 'nanoid';
 
 export interface Partner {
-  id: string | number;
-  name: string;
-  images: string;
+  id: string | number
+  name: string
+  images: string
 }
 
 const partner: Partner[] = [

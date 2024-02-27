@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Card } from 'react-bootstrap';
@@ -7,16 +6,16 @@ import { HiOutlineClock } from 'react-icons/hi2';
 import styles from '@/assets/styles/modules/ArticleColumnItem.module.css';
 // import '@/assets/styles/latest-article.css';
 
-type Props = {
+interface Props {
   title: string;
   content: string;
   date: string;
   categories: string[];
   images: string;
   slug: string;
-};
+}
 
-const ArticleColumnItem = ({ title, content, date, images, slug }: Props) => {
+function ArticleColumnItem({ title, content, date, images, slug }: Props) {
   return (
     <Card className={styles.articleColumnItem}>
       <Link to="/" aria-label="Baca selengkapnya">
@@ -48,6 +47,6 @@ const ArticleColumnItem = ({ title, content, date, images, slug }: Props) => {
       </Card.Body>
     </Card>
   );
-};
+}
 
 export default ArticleColumnItem;

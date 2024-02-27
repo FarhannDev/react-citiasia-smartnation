@@ -1,11 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Figure } from 'react-bootstrap';
 import { HiOutlineClock } from 'react-icons/hi2';
 import styles from '@/assets/styles/modules/ArticleFigureColumnItem.module.css';
 
-const ArticleFigureColumnItem = () => {
+function ArticleFigureColumnItem() {
   return (
     <Figure className={styles.articleFigureColumnItem}>
       <Link to="/" aria-label="Baca selengkapnya">
@@ -35,6 +34,6 @@ const ArticleFigureColumnItem = () => {
       </Figure.Caption>
     </Figure>
   );
-};
+}
 
 export default ArticleFigureColumnItem;

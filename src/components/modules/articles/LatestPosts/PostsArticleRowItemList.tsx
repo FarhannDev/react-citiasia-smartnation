@@ -1,7 +1,5 @@
-import React from 'react';
-
-const PostsArticleRowItemList = () => {
+function PostsArticleRowItemList() {
   return <div>PostsArticleRowItemList</div>;
-};
+}
 
 export default PostsArticleRowItemList;

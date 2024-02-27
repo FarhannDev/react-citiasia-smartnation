@@ -1,9 +1,9 @@
-import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { DropdownHeader, Stack } from 'react-bootstrap';
 
 import '../../../assets/styles/dropdown-btn_select_languange.css';
+
 interface Language {
   name: string;
   code: number | string;
@@ -31,7 +31,7 @@ export default function DropdownButtonSelectLanguange() {
           <DropdownHeader className="text-start">
             Pilihan menu bahasa
           </DropdownHeader>
-          <Dropdown.Divider></Dropdown.Divider>
+          <Dropdown.Divider />
           <Stack direction="vertical" gap={3}>
             {language.map((lang, index) => (
               <Dropdown.Item key={index++} href="#/action-1">

@@ -1,10 +1,8 @@
-import React from 'react';
-
-import styles from '@/assets/styles/modules/about.module.css';
 import { Col, Container, Figure, Row } from 'react-bootstrap';
+import styles from '@/assets/styles/modules/about.module.css';
 import AboutTeamItem from '../../components/modules/about/AboutTeamItem';
 
-const AboutIndexPage = () => {
+function AboutIndexPage() {
   return (
     <>
       <section className={styles.sectionAboutSmartnation}>
@@ -246,6 +244,6 @@ const AboutIndexPage = () => {
       </section>
     </>
   );
-};
+}
 
 export default AboutIndexPage;

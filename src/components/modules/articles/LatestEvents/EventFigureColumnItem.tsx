@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Figure } from 'react-bootstrap';
@@ -6,7 +5,7 @@ import styles from '@/assets/styles/modules/EventFigureColumnItem.module.css';
 
 // type Props = {};
 
-const EventFigureColumnItem = () => {
+function EventFigureColumnItem() {
   return (
     <Figure className={styles.eventFigureColumnItem}>
       <Link to="/" aria-label="Baca selengkapnya">
@@ -33,6 +32,6 @@ const EventFigureColumnItem = () => {
       </Figure.Caption>
     </Figure>
   );
-};
+}
 
 export default EventFigureColumnItem;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Figure } from 'react-bootstrap';
@@ -6,7 +5,7 @@ import { HiOutlineClock } from 'react-icons/hi2';
 import styles from '@/assets/styles/modules/ArticleCategoryFigureColumnItem.module.css';
 import ArticleButtonCategory from '../../../common/button/ArticleButtonCategory';
 
-const ArticleCategoryFigureColumnItem = () => {
+function ArticleCategoryFigureColumnItem() {
   return (
     <div className={styles.articleCategoryFigureColumnItem}>
       <div className="row justify-content-start g-lg-4 g-0">
@@ -57,9 +56,9 @@ const ArticleCategoryFigureColumnItem = () => {
           </div>
         </div>
       </div>
-      <div className="d-flex justify-content-start g-3"></div>
+      <div className="d-flex justify-content-start g-3" />
     </div>
   );
-};
+}
 
 export default ArticleCategoryFigureColumnItem;

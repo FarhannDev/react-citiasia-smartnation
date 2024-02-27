@@ -1,6 +1,5 @@
-import React from 'react';
-import HeroBackgroundSwiper from '../components/common/heroBackground/HeroBackgroundSwiper';
 import { Col, Container, Row } from 'react-bootstrap';
+import HeroBackgroundSwiper from '../components/common/heroBackground/HeroBackgroundSwiper';
 import PopularPostItemList from '../components/modules/articles/RelatePosts/PopularPostItemList';
 import PostsArticleColumnItemList from '../components/modules/articles/LatestPosts/PostsArticleColumnItemList';
 import PostsArticleRowItem from '../components/modules/articles/LatestPosts/PostsArticleRowItem';

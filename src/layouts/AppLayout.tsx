@@ -1,23 +1,21 @@
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import TopNavigation from '../components/common/navigation/TopNavigation';
 import FooterNavigation from '../components/common/navigation/FooterNavigation';
 
 import styles from '../assets/styles/modules/app.module.css';
 
-type AppLayoutProps = { children: ReactNode };
+interface AppLayoutProps { children: ReactNode }
 
-const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
-  return (
-    <>
-      <TopNavigation />
-      <div className={styles.appContentWrapper}>
-        {children}
-        {/* Ini adalah di mana Anda memasukkan komponen anak */}
-      </div>
+const AppLayout: React.FC<AppLayoutProps> = ({ children }) => (
+  <>
+    <TopNavigation />
+    <div className={styles.appContentWrapper}>
+      {children}
+      {/* Ini adalah di mana Anda memasukkan komponen anak */}
+    </div>
 
-      <FooterNavigation />
-    </>
-  );
-};
+    <FooterNavigation />
+  </>
+);
 
 export default AppLayout;

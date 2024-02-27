@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "build:preview": "tsc && vite build && vite preview",
-    "lint": "eslint ./src --ext .jsx --ext .js --ext .ts --ext .tsx",
-    "lint:fix": "eslint --fix ./src --ext .jsx --ext .js --ext .ts --ext .tsx",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "preview": "vite preview",
     "json-server": "npx json-server -s ./static -s ./node_modules ./src/utils/database/db.json "
   },
@@ -30,14 +29,14 @@
   "devDependencies": {
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
-    "@typescript-eslint/eslint-plugin": "^7.0.1",
-    "@typescript-eslint/parser": "^7.0.1",
+    "@types/react-lazy-load-image-component": "^1.6.3",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
     "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "typescript": "^5.2.2",
+    "typescript": "^5.3.3",
     "vite": "^5.1.0",
     "vite-plugin-imagemin": "^0.6.1"
   }

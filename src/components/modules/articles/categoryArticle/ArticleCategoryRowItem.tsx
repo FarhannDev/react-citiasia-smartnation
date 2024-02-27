@@ -1,9 +1,8 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import styles from '@/assets/styles/modules/ArticleCategoryRowItem.module.css';
 
-const ArticleCategoryRowItem = () => {
+function ArticleCategoryRowItem() {
   return (
     <div className={styles.articleCategoryRowItem}>
       <div className="d-flex justify-content-between align-items-center">
@@ -30,6 +29,6 @@ const ArticleCategoryRowItem = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ArticleCategoryRowItem;

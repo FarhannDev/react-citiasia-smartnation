@@ -1,21 +1,20 @@
-import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Figure } from 'react-bootstrap';
 import styles from '@/assets/styles/modules/about.module.css';
 
-type AboutTeamItemProps = {
+interface AboutTeamItemProps {
   name: string;
   jobTitle: string;
   description: string;
   sourceImage: string;
-};
+}
 
-const AboutTeamItem = ({
+function AboutTeamItem({
   name,
   jobTitle,
   description,
   sourceImage,
-}: AboutTeamItemProps) => {
+}: AboutTeamItemProps) {
   return (
     <Figure className="mb-5">
       <LazyLoadImage
@@ -40,6 +39,6 @@ const AboutTeamItem = ({
       </Figure.Caption>
     </Figure>
   );
-};
+}
 
 export default AboutTeamItem;

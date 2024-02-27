@@ -1,4 +1,3 @@
-import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Card } from 'react-bootstrap';
 import { HiOutlineClock } from 'react-icons/hi2';
@@ -6,22 +5,22 @@ import { Link } from 'react-router-dom';
 import ArticleButtonCategory from '../../../common/button/ArticleButtonCategory';
 import styles from '@/assets/styles/modules/PostsArticleColumn.module.css';
 
-type PostsArticleColumnItemProps = {
+interface PostsArticleColumnItemProps {
   title: string;
   content: string;
   date: string;
   categories: string[];
   images: string;
   slug: string;
-};
+}
 
-const PostsArticleColumnItem = ({
+function PostsArticleColumnItem({
   title,
   content,
   date,
   images,
   slug,
-}: PostsArticleColumnItemProps) => {
+}: PostsArticleColumnItemProps) {
   return (
     <Card className={styles.postsArticleItems}>
       <LazyLoadImage
@@ -52,6 +51,6 @@ const PostsArticleColumnItem = ({
       </Card.Body>
     </Card>
   );
-};
+}
 
 export default PostsArticleColumnItem;

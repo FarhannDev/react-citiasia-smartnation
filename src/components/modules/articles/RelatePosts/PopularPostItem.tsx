@@ -1,8 +1,7 @@
-import React from 'react';
-import styles from '@/assets/styles/modules/popular-posts.module.css';
 import { Link } from 'react-router-dom';
+import styles from '@/assets/styles/modules/popular-posts.module.css';
 
-const PopularPostItem = () => {
+function PopularPostItem() {
   return (
     <div className={styles.popularPostsItem}>
       <div className="d-flex justify-content-start align-items-center g-3">
@@ -20,6 +19,6 @@ const PopularPostItem = () => {
       </div>
     </div>
   );
-};
+}
 
 export default PopularPostItem;

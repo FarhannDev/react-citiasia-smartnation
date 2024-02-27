@@ -1,4 +1,4 @@
 export interface Podcasts {
-  id: string | number;
-  title: string;
+  id: string | number
+  title: string
 }

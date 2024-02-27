@@ -1,11 +1,10 @@
-import React from 'react';
+import { Col, Row } from 'react-bootstrap';
 import styles from '@/assets/styles/modules/popular-posts.module.css';
 import PopularPostItem from './PopularPostItem';
-import { Col, Row } from 'react-bootstrap';
 
 // type Props = {};
 
-const PopularPostItemList = () => {
+function PopularPostItemList() {
   return (
     <Row className="justify-content-start">
       <Col>
@@ -20,6 +19,6 @@ const PopularPostItemList = () => {
       </Col>
     </Row>
   );
-};
+}
 
 export default PopularPostItemList;
