@@ -5,6 +5,7 @@ import AboutIndexPage from './pages/about/AboutIndexPage';
 import PodcastsIndexPage from './pages/podcasts/PodcastsIndexPage';
 import ContactIndexPage from './pages/contact/ContactIndexPage';
 import PostsParentCategoryPage from './pages/posts/PostsParentCategoryPage';
+import PostsCategoryPage from './pages/posts/PostsCategoryPage';
 
 export default function App() {
   const publicRoutes = (
@@ -12,8 +13,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="/:parentCategory" element={<PostsParentCategoryPage />} />
-        <Route path=":/beritaId" element={<div>Berita ID</div>} />
+        <Route path="/headline/:id" element={<PostsParentCategoryPage />} />
+
+        <Route path="/posts/:categoryId" element={<PostsCategoryPage />} />
 
         <Route path="/podcasts" element={<PodcastsIndexPage />} />
         <Route path="/about" element={<AboutIndexPage />} />

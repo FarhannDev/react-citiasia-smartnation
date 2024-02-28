@@ -56,21 +56,21 @@ export default function TopNavigation() {
               <div className="d-flex flex-column justify-content-start g-3 pt-3">
                 <Link
                   className="dropdown-item mb-2"
-                  to="/berita-utama"
+                  to="/headline/berita-utama"
                   aria-label="Berita kategori"
                 >
                   Berita Utama
                 </Link>
                 <Link
                   className="dropdown-item mb-2"
-                  to="/berita-nasional"
+                  to="/headline/berita-nasional"
                   aria-label="Berita kategori"
                 >
                   Berita Nasional
                 </Link>
                 <Link
                   className="dropdown-item mb-2"
-                  to="/berita-internasional"
+                  to="/headline/berita-internasional"
                   aria-label="Berita kategori"
                 >
                   Berita Internasional
@@ -90,12 +90,30 @@ export default function TopNavigation() {
             >
               Podcast
             </Link>
-            <Link
-              className="nav-link custom-app-top-navigation__link mx-lg-3"
-              to="/"
+            <NavDropdown
+              className="custom-app-top-navigation__link-dropdown  mx-lg-3"
+              title="Lainnya"
+              id="basic-nav-dropdown"
+              autoClose="outside"
+              renderMenuOnMount={true}
             >
-              Lainnya
-            </Link>
+              <div className="d-flex flex-column justify-content-start g-3 pt-3">
+                <Link
+                  className="dropdown-item mb-2"
+                  to="/about"
+                  aria-label="Berita kategori"
+                >
+                  Tentang Kami
+                </Link>
+                <Link
+                  className="dropdown-item mb-2"
+                  to="/contact"
+                  aria-label="Berita kategori"
+                >
+                  Hubungi Kami
+                </Link>
+              </div>
+            </NavDropdown>
           </Nav>
 
           <SearchBar placeholderText="Mau cari berita apa?" />

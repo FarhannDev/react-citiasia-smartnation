@@ -31,6 +31,15 @@
   text-decoration: none;
 }
 
+.postsSmartnationCategoryHeading {
+  color: var(--Primary-600, #d71149);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
 /* PostsFigureColumnItem */
 .postsFigureColumnItem {
   width: 100%;
@@ -337,5 +346,9 @@
   }
   .postsRowItemContentDate {
     font-size: 16px;
+  }
+
+  .postsSmartnationCategoryHeading {
+    font-size: 22px;
   }
 }
