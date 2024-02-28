@@ -1,10 +1,26 @@
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import SearchBar from '../searchBar/SearchBar';
 import DropdownButtonSelectLanguange from '../button/DropdownButtonSelectLanguange';
 import '@/assets/styles/top-navigation.css';
 
 export default function TopNavigation() {
+  // const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  // const timeoutRef: React.MutableRefObject<number | null> = useRef<
+  //   number | null
+  // >(null);
+
+  // const handleMouseEnter = () => {
+  //   clearTimeout(timeoutRef.current as number);
+  //   setDropdownOpen(true);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   timeoutRef.current = window.setTimeout(() => {
+  //     setDropdownOpen(false);
+  //   }, 5000);
+  // };
+
   return (
     <Navbar expand="lg" fixed="top" className="custom-app-top-navigation ">
       <Container>
@@ -27,12 +43,41 @@ export default function TopNavigation() {
             >
               Beranda
             </Link>
-            <Link
-              className="nav-link custom-app-top-navigation__link  mx-lg-3"
-              to="/"
+            <NavDropdown
+              className="custom-app-top-navigation__link-dropdown  mx-lg-3"
+              title="Berita"
+              id="basic-nav-dropdown"
+              // autoClose="inside"
+              renderMenuOnMount={true}
+              // show={dropdownOpen}
+              // onMouseEnter={handleMouseEnter}
+              // onMouseLeave={handleMouseLeave}
             >
-              Berita
-            </Link>
+              <div className="d-flex flex-column justify-content-start g-3 pt-3">
+                <Link
+                  className="dropdown-item mb-2"
+                  to="/berita-utama"
+                  aria-label="Berita kategori"
+                >
+                  Berita Utama
+                </Link>
+                <Link
+                  className="dropdown-item mb-2"
+                  to="/berita-nasional"
+                  aria-label="Berita kategori"
+                >
+                  Berita Nasional
+                </Link>
+                <Link
+                  className="dropdown-item mb-2"
+                  to="/berita-internasional"
+                  aria-label="Berita kategori"
+                >
+                  Berita Internasional
+                </Link>
+              </div>
+            </NavDropdown>
+
             <Link
               className="nav-link custom-app-top-navigation__link mx-lg-3"
               to="/"

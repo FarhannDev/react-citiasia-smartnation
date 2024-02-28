@@ -1,10 +1,46 @@
 {
-  "jsonapi": {
-    "version": "1.1",
-    "ext": ["https://jsonapi.org/ext/atomic"],
-    "profile": [
-      "http://example.com/profiles/flexible-pagination",
-      "http://example.com/profiles/resource-versioning"
-    ]
+  "categories_parent": [
+    {
+      "_id": "1",
+      "name": "Berita Utama",
+      "slug": "berita-utama",
+      "count": 0,
+      "description": ""
+    },
+    {
+      "_id": "2",
+      "name": "Berita Nasional",
+      "slug": "berita-nasional",
+      "count": 0,
+      "description": ""
+    },
+    {
+      "_id": "3",
+      "name": "Berita Internasional",
+      "slug": "berita-internasional",
+      "count": 0,
+      "description": ""
+    }
+  ],
+  "categories": [
+    { "_id": 1, "name": "Fiksi" },
+    { "_id": 2, "name": "Non-Fiksi" }
+  ],
+  "books": [
+    { "id": 1, "title": "Harry Potter", "categoryId": 1 },
+    { "id": 2, "title": "Lord of the Rings", "categoryId": 1 },
+    { "id": 3, "title": "Sapiens", "categoryId": 2 },
+    { "id": 4, "title": "21 Lessons for the 21st Century", "categoryId": 2 }
+  ],
+  "posts": [
+    { "id": "1", "title": "a title", "views": 100 },
+    { "id": "2", "title": "another title", "views": 200 }
+  ],
+  "comments": [
+    { "id": "1", "text": "a comment about post 1", "postId": "1" },
+    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "profile": {
+    "name": "typicode"
   }
 }

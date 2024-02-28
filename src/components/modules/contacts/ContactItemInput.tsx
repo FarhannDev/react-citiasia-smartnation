@@ -1,10 +1,10 @@
-import styles from '@/assets/styles/modules/contact.module.css';
+import React, { useState, FormEvent } from 'react';
 import ContentEditable, { ContentEditableEvent } from 'react-contenteditable';
 import { Form, Button } from 'react-bootstrap';
-import { useState, FormEvent } from 'react';
+import styles from '@/assets/styles/modules/contact.module.css';
 import useInput from '../../../hooks/useInput';
 
-const ContactItemInput = () => {
+const ContactItemInput: React.FC = () => {
   const [inputName, handleChangeInputName] = useInput('');
   const [inputEmail, handleChangeInputEmail] = useInput('');
   const [inputBody, setInputBody] = useState<string>('');

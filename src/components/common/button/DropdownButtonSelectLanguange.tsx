@@ -23,7 +23,6 @@ export default function DropdownButtonSelectLanguange() {
       <div className="d-flex justify-content-start align-items-center g-0 ">
         <DropdownButton
           drop="down-centered"
-          autoClose="inside"
           id="dropdown-basic-button"
           className="app-dropdown-select-languange "
           title={<img src="/icons/language.svg" />}
