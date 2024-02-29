@@ -129,6 +129,90 @@ export default function HeroBackgroundSwiper() {
             </div>
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className={styles.backgroundHero}
+            style={{ backgroundImage: `url(${images[backgroundIndex]})` }}
+          >
+            <div className={styles.backgroundHerogradient} />
+            <div className={styles.backgroundHeroContent}>
+              <Container className={styles.backgroundHeroContentcontainer}>
+                <div className="d-flex justify-content-between g-3">
+                  <Link
+                    to="/"
+                    aria-label="Baca selengkapnya"
+                    className={styles.backgroundHeroContentHeading}
+                  >
+                    Asyik, Teknologi 6G Sudah Disiapkan. Apa Saja Manfaatnya?
+                  </Link>
+
+                  <div className="app-bghero-content__sosmed d-none d-xl-block">
+                    <Stack gap={4}>
+                      {socialMediaLists.map((social, idx) => (
+                        <Link
+                          key={idx++}
+                          to={social.link}
+                          target="_blank"
+                          aria-label={social.alternative}
+                          title={social.alternative}
+                          className="btn"
+                        >
+                          <img
+                            src={social.icon}
+                            alt={social.alternative}
+                            loading="lazy"
+                          />
+                        </Link>
+                      ))}
+                    </Stack>
+                  </div>
+                </div>
+              </Container>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className={styles.backgroundHero}
+            style={{ backgroundImage: `url(${images[backgroundIndex]})` }}
+          >
+            <div className={styles.backgroundHerogradient} />
+            <div className={styles.backgroundHeroContent}>
+              <Container className={styles.backgroundHeroContentcontainer}>
+                <div className="d-flex justify-content-between g-3">
+                  <Link
+                    to="/"
+                    aria-label="Baca selengkapnya"
+                    className={styles.backgroundHeroContentHeading}
+                  >
+                    Asyik, Teknologi 6G Sudah Disiapkan. Apa Saja Manfaatnya?
+                  </Link>
+
+                  <div className="app-bghero-content__sosmed d-none d-xl-block">
+                    <Stack gap={4}>
+                      {socialMediaLists.map((social, idx) => (
+                        <Link
+                          key={idx++}
+                          to={social.link}
+                          target="_blank"
+                          aria-label={social.alternative}
+                          title={social.alternative}
+                          className="btn"
+                        >
+                          <img
+                            src={social.icon}
+                            alt={social.alternative}
+                            loading="lazy"
+                          />
+                        </Link>
+                      ))}
+                    </Stack>
+                  </div>
+                </div>
+              </Container>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </section>
   );

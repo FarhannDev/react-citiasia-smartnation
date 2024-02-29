@@ -14,3 +14,27 @@
   font-weight: 400;
   line-height: 120%; /* 12px */
 }
+
+.buttonArticleDetailCategory {
+  width: auto;
+  height: 33px;
+  padding: 8px;
+  border-radius: 6px;
+  background: var(--Font-100, #e7e7e7);
+  margin-right: 13px;
+  margin-bottom: 13px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--Font-500, #6d6d6d);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-decoration: none;
+  text-align: center;
+}
