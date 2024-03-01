@@ -9,7 +9,9 @@
     "build:preview": "tsc && vite build && vite preview",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "preview": "vite preview",
-    "json-server": "npx json-server --watch -p 8000 -s ./static -s ./node_modules ./src/database/db.json"
+    "json-server": "npx json-server --watch -p 8000 -s ./static -s ./node_modules ./src/database/db.json",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
@@ -28,6 +30,14 @@
     "swiper": "^11.0.6"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/react": "^7.6.17",
+    "@storybook/react-vite": "^7.6.17",
+    "@storybook/test": "^7.6.17",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@types/react-lazy-load-image-component": "^1.6.3",
@@ -37,6 +47,8 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.8.0",
+    "storybook": "^7.6.17",
     "typescript": "^5.3.3",
     "vite": "^5.1.0",
     "vite-plugin-imagemin": "^0.6.1"
