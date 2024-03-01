@@ -24,7 +24,7 @@ function PostsArticleColumnItem({
   return (
     <Card className={styles.postsArticleItems}>
       <LazyLoadImage
-        className={styles.postsArticleColumnItemImage}
+        className={`${styles.postsArticleColumnItemImage} img-fluid`}
         alt={title}
         effect="blur"
         src={images}

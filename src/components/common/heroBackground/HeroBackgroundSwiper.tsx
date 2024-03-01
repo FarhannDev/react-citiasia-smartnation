@@ -11,9 +11,6 @@ import 'swiper/css/pagination';
 import '@/assets/styles/custom-swiper-pagination.css';
 // import '@/assets/styles/herobg-swiper.css';
 import styles from '@/assets/styles/modules/BackgroundHero.module.css';
-import { useState } from 'react';
-
-// type HeroBackgroundSwiperProps = {};
 
 interface SocialMedia {
   name: string;
@@ -50,11 +47,6 @@ const socialMediaLists: SocialMedia[] = [
 ];
 
 export default function HeroBackgroundSwiper() {
-  const [backgroundIndex] = useState<number>(0);
-  const images = [
-    'https://s3-alpha-sig.figma.com/img/5420/e908/252e4dbda36eec0ac50881684f5ba2f4?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZfHhClsLdRN4TZ1uJb4S~sxGYsrIeY~EWYKNPtkAQ~N8HcGYxMllP34PqbhyP6B~8oLtGbzyvP3X~SBffdqwrUvR~Y1FZ67wHyeXMgCP7ikQg4~axblRYonS5ME0Z8DA1QxPOVmShX~lDD6SLFzN~uQ8HMHjRImQ29tCzUPkvG~3dNushHclbZbd~ygW~3myONAu4LpcbDO4J8H3~-9uqUt4Xe-pbfTIRkGWqLBAWlqR~lzi8SvBo4hEeTGyAP4S40-SYzB1TVso0ak5Q3pCESfceprwPQ5sapouorsNi8aa5Y21QIiBVuXJwfFn-L~Yl~-IcxKPNwwQQM8NPV~bMg__',
-  ]; // Ganti dengan nama gambar yang Anda miliki
-
   return (
     <section
       className={styles.backgroundHeroSection}
@@ -90,7 +82,9 @@ export default function HeroBackgroundSwiper() {
         <SwiperSlide>
           <div
             className={styles.backgroundHero}
-            style={{ backgroundImage: `url(${images[backgroundIndex]})` }}
+            style={{
+              backgroundImage: `url('https://s3-alpha-sig.figma.com/img/9022/96b6/23e15b37bd84a6cb1710400d98ccbdeb?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Wrm7nmDP9AkrXqWZICYxgMbrAkWXyB5zjyCI3oU5XiIL9Ny80xVxeAyOXiDSCb6sm9n2xYnlIwLa8f5RntIAOxDNgSkojtxoS2KrnFtRK~lpm~ON~6gNrKcObUAfxW9oNw36CH-EYXwy3oP291uqlyRHLGWBP0B1EWjCPShda1F3lFy~59U79YzeYQ42jsRk6Cj53WuaHnH4KKEv2t0usG8j6mPidRGY8o5rRwP5QJ8VrbHmCh9qpFBMcIJLtDSQpR7iyKI4DQaYGGYIyMDGPsvkfCZMruqvwySPTgO0v2u8L-n1uwHlGAuroFnlokT4T7Nv27sYgB01dV5nyS2b~Q__')`,
+            }}
           >
             <div className={styles.backgroundHerogradient} />
             <div className={styles.backgroundHeroContent}>
@@ -101,7 +95,8 @@ export default function HeroBackgroundSwiper() {
                     aria-label="Baca selengkapnya"
                     className={styles.backgroundHeroContentHeading}
                   >
-                    Asyik, Teknologi 6G Sudah Disiapkan. Apa Saja Manfaatnya?
+                    Smart City: Standar Nasional Indonesia (SNI) untuk Kota
+                    Cerdas
                   </Link>
 
                   <div className="app-bghero-content__sosmed d-none d-xl-block">
@@ -132,7 +127,9 @@ export default function HeroBackgroundSwiper() {
         <SwiperSlide>
           <div
             className={styles.backgroundHero}
-            style={{ backgroundImage: `url(${images[backgroundIndex]})` }}
+            style={{
+              backgroundImage: `url('https://s3-alpha-sig.figma.com/img/9022/96b6/23e15b37bd84a6cb1710400d98ccbdeb?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Wrm7nmDP9AkrXqWZICYxgMbrAkWXyB5zjyCI3oU5XiIL9Ny80xVxeAyOXiDSCb6sm9n2xYnlIwLa8f5RntIAOxDNgSkojtxoS2KrnFtRK~lpm~ON~6gNrKcObUAfxW9oNw36CH-EYXwy3oP291uqlyRHLGWBP0B1EWjCPShda1F3lFy~59U79YzeYQ42jsRk6Cj53WuaHnH4KKEv2t0usG8j6mPidRGY8o5rRwP5QJ8VrbHmCh9qpFBMcIJLtDSQpR7iyKI4DQaYGGYIyMDGPsvkfCZMruqvwySPTgO0v2u8L-n1uwHlGAuroFnlokT4T7Nv27sYgB01dV5nyS2b~Q__')`,
+            }}
           >
             <div className={styles.backgroundHerogradient} />
             <div className={styles.backgroundHeroContent}>
@@ -143,7 +140,8 @@ export default function HeroBackgroundSwiper() {
                     aria-label="Baca selengkapnya"
                     className={styles.backgroundHeroContentHeading}
                   >
-                    Asyik, Teknologi 6G Sudah Disiapkan. Apa Saja Manfaatnya?
+                    Smart City: Standar Nasional Indonesia (SNI) untuk Kota
+                    Cerdas
                   </Link>
 
                   <div className="app-bghero-content__sosmed d-none d-xl-block">
@@ -174,7 +172,9 @@ export default function HeroBackgroundSwiper() {
         <SwiperSlide>
           <div
             className={styles.backgroundHero}
-            style={{ backgroundImage: `url(${images[backgroundIndex]})` }}
+            style={{
+              backgroundImage: `url('https://s3-alpha-sig.figma.com/img/9022/96b6/23e15b37bd84a6cb1710400d98ccbdeb?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Wrm7nmDP9AkrXqWZICYxgMbrAkWXyB5zjyCI3oU5XiIL9Ny80xVxeAyOXiDSCb6sm9n2xYnlIwLa8f5RntIAOxDNgSkojtxoS2KrnFtRK~lpm~ON~6gNrKcObUAfxW9oNw36CH-EYXwy3oP291uqlyRHLGWBP0B1EWjCPShda1F3lFy~59U79YzeYQ42jsRk6Cj53WuaHnH4KKEv2t0usG8j6mPidRGY8o5rRwP5QJ8VrbHmCh9qpFBMcIJLtDSQpR7iyKI4DQaYGGYIyMDGPsvkfCZMruqvwySPTgO0v2u8L-n1uwHlGAuroFnlokT4T7Nv27sYgB01dV5nyS2b~Q__')`,
+            }}
           >
             <div className={styles.backgroundHerogradient} />
             <div className={styles.backgroundHeroContent}>
@@ -185,7 +185,8 @@ export default function HeroBackgroundSwiper() {
                     aria-label="Baca selengkapnya"
                     className={styles.backgroundHeroContentHeading}
                   >
-                    Asyik, Teknologi 6G Sudah Disiapkan. Apa Saja Manfaatnya?
+                    Smart City: Standar Nasional Indonesia (SNI) untuk Kota
+                    Cerdas
                   </Link>
 
                   <div className="app-bghero-content__sosmed d-none d-xl-block">

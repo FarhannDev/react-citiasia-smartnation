@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { IoChevronForwardOutline } from 'react-icons/io5';
 import { Col, Container, Row } from 'react-bootstrap';

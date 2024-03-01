@@ -5,24 +5,8 @@ import DropdownButtonSelectLanguange from '../button/DropdownButtonSelectLanguan
 import '@/assets/styles/top-navigation.css';
 
 export default function TopNavigation() {
-  // const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
-  // const timeoutRef: React.MutableRefObject<number | null> = useRef<
-  //   number | null
-  // >(null);
-
-  // const handleMouseEnter = () => {
-  //   clearTimeout(timeoutRef.current as number);
-  //   setDropdownOpen(true);
-  // };
-
-  // const handleMouseLeave = () => {
-  //   timeoutRef.current = window.setTimeout(() => {
-  //     setDropdownOpen(false);
-  //   }, 5000);
-  // };
-
   return (
-    <Navbar expand="lg" fixed="top" className="custom-app-top-navigation ">
+    <Navbar expand="lg" fixed="top" className="custom-app-top-navigation">
       <Container>
         <Navbar.Brand className="custom-app-top-navigation__brand ">
           <img
@@ -31,67 +15,63 @@ export default function TopNavigation() {
             alt="React Bootstrap logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Toggle aria-controls="navbarScroll" className="custom-button" />
+
         <Navbar.Collapse
-          className=" justify-content-arround g-2"
+          className="  justify-content-arround g-2"
           id="navbarScroll"
         >
-          <Nav className="d-flex justify-content-arround g-2 ">
+          {/* Show navigation link on screen large or high */}
+          <Nav className=" d-flex justify-content-arround g-2 d-none d-lg-flex d-xl-flex">
             <Link
-              className="nav-link custom-app-top-navigation__link custom-app-top-navigation__link-active  mx-lg-3"
+              className="nav-link custom-app-top-navigation__link custom-app-top-navigation__link-active  mx-xl-3 mx-md-2 "
               to="/"
             >
               Beranda
             </Link>
             <NavDropdown
-              className="custom-app-top-navigation__link-dropdown  mx-lg-3"
+              className="custom-app-top-navigation__link-dropdown   mx-xl-3 mx-md-2"
               title="Berita"
               id="basic-nav-dropdown"
-              // autoClose="inside"
-              renderMenuOnMount={true}
-              // show={dropdownOpen}
-              // onMouseEnter={handleMouseEnter}
-              // onMouseLeave={handleMouseLeave}
             >
               <div className="d-flex flex-column justify-content-start g-3 pt-3">
                 <Link
                   className="dropdown-item mb-2"
-                  to="/headline/berita-utama"
+                  to="/posts/headline"
                   aria-label="Berita kategori"
                 >
                   Berita Utama
                 </Link>
                 <Link
                   className="dropdown-item mb-2"
-                  to="/headline/berita-nasional"
+                  to="/posts/headline/nasional"
                   aria-label="Berita kategori"
                 >
                   Berita Nasional
                 </Link>
                 <Link
                   className="dropdown-item mb-2"
-                  to="/headline/berita-internasional"
+                  to="/posts/headline/internasional"
                   aria-label="Berita kategori"
                 >
                   Berita Internasional
                 </Link>
               </div>
             </NavDropdown>
-
             <Link
-              className="nav-link custom-app-top-navigation__link mx-lg-3"
+              className="nav-link custom-app-top-navigation__link mx-xl-3 mx-md-2"
               to="/"
             >
               Program
             </Link>
             <Link
-              className="nav-link custom-app-top-navigation__link mx-lg-3"
+              className="nav-link custom-app-top-navigation__link mx-xl-3 mx-md-2"
               to="/podcasts"
             >
               Podcast
             </Link>
             <NavDropdown
-              className="custom-app-top-navigation__link-dropdown  mx-lg-3"
+              className="custom-app-top-navigation__link-dropdown  mx-xl-3 mx-md-2"
               title="Lainnya"
               id="basic-nav-dropdown"
               autoClose="outside"
@@ -112,12 +92,55 @@ export default function TopNavigation() {
                 >
                   Hubungi Kami
                 </Link>
+                <Link
+                  className="dropdown-item mb-2"
+                  to="/contact"
+                  aria-label="Berita kategori"
+                >
+                  Daftar Pertanyaan (FAQ)
+                </Link>
               </div>
             </NavDropdown>
           </Nav>
 
-          <SearchBar placeholderText="Mau cari berita apa?" />
-          <DropdownButtonSelectLanguange />
+          {/* Show navigation link on screen small  */}
+          <Nav className="d-flex flex-column justify-content-center d-lg-none d-xl-none py-3">
+            <Link
+              className="nav-link  custom-app-top-navigation__link   mx-md-3 "
+              to="/"
+            >
+              Beranda
+            </Link>
+            <Link
+              className="nav-link  custom-app-top-navigation__link   mx-md-3 "
+              to="/"
+            >
+              Beranda
+            </Link>
+            <Link
+              className="nav-link  custom-app-top-navigation__link   mx-md-3 "
+              to="/"
+            >
+              Beranda
+            </Link>
+            <Link
+              className="nav-link  custom-app-top-navigation__link   mx-md-3 "
+              to="/"
+            >
+              Beranda
+            </Link>
+            <Link
+              className="nav-link  custom-app-top-navigation__link   mx-md-3 "
+              to="/"
+            >
+              Beranda
+            </Link>
+          </Nav>
+
+          <Nav className=" d-flex justify-content-arround align-items-center g-2 d-none d-lg-flex d-xl-flex ">
+            <SearchBar placeholderText="Mau cari berita apa?" />
+            <DropdownButtonSelectLanguange />
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>

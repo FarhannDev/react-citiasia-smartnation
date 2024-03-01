@@ -1,0 +1,25 @@
+import { Figure } from 'react-bootstrap';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+type AboutTeamPartnerItemProps = Partner;
+
+const AboutTeamPartnerItem = ({
+  name,
+  sourceImageUrl,
+}: AboutTeamPartnerItemProps) => {
+  return (
+    <Figure>
+      <LazyLoadImage
+        width={90}
+        height={90}
+        loading="lazy"
+        // effect="black-and-white"
+        alt={name}
+        title={name}
+        src={sourceImageUrl}
+      />
+    </Figure>
+  );
+};
+
+export default AboutTeamPartnerItem;

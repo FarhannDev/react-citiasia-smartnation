@@ -4,36 +4,36 @@ import styles from '@/assets/styles/modules/about.module.css';
 
 interface AboutTeamItemProps {
   name: string;
-  jobTitle: string;
-  description: string;
-  sourceImage: string;
+  jobs: string;
+  introduction: string;
+  sourceImageUrl: string;
 }
 
 function AboutTeamItem({
   name,
-  jobTitle,
-  description,
-  sourceImage,
+  jobs,
+  introduction,
+  sourceImageUrl,
 }: AboutTeamItemProps) {
   return (
     <Figure className="mb-5">
       <LazyLoadImage
-        className={`${styles.sectionAboutSmartnationTeamProfileImage} figure-img img-fluid`}
         alt={name}
         loading="lazy"
         effect="blur"
-        src={sourceImage}
+        src={sourceImageUrl}
+        className={`${styles.sectionAboutSmartnationTeamProfileImage} img-fluid`}
       />
       <Figure.Caption>
-        <div className="d-flex flex-column">
+        <div className="d-flex flex-column pt-3">
           <div className={styles.sectionAboutSmartnationTeamProfileName}>
             {name}
           </div>
           <div className={styles.sectionAboutSmartnationTeamProfileJob}>
-            {jobTitle}
+            {jobs}
           </div>
           <div className={styles.sectionAboutSmartnationTeamProfileDescription}>
-            {description}
+            {introduction}
           </div>
         </div>
       </Figure.Caption>

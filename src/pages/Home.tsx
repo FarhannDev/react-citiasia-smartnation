@@ -34,15 +34,9 @@ export default function Home() {
     <>
       <HeroBackgroundSwiper />
       {/* Section Article Start  */}
-      <section
-        className={styles.appArticleSection}
-        id={styles.appArticleSection}
-      >
+      <section className={styles.appArticleSection}>
         {/* Section Latest Posts Article Lists  */}
-        <section
-          className={styles.sectionPostsArticlelists}
-          id={styles.sectionPostsArticlelists}
-        >
+        <section className={styles.sectionPostsArticlelists}>
           <Container className={styles.postsArticleListsContainer}>
             <h1 className={styles.postsArticleListsHeading}>
               Postingan Terbaru
@@ -67,10 +61,7 @@ export default function Home() {
           </Container>
         </section>
         {/* Section Latest Article Lists */}
-        <section
-          className={styles.sectionArticleLists}
-          id={styles.sectionArticleLists}
-        >
+        <section className={styles.sectionArticleLists}>
           <Container className={styles.sectionArticleListsContainer}>
             <h1 className={styles.sectionArticleListsHeading}>
               Berita Terkini
@@ -99,10 +90,7 @@ export default function Home() {
           </Container>
         </section>
         {/* Section Events Article Lists */}
-        <section
-          className={styles.sectionEventsArticle}
-          id={styles.sectionEventsArticle}
-        >
+        <section className={styles.sectionEventsArticle}>
           <Container className={styles.eventsArticleContainer}>
             <h1 className={styles.eventsArticleHeading}>Acara</h1>
 
@@ -120,10 +108,7 @@ export default function Home() {
           </Container>
         </section>
         {/* Section Category Article Lists */}
-        <section
-          className={styles.sectionCategoryArticle}
-          id={styles.sectionCategoryArticle}
-        >
+        <section className={styles.sectionCategoryArticle}>
           <Container className={styles.categoryArticleContainer}>
             <h1 className={styles.eventsArticleHeading}>Artikel</h1>
 
@@ -146,10 +131,7 @@ export default function Home() {
       </section>
       {/* Section Article End  */}
       {/* Section Newsletter Subscribe  */}
-      <section
-        className={styles.sectionNewsletterSubscribe}
-        id={styles.sectionNewsletterSubscribe}
-      >
+      <section className={styles.sectionNewsletterSubscribe}>
         <Container className={styles.sectionNewsletterSubscribeContainer}>
           <NewsLetterItem />
         </Container>

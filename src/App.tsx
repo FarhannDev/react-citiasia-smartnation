@@ -7,19 +7,29 @@ import ContactIndexPage from './pages/contact/ContactIndexPage';
 import PostsParentCategoryPage from './pages/posts/PostsParentCategoryPage';
 import PostsCategoryPage from './pages/posts/PostsCategoryPage';
 import PostsDetailsPage from './pages/posts/PostsDetailsPage';
+import DashboardIndexPage from './pages/dashboard/DashboardIndexPage';
 
 export default function App() {
   const publicRoutes = (
     <AppLayout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path=":id" element={<PostsDetailsPage />} />
-        <Route path="/headline/:id" element={<PostsParentCategoryPage />} />
-        <Route path="/posts/:categoryId" element={<PostsCategoryPage />} />
+
+        <Route path="/posts">
+          <Route index element={<PostsParentCategoryPage />} />
+          <Route path="headline/:id" element={<PostsParentCategoryPage />} />
+          <Route
+            path="headline/:id/:categoryId"
+            element={<PostsCategoryPage />}
+          />
+          <Route path="read/:id" element={<PostsDetailsPage />} />
+        </Route>
 
         <Route path="/podcasts" element={<PodcastsIndexPage />} />
         <Route path="/about" element={<AboutIndexPage />} />
         <Route path="/contact" element={<ContactIndexPage />} />
+
+        <Route path="/dashboard" element={<DashboardIndexPage />} />
       </Routes>
     </AppLayout>
   );

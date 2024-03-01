@@ -23,7 +23,7 @@ function PostsArticleRowItem() {
         <div className="d-flex justify-content-between">
           <div className="d-flex-flex-column">
             <Link
-              className={styles.postsArticleRowitemsTitle}
+              className={`${styles.postsArticleRowitemsTitle}`}
               aria-label="Baca selengkapnya"
               to="/"
             >
@@ -31,7 +31,9 @@ function PostsArticleRowItem() {
               Indonesia
             </Link>
 
-            <ArticleButtonCategory />
+            <div className="pt-3">
+              <ArticleButtonCategory />
+            </div>
           </div>
 
           <div>
