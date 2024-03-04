@@ -1,24 +1,31 @@
 import { Link } from 'react-router-dom';
 import styles from '@/assets/styles/modules/popular-posts.module.css';
+import React from 'react';
 
-function PopularPostItem() {
+type PopularPostItemProps = Posts;
+type IncrementProps = { index: number };
+
+const PopularPostItem: React.FC<PopularPostItemProps & IncrementProps> = ({
+  title,
+  slug,
+  index,
+}) => {
   return (
     <div className={styles.popularPostsItem}>
       <div className="d-flex justify-content-start align-items-center g-3">
-        <div className={styles.popularPostsItemStart}>01</div>
+        <div className={styles.popularPostsItemStart}>0{index}</div>
         <div>
           <Link
             className={styles.popularPostsItemTitle}
-            to="/"
+            to={`/posts/read/${slug}`}
             aria-label="Baca selengkapnya"
           >
-            Dalam Kenalkan Energi Terbarukan, Indonesia Gelar Pameran Teknologi
-            Smart City
+            {title}
           </Link>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default PopularPostItem;

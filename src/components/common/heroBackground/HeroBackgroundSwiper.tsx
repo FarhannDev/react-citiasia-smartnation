@@ -46,7 +46,9 @@ const socialMediaLists: SocialMedia[] = [
   },
 ];
 
-export default function HeroBackgroundSwiper() {
+type Props = { posts: Posts[] };
+
+export default function HeroBackgroundSwiper({ posts }: Props) {
   return (
     <section
       className={styles.backgroundHeroSection}
@@ -79,141 +81,52 @@ export default function HeroBackgroundSwiper() {
         modules={[Pagination, Keyboard, EffectCreative, Autoplay]}
         className="mySwiper position-relative"
       >
-        <SwiperSlide>
-          <div
-            className={styles.backgroundHero}
-            style={{
-              backgroundImage: `url('https://s3-alpha-sig.figma.com/img/9022/96b6/23e15b37bd84a6cb1710400d98ccbdeb?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Wrm7nmDP9AkrXqWZICYxgMbrAkWXyB5zjyCI3oU5XiIL9Ny80xVxeAyOXiDSCb6sm9n2xYnlIwLa8f5RntIAOxDNgSkojtxoS2KrnFtRK~lpm~ON~6gNrKcObUAfxW9oNw36CH-EYXwy3oP291uqlyRHLGWBP0B1EWjCPShda1F3lFy~59U79YzeYQ42jsRk6Cj53WuaHnH4KKEv2t0usG8j6mPidRGY8o5rRwP5QJ8VrbHmCh9qpFBMcIJLtDSQpR7iyKI4DQaYGGYIyMDGPsvkfCZMruqvwySPTgO0v2u8L-n1uwHlGAuroFnlokT4T7Nv27sYgB01dV5nyS2b~Q__')`,
-            }}
-          >
-            <div className={styles.backgroundHerogradient} />
-            <div className={styles.backgroundHeroContent}>
-              <Container className={styles.backgroundHeroContentcontainer}>
-                <div className="d-flex justify-content-between g-3">
-                  <Link
-                    to="/"
-                    aria-label="Baca selengkapnya"
-                    className={styles.backgroundHeroContentHeading}
-                  >
-                    Smart City: Standar Nasional Indonesia (SNI) untuk Kota
-                    Cerdas
-                  </Link>
+        {posts.map((post) => (
+          <SwiperSlide key={post.id}>
+            <div
+              className={styles.backgroundHero}
+              style={{
+                backgroundImage: `url(${post.sourceImageUrl})`,
+              }}
+            >
+              <div className={styles.backgroundHerogradient} />
+              <div className={styles.backgroundHeroContent}>
+                <Container className={styles.backgroundHeroContentcontainer}>
+                  <div className="d-flex justify-content-between g-3">
+                    <Link
+                      to={`/posts/read/${post.slug}`}
+                      aria-label="Baca selengkapnya"
+                      className={styles.backgroundHeroContentHeading}
+                    >
+                      {post.title}
+                    </Link>
 
-                  <div className="app-bghero-content__sosmed d-none d-xl-block">
-                    <Stack gap={4}>
-                      {socialMediaLists.map((social, idx) => (
-                        <Link
-                          key={idx++}
-                          to={social.link}
-                          target="_blank"
-                          aria-label={social.alternative}
-                          title={social.alternative}
-                          className="btn"
-                        >
-                          <img
-                            src={social.icon}
-                            alt={social.alternative}
-                            loading="lazy"
-                          />
-                        </Link>
-                      ))}
-                    </Stack>
+                    <div className="app-bghero-content__sosmed d-none d-xl-block">
+                      <Stack gap={4}>
+                        {socialMediaLists.map((social, idx) => (
+                          <Link
+                            key={idx++}
+                            to={social.link}
+                            target="_blank"
+                            aria-label={social.alternative}
+                            title={social.alternative}
+                            className="btn"
+                          >
+                            <img
+                              src={social.icon}
+                              alt={social.alternative}
+                              loading="lazy"
+                            />
+                          </Link>
+                        ))}
+                      </Stack>
+                    </div>
                   </div>
-                </div>
-              </Container>
+                </Container>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div
-            className={styles.backgroundHero}
-            style={{
-              backgroundImage: `url('https://s3-alpha-sig.figma.com/img/9022/96b6/23e15b37bd84a6cb1710400d98ccbdeb?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Wrm7nmDP9AkrXqWZICYxgMbrAkWXyB5zjyCI3oU5XiIL9Ny80xVxeAyOXiDSCb6sm9n2xYnlIwLa8f5RntIAOxDNgSkojtxoS2KrnFtRK~lpm~ON~6gNrKcObUAfxW9oNw36CH-EYXwy3oP291uqlyRHLGWBP0B1EWjCPShda1F3lFy~59U79YzeYQ42jsRk6Cj53WuaHnH4KKEv2t0usG8j6mPidRGY8o5rRwP5QJ8VrbHmCh9qpFBMcIJLtDSQpR7iyKI4DQaYGGYIyMDGPsvkfCZMruqvwySPTgO0v2u8L-n1uwHlGAuroFnlokT4T7Nv27sYgB01dV5nyS2b~Q__')`,
-            }}
-          >
-            <div className={styles.backgroundHerogradient} />
-            <div className={styles.backgroundHeroContent}>
-              <Container className={styles.backgroundHeroContentcontainer}>
-                <div className="d-flex justify-content-between g-3">
-                  <Link
-                    to="/"
-                    aria-label="Baca selengkapnya"
-                    className={styles.backgroundHeroContentHeading}
-                  >
-                    Smart City: Standar Nasional Indonesia (SNI) untuk Kota
-                    Cerdas
-                  </Link>
-
-                  <div className="app-bghero-content__sosmed d-none d-xl-block">
-                    <Stack gap={4}>
-                      {socialMediaLists.map((social, idx) => (
-                        <Link
-                          key={idx++}
-                          to={social.link}
-                          target="_blank"
-                          aria-label={social.alternative}
-                          title={social.alternative}
-                          className="btn"
-                        >
-                          <img
-                            src={social.icon}
-                            alt={social.alternative}
-                            loading="lazy"
-                          />
-                        </Link>
-                      ))}
-                    </Stack>
-                  </div>
-                </div>
-              </Container>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div
-            className={styles.backgroundHero}
-            style={{
-              backgroundImage: `url('https://s3-alpha-sig.figma.com/img/9022/96b6/23e15b37bd84a6cb1710400d98ccbdeb?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Wrm7nmDP9AkrXqWZICYxgMbrAkWXyB5zjyCI3oU5XiIL9Ny80xVxeAyOXiDSCb6sm9n2xYnlIwLa8f5RntIAOxDNgSkojtxoS2KrnFtRK~lpm~ON~6gNrKcObUAfxW9oNw36CH-EYXwy3oP291uqlyRHLGWBP0B1EWjCPShda1F3lFy~59U79YzeYQ42jsRk6Cj53WuaHnH4KKEv2t0usG8j6mPidRGY8o5rRwP5QJ8VrbHmCh9qpFBMcIJLtDSQpR7iyKI4DQaYGGYIyMDGPsvkfCZMruqvwySPTgO0v2u8L-n1uwHlGAuroFnlokT4T7Nv27sYgB01dV5nyS2b~Q__')`,
-            }}
-          >
-            <div className={styles.backgroundHerogradient} />
-            <div className={styles.backgroundHeroContent}>
-              <Container className={styles.backgroundHeroContentcontainer}>
-                <div className="d-flex justify-content-between g-3">
-                  <Link
-                    to="/"
-                    aria-label="Baca selengkapnya"
-                    className={styles.backgroundHeroContentHeading}
-                  >
-                    Smart City: Standar Nasional Indonesia (SNI) untuk Kota
-                    Cerdas
-                  </Link>
-
-                  <div className="app-bghero-content__sosmed d-none d-xl-block">
-                    <Stack gap={4}>
-                      {socialMediaLists.map((social, idx) => (
-                        <Link
-                          key={idx++}
-                          to={social.link}
-                          target="_blank"
-                          aria-label={social.alternative}
-                          title={social.alternative}
-                          className="btn"
-                        >
-                          <img
-                            src={social.icon}
-                            alt={social.alternative}
-                            loading="lazy"
-                          />
-                        </Link>
-                      ))}
-                    </Stack>
-                  </div>
-                </div>
-              </Container>
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   );

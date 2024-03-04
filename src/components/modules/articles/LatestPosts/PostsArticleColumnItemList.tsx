@@ -1,9 +1,10 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from 'react';
 import PostsArticleColumnItem from './PostsArticleColumnItem';
 
-// type PostsArticleColumnItemListProps = { posts: Object[] };
+type PostsArticleColumnItemListProps = { posts: Posts[] };
 
-const PostsArticleColumnItemList = ({ posts }: any) =>
-  posts?.map((post: any) => <PostsArticleColumnItem key={post.id} {...post} />);
+const PostsArticleColumnItemList: React.FC<PostsArticleColumnItemListProps> = ({
+  posts,
+}) => posts.map((post) => <PostsArticleColumnItem key={post.id} {...post} />);
 
 export default PostsArticleColumnItemList;
