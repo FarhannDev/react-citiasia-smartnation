@@ -17,10 +17,9 @@ const EventFigureColumnItem: React.FC<EventFigureColumnItemProps> = ({
     <Figure className={styles.eventFigureColumnItem}>
       <Link to={`/${slug}`} aria-label="Baca selengkapnya">
         <LazyLoadImage
-          className={`${styles.eventFigureColumnItemImage} figure img-fluid`}
-          alt="171x180"
+          className={`${styles.eventFigureColumnItemImage} img-fluid `}
+          alt={title}
           effect="blur"
-          loading="lazy"
           src={sourceImageUrl}
         />
       </Link>

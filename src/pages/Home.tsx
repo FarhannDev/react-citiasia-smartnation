@@ -1,18 +1,56 @@
 import { Col, Container, Row } from 'react-bootstrap';
-import HeroBackgroundSwiper from '../components/common/heroBackground/HeroBackgroundSwiper';
-import PopularPostItemList from '../components/modules/articles/RelatePosts/PopularPostItemList';
-import PostsArticleColumnItemList from '../components/modules/articles/LatestPosts/PostsArticleColumnItemList';
-import ArticleColumnItemList from '../components/modules/articles/LatestArticle/ArticleColumItemList';
-import ArticleCategoryRowItemList from '../components/modules/articles/categoryArticle/ArticleCategoryRowItemList';
+import loadable from '@loadable/component';
 import styles from '@/assets/styles/modules/app.module.css';
-import NewsLetterItem from '../components/modules/Newsletter/NewsLetterItem';
-import PostsArticleRowItemList from '../components/modules/articles/LatestPosts/PostsArticleRowItemList';
-import ArticleFigureColumnItemList from '../components/modules/articles/LatestArticle/ArticleFigureColumnItemList';
-import EventFigureColumnItemList from '../components/modules/articles/LatestEvents/EventFigureColumnItemList';
-import ArticleCategoryFigureColumnItemList from '../components/modules/articles/categoryArticle/ArticleCategoryFigureColumnItemList';
-
 import { categories } from '../utils/data/categoryPostsData';
 import { posts } from '../utils/data/postsData';
+
+const HeroBackgroundSwiper = loadable(
+  () => import('../components/common/heroBackground/HeroBackgroundSwiper')
+);
+const PopularPostItemList = loadable(
+  () => import('../components/modules/articles/RelatePosts/PopularPostItemList')
+);
+const PostsArticleColumnItemList = loadable(
+  () =>
+    import(
+      '../components/modules/articles/LatestPosts/PostsArticleColumnItemList'
+    )
+);
+const ArticleColumnItemList = loadable(
+  () =>
+    import('../components/modules/articles/LatestArticle/ArticleColumItemList')
+);
+const ArticleCategoryRowItemList = loadable(
+  () =>
+    import(
+      '../components/modules/articles/categoryArticle/ArticleCategoryRowItemList'
+    )
+);
+const NewsLetterItem = loadable(
+  () => import('../components/modules/Newsletter/NewsLetterItem')
+);
+const PostsArticleRowItemList = loadable(
+  () =>
+    import('../components/modules/articles/LatestPosts/PostsArticleRowItemList')
+);
+const ArticleFigureColumnItemList = loadable(
+  () =>
+    import(
+      '../components/modules/articles/LatestArticle/ArticleFigureColumnItemList'
+    )
+);
+const EventFigureColumnItemList = loadable(
+  () =>
+    import(
+      '../components/modules/articles/LatestEvents/EventFigureColumnItemList'
+    )
+);
+const ArticleCategoryFigureColumnItemList = loadable(
+  () =>
+    import(
+      '../components/modules/articles/categoryArticle/ArticleCategoryFigureColumnItemList'
+    )
+);
 
 export default function Home() {
   const postsData = posts.sort(

@@ -1,18 +1,15 @@
 .postsArticleRowitems {
   background: none;
   box-shadow: 0;
-  display: flex;
   width: auto;
   height: auto;
   padding-bottom: 8px;
-  align-items: flex-start;
   gap: 12px;
   border-radius: 0 !important;
   border-bottom: 1px solid var(--Font-100, #e7e7e7) !important;
 }
 
 .postsArticleRowitemsTitle {
-  /* width: 376px; */
   color: var(--Font-600, #5d5d5d);
   font-family: Poppins;
   font-size: 14px;

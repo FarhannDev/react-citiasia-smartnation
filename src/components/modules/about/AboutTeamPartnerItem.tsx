@@ -1,7 +1,7 @@
 import { Figure } from 'react-bootstrap';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-type AboutTeamPartnerItemProps = Partner;
+type AboutTeamPartnerItemProps = Partners;
 
 const AboutTeamPartnerItem = ({
   name,

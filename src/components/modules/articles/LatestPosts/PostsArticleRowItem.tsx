@@ -26,7 +26,7 @@ const PostsArticleRowItem: React.FC<PostsArticleRowItemProps> = ({
             </span>
           </div>
         </div>
-        <div className="d-flex justify-content-between g-3">
+        <div className="d-flex justify-content-between align-items-center g-3">
           <div className="d-flex-flex-column">
             <Link
               className={`${styles.postsArticleRowitemsTitle}`}
@@ -44,8 +44,7 @@ const PostsArticleRowItem: React.FC<PostsArticleRowItemProps> = ({
           <div>
             <Link to={`/${slug}`} aria-label="Baca selengkapnya">
               <LazyLoadImage
-                loading="lazy"
-                className={styles.postsArticleRowitemsThumbnail}
+                className={`${styles.postsArticleRowitemsThumbnail}`}
                 alt={title}
                 effect="blur"
                 src={sourceImageUrl}

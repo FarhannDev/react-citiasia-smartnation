@@ -1,7 +1,7 @@
 import AboutTeamPartnerItem from './AboutTeamPartnerItem';
 
 type AboutTeamPartnerItemListProps = {
-  partners: Partner[];
+  partners: Partners[];
 };
 
 const AboutTeamPartnerItemList = ({

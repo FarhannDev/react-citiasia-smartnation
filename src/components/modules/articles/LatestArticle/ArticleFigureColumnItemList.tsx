@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import ArticleFigureColumnItem from './ArticleFigureColumnItem';
+import loadable from '@loadable/component';
+
+const ArticleFigureColumnItem = loadable(() => import('./ArticleColumnItem'));
 
 type ArticleFigureColumnItemListProps = { posts: Posts[] };
 

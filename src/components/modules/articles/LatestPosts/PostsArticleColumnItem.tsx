@@ -3,9 +3,9 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Card } from 'react-bootstrap';
 import { HiOutlineClock } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
-import ArticleButtonCategory from '../../../common/button/ArticleButtonCategory';
-import styles from '@/assets/styles/modules/PostsArticleColumn.module.css';
 import { postedAt } from '../../../../utils/common/generateFormattedDate';
+import styles from '@/assets/styles/modules/PostsArticleColumn.module.css';
+import ArticleButtonCategory from '../../../common/button/ArticleButtonCategory';
 
 type PostsArticleColumnItemProps = Posts;
 
@@ -22,7 +22,6 @@ const PostsArticleColumnItem = ({
         className={`${styles.postsArticleColumnItemImage} img-fluid`}
         alt={title}
         effect="blur"
-        loading="lazy"
         src={sourceImageUrl}
       />
 

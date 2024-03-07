@@ -6,14 +6,14 @@ const api = (() => {
     localStorage.setItem('token', token);
   const getAccessToken = () => localStorage.getItem('token');
 
-  const _fetchWithAuth = async (url: string, options = {}) =>
-    fetch(url, {
-      ...options,
-      headers: {
-        ...options.headers,
-        Authorization: `Bearer ${getAccessToken()}`,
-      },
-    });
+  // const _fetchWithAuth = async (url: string, options = {}) =>
+  //   fetch(url, {
+  //     ...options,
+  //     headers: {
+  //       ...options.headers,
+  //       Authorization: `Bearer ${getAccessToken()}`,
+  //     },
+  //   });
 
   async function getAllPartners(): Promise<Partners[]> {
     const response: Response = await fetch(`${API_BASE_URL}/partners`);
@@ -85,7 +85,7 @@ const api = (() => {
   async function createNewPosts({
     title,
     publishDate,
-    category,
+    categories,
     sourceImageUrl,
     content,
   }: Posts) {
@@ -96,7 +96,7 @@ const api = (() => {
         title,
         slug: generateCreateSlug(title),
         publishDate,
-        category,
+        categories,
         status: 'publish',
         comment_status: 'open',
         sourceImageUrl,
@@ -129,7 +129,6 @@ const api = (() => {
   }
 
   return {
-    _fetchWithAuth,
     putAccessToken,
     getAccessToken,
     getAllPartners,

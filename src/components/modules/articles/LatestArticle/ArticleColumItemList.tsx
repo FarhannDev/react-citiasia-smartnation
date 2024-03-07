@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import React from 'react';
-import ArticleColumnItem from './ArticleColumnItem';
+import loadable from '@loadable/component';
+
+const ArticleColumnItem = loadable(() => import('./ArticleColumnItem'));
 
 type ArticleColumnItemListProps = { posts: Posts[] };
 

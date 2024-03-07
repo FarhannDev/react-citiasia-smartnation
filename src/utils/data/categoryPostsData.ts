@@ -1,6 +1,3 @@
-import { nanoid } from 'nanoid';
-import generateCreateSlug from '../common/generateCreateSlug';
-
 const parentCategories: Parent[] = [
   {
     id: '63b1',

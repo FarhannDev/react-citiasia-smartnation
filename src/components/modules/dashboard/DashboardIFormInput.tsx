@@ -2,17 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import ContentEditable, { ContentEditableEvent } from 'react-contenteditable';
 import styles from '@/assets/styles/modules/Dashboard.module.css';
-import { Categories } from '../../../utils/models/categoryPostData';
 import api from '../../../utils/api/api';
 import useInput from '../../../hooks/useInput';
 
-type DashboardIFormInputProps = {
-  addPosts: ({ title, categoryId, sourceImageUrl, content }: Posts) => void;
-};
+// type DashboardIFormInputProps = {
+//   addPosts: ({ title, , sourceImageUrl, content }: Posts) => void;
+// };
 
-const DashboardIFormInput: React.FC<DashboardIFormInputProps> = ({
-  addPosts,
-}) => {
+const DashboardIFormInput: React.FC = () => {
   const [categories, setCategories] = useState<Categories[]>([]);
   const [inputTitle, handleChangeInputTitle] = useInput('');
   const [inputPublishDate, handleChangeInputPublishDate] = useInput('');
@@ -40,13 +37,6 @@ const DashboardIFormInput: React.FC<DashboardIFormInputProps> = ({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    addPosts({
-      title: inputTitle,
-      // title: inputTitle,
-      // categoryId: inputCategoryId,
-      // sourceImageUrl: inputSourceImageUrl,
-      // content: inputBody,
-    });
   };
 
   return (

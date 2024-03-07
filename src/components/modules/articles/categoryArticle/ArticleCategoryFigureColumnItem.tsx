@@ -1,12 +1,16 @@
 import React from 'react';
 import parse from 'html-react-parser';
+import loadable from '@loadable/component';
 import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Figure } from 'react-bootstrap';
 import { HiOutlineClock } from 'react-icons/hi2';
-import styles from '@/assets/styles/modules/ArticleCategoryFigureColumnItem.module.css';
-import ArticleButtonCategory from '../../../common/button/ArticleButtonCategory';
 import { postedAt } from '../../../../utils/common/generateFormattedDate';
+import styles from '@/assets/styles/modules/ArticleCategoryFigureColumnItem.module.css';
+
+const ArticleButtonCategory = loadable(
+  () => import('../../../common/button/ArticleButtonCategory')
+);
 
 type ArticleCategoryFigureColumnItemProps = Posts;
 
@@ -20,8 +24,7 @@ const ArticleCategoryFigureColumnItem: React.FC<
           <Figure className={styles.articleCategoryFigureColumnItemContainer}>
             <Link to={`/${slug}`} aria-label="Baca selengkapnya">
               <LazyLoadImage
-                className={`${styles.articleCategoryFigureColumnItemImage} figure img-fluid `}
-                loading="lazy"
+                className={`${styles.articleCategoryFigureColumnItemImage}  img-fluid `}
                 alt="171x180"
                 effect="blur"
                 src={sourceImageUrl}

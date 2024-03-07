@@ -1,20 +1,14 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { IoChevronForwardOutline } from 'react-icons/io5';
 import { Col, Container, Row } from 'react-bootstrap';
 import PostsFigureColumnItem from '../../components/modules/posts/PostsFigureColumnItem';
 import PostsFigureRowItem from '../../components/modules/posts/PostsFigureRowItem';
-import PostsPopulerFigureColumnItem from '../../components/modules/posts/PostsPopulerFigureColumnItem';
-import PostsRowItem from '../../components/modules/posts/PostsRowItem';
-import PopularPostItemList from '../../components/modules/articles/RelatePosts/PopularPostItemList';
 import NewsLetterItem from '../../components/modules/Newsletter/NewsLetterItem';
 import styles from '@/assets/styles/modules/posts.module.css';
 import appStyles from '@/assets/styles/modules/app.module.css';
 
 const PostsParentCategoryPage: React.FC = () => {
-  const { id } = useParams();
-
   return (
     <>
       <section className={styles.sectionPostSmartnation}>
@@ -47,10 +41,10 @@ const PostsParentCategoryPage: React.FC = () => {
                   </h1>
                   <Row className="justify-content-start g-3 py-3">
                     <Col lg={6} xl={6}>
-                      <PostsPopulerFigureColumnItem />
+                      {/* <PostsPopulerFigureColumnItem /> */}
                     </Col>
                     <Col lg={6} xl={6}>
-                      <PostsPopulerFigureColumnItem />
+                      {/* <PostsPopulerFigureColumnItem /> */}
                     </Col>
                   </Row>
                 </Col>
@@ -69,18 +63,18 @@ const PostsParentCategoryPage: React.FC = () => {
                     </Link>
                   </div>
 
-                  <div className="d-flex flex-column pt-4">
+                  {/* <div className="d-flex flex-column pt-4">
                     <PostsRowItem />
                     <PostsRowItem />
                     <PostsRowItem />
                     <PostsRowItem />
                     <PostsRowItem />
-                  </div>
+                  </div> */}
                 </Col>
               </Row>
             </Col>
             <Col lg={12} xl={4}>
-              <PopularPostItemList />
+              {/* <PopularPostItemList /> */}
             </Col>
           </Row>
         </Container>
