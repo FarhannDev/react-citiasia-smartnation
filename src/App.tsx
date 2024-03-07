@@ -14,15 +14,11 @@ export default function App() {
     <AppLayout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<PostsDetailsPage />} />
 
         <Route path="/posts">
           <Route index element={<PostsParentCategoryPage />} />
-          <Route path="headline/:id" element={<PostsParentCategoryPage />} />
-          <Route
-            path="headline/:id/:categoryId"
-            element={<PostsCategoryPage />}
-          />
-          <Route path="read/:id" element={<PostsDetailsPage />} />
+          <Route path=":categoryId" element={<PostsCategoryPage />} />
         </Route>
 
         <Route path="/podcasts" element={<PodcastsIndexPage />} />

@@ -1,0 +1,74 @@
+.searchBarResultItem {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 300px;
+  height: auto;
+  overflow: auto;
+  padding: 12px 16px;
+  border-radius: 4px;
+  background: var(--Background, #fff);
+  box-shadow: 0px 0.917px 0.917px 0px rgba(0, 0, 0, 0.12),
+    0px 0px 0px 0.917px rgba(103, 110, 118, 0.16),
+    0px 1.833px 4.583px 0px rgba(103, 110, 118, 0.08);
+  position: absolute;
+  top: 60px;
+  margin: 0 auto;
+  padding: 30px 16px;
+}
+
+.searchBarResultItemHeading {
+  color: var(--Font-600, #5d5d5d);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.searchBarResultItemList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+}
+.searchBarResultItemListTitle {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--Font-600, #5d5d5d);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  text-decoration: none;
+}
+.searchBarResultItemListTitle:hover {
+  color: var(--Danger-600, #ce2f2f);
+  text-decoration: underline;
+}
+.searchBarResultItemListTitle:focus {
+  color: var(--Danger-600, #ce2f2f);
+  text-decoration: underline;
+}
+.searchBarResultItemListTitle:active {
+  color: var(--Danger-600, #ce2f2f);
+  text-decoration: underline;
+}
+
+.searchBarResultItemListIconLink {
+  color: var(--Danger-600, #ce2f2f);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-decoration: none;
+}

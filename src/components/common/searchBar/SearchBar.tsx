@@ -7,13 +7,19 @@ interface SearchBarProps {
 
 export default function SearchBar({ placeholderText }: SearchBarProps) {
   return (
-    <Form className=" app-search-bar-items d-none d-lg-block">
-      <Form.Control
-        type="search"
-        placeholder={placeholderText}
-        className="me-2  app-search-bar-item__input"
-        aria-label="Search"
-      />
-    </Form>
+    <>
+      <div className="position-relative">
+        <Form className=" app-search-bar-items d-none d-lg-block">
+          <Form.Control
+            type="search"
+            placeholder={placeholderText}
+            className="me-2  app-search-bar-item__input"
+            aria-label="Search"
+          />
+        </Form>
+
+        {/* <SearchBarResult /> */}
+      </div>
+    </>
   );
 }

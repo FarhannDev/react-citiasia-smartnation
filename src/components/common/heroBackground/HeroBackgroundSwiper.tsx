@@ -94,7 +94,7 @@ export default function HeroBackgroundSwiper({ posts }: Props) {
                 <Container className={styles.backgroundHeroContentcontainer}>
                   <div className="d-flex justify-content-between g-3">
                     <Link
-                      to={`/posts/read/${post.slug}`}
+                      to={`/${post.slug}`}
                       aria-label="Baca selengkapnya"
                       className={styles.backgroundHeroContentHeading}
                     >

@@ -17,7 +17,7 @@ const ArticleFigureColumnItem: React.FC<ArticleFigureColumnItemProps> = ({
 }) => {
   return (
     <Figure className={styles.articleFigureColumnItem}>
-      <Link to={`/posts/read/${slug}`} aria-label="Baca selengkapnya">
+      <Link to={`/${slug}`} aria-label="Baca selengkapnya">
         <LazyLoadImage
           className={`${styles.articleFigureColumnItemImage} figure img-fluid`}
           alt="171x180"
@@ -35,7 +35,7 @@ const ArticleFigureColumnItem: React.FC<ArticleFigureColumnItemProps> = ({
           </span>
         </div>
         <Link
-          to="/"
+          to={`/${slug}`}
           aria-label="Baca selengkapnya"
           className={styles.articleFigureColumnItemCaptionTitle}
         >

@@ -104,7 +104,7 @@
 }
 
 .custom-app-top-navigation__link-dropdown .dropdown-menu {
-  margin-top: 20px !important;
+  margin-top: 30px !important;
   width: 250px;
   height: auto;
   overflow: auto;
@@ -137,6 +137,82 @@
 }
 .custom-app-top-navigation__link-dropdown .dropdown-menu .dropdown-item:active {
   color: var(--Danger-600, #ce2f2f) !important;
+  background-color: #fff0f2;
+  border-radius: 4px;
+  border-bottom: none;
+}
+
+.custom-dropdown-toggle {
+  color: var(--Font-600, #5d5d5d) !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 120%;
+  transition: ease;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.custom-dropdown-toggle:hover {
+  color: var(--Danger-600, #ce2f2f) !important;
+  border-bottom: 1.833px solid var(--Primary-600, #d71149) !important;
+}
+.custom-dropdown-toggle:focus {
+  color: var(--Danger-600, #ce2f2f) !important;
+  border-bottom: 1.833px solid var(--Primary-600, #d71149) !important;
+}
+.custom-dropdown-toggle:active {
+  color: var(--Danger-600, #ce2f2f) !important;
+  border-bottom: 1.833px solid var(--Primary-600, #d71149) !important;
+}
+
+.custom-dropdown-megamenu {
+  margin-top: 30px !important;
+  width: 624px;
+  height: 400px;
+  overflow: auto;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: var(--Background, #fff);
+  padding: 30px !important;
+}
+.custom-dropdown-megamenu__heading {
+  color: var(--Danger-600, #ce2f2f);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+.custom-dropdown-megamenu__item {
+  color: var(--Font-600, #5d5d5d) !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  transition: ease;
+  text-decoration: none;
+  padding: 10px;
+}
+.custom-dropdown-megamenu__item:hover {
+  color: var(--Danger-600, #ce2f2f);
+  background-color: #fff0f2;
+  border-radius: 4px;
+  border-bottom: none;
+}
+.custom-dropdown-megamenu__item:focus {
+  color: var(--Danger-600, #ce2f2f);
+  background-color: #fff0f2;
+  border-radius: 4px;
+  border-bottom: none;
+}
+.custom-dropdown-megamenu__item:active {
+  color: var(--Danger-600, #ce2f2f);
   background-color: #fff0f2;
   border-radius: 4px;
   border-bottom: none;

@@ -41,7 +41,7 @@ const DashboardIFormInput: React.FC<DashboardIFormInputProps> = ({
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     addPosts({
-      title: inputTitle
+      title: inputTitle,
       // title: inputTitle,
       // categoryId: inputCategoryId,
       // sourceImageUrl: inputSourceImageUrl,

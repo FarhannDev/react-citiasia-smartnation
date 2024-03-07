@@ -1,22 +1,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { BrowserRouter, useLocation } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import ScrollToTop from './components/common/button/ScrollToTop.tsx';
 import App from './App.tsx';
 
 // import assets
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import '@/assets/styles/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -29,5 +20,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <ScrollToTop />
       <App />
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

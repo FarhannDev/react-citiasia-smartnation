@@ -1,32 +1,11 @@
 import { Col, Container, Row } from 'react-bootstrap';
-import { useEffect, useState } from 'react';
-import api from '../../utils/api/api';
 import styles from '@/assets/styles/modules/about.module.css';
 import AboutTeamItemList from '../../components/modules/about/AboutTeamItemList';
 import AboutTeamPartnerItemList from '../../components/modules/about/AboutTeamPartnerItemList';
+import { partners } from '../../utils/data/partnerData';
+import { teams } from '../../utils/data/teamsData';
 
 function AboutIndexPage() {
-  const [teams, setTeams] = useState<Teams[]>([]);
-  const [partners, setPartners] = useState<Partner[]>([]);
-
-  useEffect(() => {
-    const fetchDataFromNetwork = async () => {
-      const results = await api.getAllTeams();
-      setTeams(results);
-    };
-
-    fetchDataFromNetwork();
-  }, []);
-
-  useEffect(() => {
-    const fetchDataFromNetwork = async () => {
-      const results = await api.getAllPartners();
-      setPartners(results);
-    };
-
-    fetchDataFromNetwork();
-  }, []);
-
   return (
     <>
       <section className={styles.sectionAboutSmartnation}>
@@ -70,11 +49,32 @@ function AboutIndexPage() {
 
       <section className={styles.sectionAboutSmartnationMitra}>
         <Container className={styles.sectionAboutSmartnationContainer}>
-          <h1 className={styles.sectionAboutSmartnationMitraHeading}>
-            Mitra Kami
-          </h1>
+          <Row className="justiy-content-start g-3 py-5">
+            <Col>
+              <h1 className={styles.sectionAboutSmartnationMitraHeading}>
+                Mitra Publik Kami
+              </h1>
 
-          <AboutTeamPartnerItemList partners={partners} />
+              <AboutTeamPartnerItemList
+                partners={partners.filter(
+                  (partner) => partner.type === 'mitra_public'
+                )}
+              />
+            </Col>
+          </Row>
+          <Row className="justiy-content-start g-3 py-5">
+            <Col>
+              <h1 className={styles.sectionAboutSmartnationMitraHeading}>
+                Mitra Swasta Kami
+              </h1>
+
+              <AboutTeamPartnerItemList
+                partners={partners.filter(
+                  (partner) => partner.type === 'mitra_swasta'
+                )}
+              />
+            </Col>
+          </Row>
         </Container>
       </section>
 

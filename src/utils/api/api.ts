@@ -1,8 +1,7 @@
 import generateCreateSlug from '../common/generateCreateSlug';
-import { Categories } from '../models/categoryPostData';
 
 const api = (() => {
-  const API_BASE_URL: string = 'http://localhost:8000';
+  const API_BASE_URL: string = 'http://localhost:3001';
   const putAccessToken: (token: string) => void = (token: string) =>
     localStorage.setItem('token', token);
   const getAccessToken = () => localStorage.getItem('token');
@@ -16,13 +15,13 @@ const api = (() => {
       },
     });
 
-  async function getAllPartners(): Promise<Partner[]> {
+  async function getAllPartners(): Promise<Partners[]> {
     const response: Response = await fetch(`${API_BASE_URL}/partners`);
     if (!response.ok)
       throw new Error(
         `Error fetching data http status code ${response.status}`
       );
-    const responseData: Promise<Partner[]> = await response.json();
+    const responseData: Promise<Partners[]> = await response.json();
     return responseData;
   }
 
@@ -48,8 +47,32 @@ const api = (() => {
     return responseData;
   }
 
+  async function getAllParents(): Promise<Parent[]> {
+    const response: Response = await fetch(`${API_BASE_URL}/parents`);
+    if (!response.ok)
+      throw new Error(
+        `Error fetching data http status code ${response.status}`
+      );
+    const responseData: Promise<Parent[]> = await response.json();
+
+    return responseData;
+  }
+
   async function getAllCategories(): Promise<Categories[]> {
     const response: Response = await fetch(`${API_BASE_URL}/categories`);
+    if (!response.ok)
+      throw new Error(
+        `Error fetching data http status code ${response.status}`
+      );
+    const responseData: Promise<Categories[]> = await response.json();
+
+    return responseData;
+  }
+
+  async function getCategories() {
+    const response: Response = await fetch(
+      `${API_BASE_URL}/categories?_embed=parent`
+    );
     if (!response.ok)
       throw new Error(
         `Error fetching data http status code ${response.status}`
@@ -62,7 +85,7 @@ const api = (() => {
   async function createNewPosts({
     title,
     publishDate,
-    categoryId,
+    category,
     sourceImageUrl,
     content,
   }: Posts) {
@@ -73,7 +96,7 @@ const api = (() => {
         title,
         slug: generateCreateSlug(title),
         publishDate,
-        categoryId,
+        category,
         status: 'publish',
         comment_status: 'open',
         sourceImageUrl,
@@ -110,9 +133,11 @@ const api = (() => {
     putAccessToken,
     getAccessToken,
     getAllPartners,
+    getAllParents,
     getAllTeams,
     getAllPosts,
     getAllCategories,
+    getCategories,
     createSubscribeNewsLetter,
     createNewPosts,
   };

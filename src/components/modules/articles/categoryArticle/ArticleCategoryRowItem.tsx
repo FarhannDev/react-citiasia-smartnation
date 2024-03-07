@@ -16,7 +16,7 @@ const ArticleCategoryRowItem: React.FC<
           <div className={styles.articleCategoryRowItemStart}>0{index}</div>
           <Link
             className={styles.articleCategoryRowItemTitle}
-            to={`/posts/read/${slug}`}
+            to={`/${slug}`}
             aria-label="Baca selengkapnya"
           >
             {title}

@@ -9,7 +9,7 @@
     "build:preview": "tsc && vite build && vite preview",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "preview": "vite preview",
-    "json-server": "npx json-server --watch -p 8000 -s ./static -s ./node_modules ./src/database/db.json",
+    "json-server": "npx json-server --watch -p 3001 -s ./static -s ./node_modules ./src/database/db.json",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

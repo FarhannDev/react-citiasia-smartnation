@@ -1,5 +1,9 @@
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavDropdown, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import {
+  parentCategories,
+  categories,
+} from '../../../utils/data/categoryPostsData';
 import SearchBar from '../searchBar/SearchBar';
 import DropdownButtonSelectLanguange from '../button/DropdownButtonSelectLanguange';
 import '@/assets/styles/top-navigation.css';
@@ -29,35 +33,43 @@ export default function TopNavigation() {
             >
               Beranda
             </Link>
-            <NavDropdown
-              className="custom-app-top-navigation__link-dropdown   mx-xl-3 mx-md-2"
-              title="Berita"
-              id="basic-nav-dropdown"
-            >
-              <div className="d-flex flex-column justify-content-start g-3 pt-3">
-                <Link
-                  className="dropdown-item mb-2"
-                  to="/posts/headline"
-                  aria-label="Berita kategori"
-                >
-                  Berita Utama
-                </Link>
-                <Link
-                  className="dropdown-item mb-2"
-                  to="/posts/headline/nasional"
-                  aria-label="Berita kategori"
-                >
-                  Berita Nasional
-                </Link>
-                <Link
-                  className="dropdown-item mb-2"
-                  to="/posts/headline/internasional"
-                  aria-label="Berita kategori"
-                >
-                  Berita Internasional
-                </Link>
-              </div>
-            </NavDropdown>
+
+            <Dropdown className="d-inline mx-2">
+              <Dropdown.Toggle
+                id="dropdown-autoclose-true"
+                className="custom-dropdown-toggle"
+              >
+                Berita
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu className="custom-dropdown-megamenu">
+                <div className="row justify-content-start align-content-start g-3">
+                  {parentCategories?.map((parent) => (
+                    <div key={parent.id} className="col-xl-4 col-lg-4 col-md">
+                      <div className="custom-dropdown-megamenu__heading">
+                        {parent.name}
+                      </div>
+                      <div className="d-flex flex-column justify-content-start g-3 pt-3">
+                        {categories
+                          ?.sort((a, b) => a.name.localeCompare(b.name))
+                          .filter((category) => category.parentId === parent.id)
+                          .map((cat) => (
+                            <Link
+                              key={cat.id}
+                              className="custom-dropdown-megamenu__item"
+                              to={`/posts/${cat.slug}`}
+                              aria-label="Berita kategori"
+                            >
+                              {cat.name}
+                            </Link>
+                          ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Dropdown.Menu>
+            </Dropdown>
+
             <Link
               className="nav-link custom-app-top-navigation__link mx-xl-3 mx-md-2"
               to="/"

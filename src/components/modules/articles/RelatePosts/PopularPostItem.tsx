@@ -17,7 +17,7 @@ const PopularPostItem: React.FC<PopularPostItemProps & IncrementProps> = ({
         <div>
           <Link
             className={styles.popularPostsItemTitle}
-            to={`/posts/read/${slug}`}
+            to={`/${slug}`}
             aria-label="Baca selengkapnya"
           >
             {title}

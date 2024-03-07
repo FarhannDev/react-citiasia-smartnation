@@ -19,8 +19,7 @@ const PodcastRowItem = () => {
           target="_parent"
           className={`stretched-link ${styles.podcastRowItemBodyTitle}`}
         >
-          Judul Podcast Ke berapa ya heheeheheheheh Lorem ipsum, dolor sit amet
-          consectetur adipisicing elit. Modi, ducimus?
+          1 Menit Bincang Pintar Bersama SmartNation
         </Link>
       </div>
     </div>

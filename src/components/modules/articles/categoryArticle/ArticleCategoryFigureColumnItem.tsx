@@ -18,7 +18,7 @@ const ArticleCategoryFigureColumnItem: React.FC<
       <div className="row justify-content-start g-lg-4 g-0">
         <div className="col-xl-6 col-lg-6 col-md-auto">
           <Figure className={styles.articleCategoryFigureColumnItemContainer}>
-            <Link to={`/posts/read/${slug}`} aria-label="Baca selengkapnya">
+            <Link to={`/${slug}`} aria-label="Baca selengkapnya">
               <LazyLoadImage
                 className={`${styles.articleCategoryFigureColumnItemImage} figure img-fluid `}
                 loading="lazy"
@@ -32,7 +32,7 @@ const ArticleCategoryFigureColumnItem: React.FC<
         <div className="col-xl-6 col-lg-6 col-md-auto">
           <div className={styles.articleCategoryFigureColumnItemBody}>
             <Link
-              to={`/posts/read/${slug}`}
+              to={`/${slug}`}
               aria-label="Baca selengkapnya"
               className={styles.articleCategoryFigureColumnItemBodyTitle}
             >

@@ -18,7 +18,7 @@ const ArticleColumnItem: React.FC<ArticleColumnItemProps> = ({
 }) => {
   return (
     <Card className={styles.articleColumnItem}>
-      <Link to={`/posts/read/${slug}`} aria-label="Baca selengkapnya">
+      <Link to={`/${slug}`} aria-label="Baca selengkapnya">
         <LazyLoadImage
           alt={title}
           loading="lazy"
@@ -36,7 +36,7 @@ const ArticleColumnItem: React.FC<ArticleColumnItemProps> = ({
             </span>
           </div>
           <Link
-            to={`/posts/read/${slug}`}
+            to={`/${slug}`}
             aria-label="Baca selengkapnya"
             className={styles.articleColumnItemTitle}
           >

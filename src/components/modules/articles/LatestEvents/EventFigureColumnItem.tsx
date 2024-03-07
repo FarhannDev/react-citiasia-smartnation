@@ -15,7 +15,7 @@ const EventFigureColumnItem: React.FC<EventFigureColumnItemProps> = ({
 }) => {
   return (
     <Figure className={styles.eventFigureColumnItem}>
-      <Link to={`/posts/read/${slug}`} aria-label="Baca selengkapnya">
+      <Link to={`/${slug}`} aria-label="Baca selengkapnya">
         <LazyLoadImage
           className={`${styles.eventFigureColumnItemImage} figure img-fluid`}
           alt="171x180"

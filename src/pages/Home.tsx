@@ -4,20 +4,23 @@ import PopularPostItemList from '../components/modules/articles/RelatePosts/Popu
 import PostsArticleColumnItemList from '../components/modules/articles/LatestPosts/PostsArticleColumnItemList';
 import ArticleColumnItemList from '../components/modules/articles/LatestArticle/ArticleColumItemList';
 import ArticleCategoryRowItemList from '../components/modules/articles/categoryArticle/ArticleCategoryRowItemList';
-
 import styles from '@/assets/styles/modules/app.module.css';
 import NewsLetterItem from '../components/modules/Newsletter/NewsLetterItem';
 import PostsArticleRowItemList from '../components/modules/articles/LatestPosts/PostsArticleRowItemList';
 import ArticleFigureColumnItemList from '../components/modules/articles/LatestArticle/ArticleFigureColumnItemList';
-import { categories } from '../utils/data/categoryPostsData';
-import { posts } from '../utils/data/postsData';
 import EventFigureColumnItemList from '../components/modules/articles/LatestEvents/EventFigureColumnItemList';
 import ArticleCategoryFigureColumnItemList from '../components/modules/articles/categoryArticle/ArticleCategoryFigureColumnItemList';
 
+import { categories } from '../utils/data/categoryPostsData';
+import { posts } from '../utils/data/postsData';
+
 export default function Home() {
+  const postsData = posts.sort(
+    (a, b) => b.timestamp.getTime() - a.timestamp.getTime()
+  );
   return (
     <>
-      <HeroBackgroundSwiper posts={posts.slice(0, 6)} />
+      <HeroBackgroundSwiper posts={postsData.slice(0, 6)} />
       {/* Section Article Start  */}
       <section className={styles.appArticleSection}>
         {/* Section Latest Posts Article Lists  */}
@@ -29,17 +32,17 @@ export default function Home() {
 
             <Row className="justify-content-start g-4 pt-4">
               <Col xl={4} lg={12} md={12}>
-                <PostsArticleColumnItemList posts={posts.slice(0, 1)} />
+                <PostsArticleColumnItemList posts={postsData.slice(1, 2)} />
               </Col>
 
               <Col xl={4} lg={6} md={12}>
-                <PostsArticleRowItemList posts={posts.slice(1, 5)} />
+                <PostsArticleRowItemList posts={postsData.slice(1, 5)} />
               </Col>
 
               <Col xl={4} lg={6} md={12}>
                 <PopularPostItemList
                   heading="Terpopuler"
-                  posts={posts.slice(0, 5)}
+                  posts={postsData.slice(1, 6)}
                 />
               </Col>
             </Row>
@@ -53,10 +56,10 @@ export default function Home() {
             </h1>
             <Row className="justify-content-start g-4 pt-4">
               <Col xl={5} lg={12} md={12}>
-                <ArticleColumnItemList posts={posts.slice(0, 1)} />
+                <ArticleColumnItemList posts={postsData.slice(0, 1)} />
               </Col>
               <Col xl={7} lg={12} md={12}>
-                <ArticleFigureColumnItemList posts={posts.slice(0, 4)} />
+                <ArticleFigureColumnItemList posts={postsData.slice(2, 6)} />
               </Col>
             </Row>
           </Container>
@@ -65,15 +68,18 @@ export default function Home() {
         <section className={styles.sectionEventsArticle}>
           <Container className={styles.eventsArticleContainer}>
             <h1 className={styles.eventsArticleHeading}>Acara</h1>
-            <EventFigureColumnItemList posts={posts.slice(0, 3)} />
+            <EventFigureColumnItemList posts={postsData.slice(0, 3)} />
           </Container>
         </section>
         {/* Section Category Article Lists */}
         <section className={styles.sectionCategoryArticle}>
           <Container className={styles.categoryArticleContainer}>
             <h1 className={styles.eventsArticleHeading}>Artikel</h1>
-            <ArticleCategoryFigureColumnItemList posts={posts} />
-            <ArticleCategoryRowItemList posts={posts} categories={categories} />
+            <ArticleCategoryFigureColumnItemList posts={postsData} />
+            <ArticleCategoryRowItemList
+              posts={postsData}
+              categories={categories}
+            />
           </Container>
         </section>
       </section>

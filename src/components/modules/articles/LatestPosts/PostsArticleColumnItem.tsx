@@ -35,7 +35,7 @@ const PostsArticleColumnItem = ({
             </span>
           </div>
           <Link
-            to={slug}
+            to={`/${slug}`}
             aria-label="Baca selengkapnya"
             className={styles.postsArticleColumnItemTitle}
           >
