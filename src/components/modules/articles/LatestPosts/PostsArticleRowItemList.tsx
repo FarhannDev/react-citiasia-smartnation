@@ -1,5 +1,7 @@
 import React from 'react';
-import PostsArticleRowItem from './PostsArticleRowItem';
+import loadable from '@loadable/component';
+
+const PostsArticleRowItem = loadable(() => import('./PostsArticleRowItem'));
 
 type PostsArticleRowItemListProps = {
   posts: Posts[];

@@ -21,7 +21,7 @@ export default function App() {
         <Route path="/posts">
           <Route path=":categoryId" element={<PostsCategoryPage />} />
         </Route>
-        <Route path="/podcasts" element={<PodcastsIndexPage />} />
+        <Route path="/podcast" element={<PodcastsIndexPage />} />
         <Route path="/about" element={<AboutIndexPage />} />
         <Route path="/contact" element={<ContactIndexPage />} />
       </Routes>

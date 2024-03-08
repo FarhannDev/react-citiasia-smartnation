@@ -1,10 +1,19 @@
 import React, { type ReactNode } from 'react';
-import TopNavigation from '../components/common/navigation/TopNavigation';
-import FooterNavigation from '../components/common/navigation/FooterNavigation';
+import loadable from '@loadable/component';
+
+// const TopNavigation = loadable(
+//   () => import('../components/common/navigation/TopNavigation')
+// );
+const FooterNavigation = loadable(
+  () => import('../components/common/navigation/FooterNavigation')
+);
 
 import styles from '../assets/styles/modules/app.module.css';
+import TopNavigation from '../components/common/navigation/TopNavigation';
 
-interface AppLayoutProps { children: ReactNode }
+interface AppLayoutProps {
+  children: ReactNode;
+}
 
 const AppLayout: React.FC<AppLayoutProps> = ({ children }) => (
   <>

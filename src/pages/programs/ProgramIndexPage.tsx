@@ -1,13 +1,25 @@
+import { useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';
 import { program, programCategory } from '../../utils/data/programsData';
+import loadable from '@loadable/component';
 import styles from '@/assets/styles/modules/programs.module.css';
-import ProgramIntroduction from '../../components/modules/programs/ProgramIntroduction';
-import ProgramRowItemList from '../../components/modules/programs/ProgramRowItemList';
-import ProgramPopulerItemList from '../../components/modules/programs/ProgramPopulerItemList';
-import SearchItem from '../../components/common/search/SearchItem';
-import { useState } from 'react';
-import SearchEmpty from '../../components/common/empty/SearchEmpty';
+
+const ProgramIntroduction = loadable(
+  () => import('../../components/modules/programs/ProgramIntroduction')
+);
+const ProgramRowItemList = loadable(
+  () => import('../../components/modules/programs/ProgramRowItemList')
+);
+const ProgramPopulerItemList = loadable(
+  () => import('../../components/modules/programs/ProgramPopulerItemList')
+);
+const SearchItem = loadable(
+  () => import('../../components/common/search/SearchItem')
+);
+const SearchEmpty = loadable(
+  () => import('../../components/common/empty/SearchEmpty')
+);
 
 const ProgramIndexPage = () => {
   const { categoryId } = useParams();

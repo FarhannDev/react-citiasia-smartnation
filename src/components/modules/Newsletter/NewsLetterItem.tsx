@@ -1,6 +1,8 @@
 import styles from '@/assets/styles/modules/NewsLetterItem.module.css';
-import NewsLetterFormInput from './NewsLetterFormInput';
 import api from '../../../utils/api/api';
+import loadable from '@loadable/component';
+
+const NewsLetterFormInput = loadable(() => import('./NewsLetterFormInput'));
 
 function NewsLetterItem() {
   const handleNewsLetterSubscribe = (email: string) => {

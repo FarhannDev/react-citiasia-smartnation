@@ -75,8 +75,6 @@ export default function TopNavigation() {
               className="custom-app-top-navigation__link-dropdown  mx-xl-3 mx-md-2"
               title="Program"
               id="basic-nav-dropdown"
-              autoClose="outside"
-              renderMenuOnMount={true}
             >
               <div className="d-flex flex-column justify-content-start g-3 pt-3">
                 {programCategory.map((program) => (
@@ -93,7 +91,7 @@ export default function TopNavigation() {
             </NavDropdown>
             <Link
               className="nav-link custom-app-top-navigation__link mx-xl-3 mx-md-2"
-              to="/podcasts"
+              to="/podcast"
             >
               Podcast
             </Link>
@@ -102,7 +100,6 @@ export default function TopNavigation() {
               title="Lainnya"
               id="basic-nav-dropdown"
               autoClose="outside"
-              renderMenuOnMount={true}
             >
               <div className="d-flex flex-column justify-content-start g-3 pt-3">
                 <Link

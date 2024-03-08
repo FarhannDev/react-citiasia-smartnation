@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import EventFigureColumnItem from './EventFigureColumnItem';
+import loadable from '@loadable/component';
+
+const EventFigureColumnItem = loadable(() => import('./EventFigureColumnItem'));
 
 type EventFigureColumnItemListProps = { posts: Posts[] };
 

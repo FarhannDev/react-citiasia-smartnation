@@ -1,7 +1,9 @@
 import { Col, Row } from 'react-bootstrap';
 import styles from '@/assets/styles/modules/popular-posts.module.css';
-import PopularPostItem from './PopularPostItem';
 import React from 'react';
+import loadable from '@loadable/component';
+
+const PopularPostItem = loadable(() => import('./PopularPostItem'));
 
 type PopularPostItemListProps = {
   heading: string;

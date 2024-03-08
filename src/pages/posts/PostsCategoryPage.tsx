@@ -1,11 +1,18 @@
 import React from 'react';
 import styles from '@/assets/styles/modules/posts.module.css';
+import loadable from '@loadable/component';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { posts } from '../../utils/data/postsData';
 import { categories } from '../../utils/data/categoryPostsData';
-import PopularPostItemList from '../../components/modules/articles/RelatePosts/PopularPostItemList';
-import PostsRowItemList from '../../components/modules/posts/PostsRowItemList';
+
+const PopularPostItemList = loadable(
+  () =>
+    import('../../components/modules/articles/RelatePosts/PopularPostItemList')
+);
+const PostsRowItemList = loadable(
+  () => import('../../components/modules/posts/PostsRowItemList')
+);
 
 const PostsCategoryPage: React.FC = () => {
   const { categoryId } = useParams();

@@ -1,11 +1,20 @@
+import loadable from '@loadable/component';
 import { Col, Container, Row } from 'react-bootstrap';
-import styles from '@/assets/styles/modules/about.module.css';
-import AboutTeamItemList from '../../components/modules/about/AboutTeamItemList';
-import AboutTeamPartnerItemList from '../../components/modules/about/AboutTeamPartnerItemList';
 import { partners } from '../../utils/data/partnerData';
 import { teams } from '../../utils/data/teamsData';
 import { programCategory } from '../../utils/data/programsData';
-import AboutProgramItemList from '../../components/modules/about/AboutProgramItemList';
+import styles from '@/assets/styles/modules/about.module.css';
+
+const AboutProgramItemList = loadable(
+  () => import('../../components/modules/about/AboutProgramItemList')
+);
+
+const AboutTeamItemList = loadable(
+  () => import('../../components/modules/about/AboutTeamItemList')
+);
+const AboutTeamPartnerItemList = loadable(
+  () => import('../../components/modules/about/AboutTeamPartnerItemList')
+);
 
 function AboutIndexPage() {
   const programCategoryData: ProgramCategory[] = programCategory?.sort(

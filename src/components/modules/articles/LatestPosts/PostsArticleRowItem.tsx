@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { HiOutlineClock } from 'react-icons/hi2';
 import { postedAt } from '../../../../utils/common/generateFormattedDate';
-import ArticleButtonCategory from '../../../common/button/ArticleButtonCategory';
 import styles from '@/assets/styles/modules/PostsArticleRowItem.module.css';
+import loadable from '@loadable/component';
+
+const ArticleButtonCategory = loadable(
+  () => import('../../../common/button/ArticleButtonCategory')
+);
 
 type PostsArticleRowItemProps = Posts;
 

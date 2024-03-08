@@ -1,8 +1,14 @@
+import { Col, Container, Row } from 'react-bootstrap';
+import loadable from '@loadable/component';
 import appStyles from '@/assets/styles/modules/app.module.css';
 import styles from '@/assets/styles/modules/contact.module.css';
-import { Col, Container, Row } from 'react-bootstrap';
-import ContactItemInput from '../../components/modules/contacts/ContactItemInput';
-import NewsLetterItem from '../../components/modules/Newsletter/NewsLetterItem';
+
+const ContactItemInput = loadable(
+  () => import('../../components/modules/contacts/ContactItemInput')
+);
+const NewsLetterItem = loadable(
+  () => import('../../components/modules/Newsletter/NewsLetterItem')
+);
 
 const ContactIndexPage = () => {
   return (

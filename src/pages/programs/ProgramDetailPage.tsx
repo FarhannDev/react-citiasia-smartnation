@@ -2,7 +2,11 @@ import { useParams } from 'react-router-dom';
 import { program } from '../../utils/data/programsData';
 import { Container } from 'react-bootstrap';
 import styles from '@/assets/styles/modules/programs.module.css';
-import ProgramDetail from '../../components/modules/programs/details/ProgramDetail';
+import loadable from '@loadable/component';
+
+const ProgramDetail = loadable(
+  () => import('../../components/modules/programs/details/ProgramDetail')
+);
 
 const ProgramDetailPage = () => {
   const { programId } = useParams();
