@@ -4,8 +4,13 @@ import AboutTeamItemList from '../../components/modules/about/AboutTeamItemList'
 import AboutTeamPartnerItemList from '../../components/modules/about/AboutTeamPartnerItemList';
 import { partners } from '../../utils/data/partnerData';
 import { teams } from '../../utils/data/teamsData';
+import { programCategory } from '../../utils/data/programsData';
+import AboutProgramItemList from '../../components/modules/about/AboutProgramItemList';
 
 function AboutIndexPage() {
+  const programCategoryData: ProgramCategory[] = programCategory?.sort(
+    (a, b) => b.timestamp.getTime() - a.timestamp.getTime()
+  );
   return (
     <>
       <section className={styles.sectionAboutSmartnation}>
@@ -47,6 +52,16 @@ function AboutIndexPage() {
         </Container>
       </section>
 
+      <section className={styles.sectionAboutSmartnationProgram}>
+        <Container className={styles.sectionAboutSmartnationContainer}>
+          <h1 className={styles.sectionAboutSmartnationMitraHeading}>
+            Program unggulan smart nation
+          </h1>
+
+          <AboutProgramItemList programs={programCategoryData} />
+        </Container>
+      </section>
+
       <section className={styles.sectionAboutSmartnationMitra}>
         <Container className={styles.sectionAboutSmartnationContainer}>
           <Row className="justiy-content-start g-3 py-5">
@@ -81,7 +96,7 @@ function AboutIndexPage() {
       <section className={styles.sectionAboutSmartnationTeam}>
         <Container className={styles.sectionAboutSmartnationContainer}>
           <h1 className={styles.sectionAboutSmartnationTeamHeading}>
-            Smart Nation Team
+            Tim Smart Nation
           </h1>
 
           <AboutTeamItemList teams={teams} />

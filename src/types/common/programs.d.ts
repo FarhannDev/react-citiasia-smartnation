@@ -3,7 +3,7 @@ interface ProgramCategory {
   id: string | number;
   slug: string;
   name: string;
-  description: string | null;
+  description: string;
   sourceImageUrl: string | null;
   timestamp: Date;
 }
@@ -13,7 +13,7 @@ interface ProgramSubCategory {
   programCategoryId: string | number;
   slug: string;
   name: string;
-  description: string | null;
+  description: string;
   sourceImageUrl: string | null;
   timestamp: Date;
 }

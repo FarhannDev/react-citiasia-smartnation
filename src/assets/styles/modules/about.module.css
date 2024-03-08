@@ -60,10 +60,11 @@
   text-align: start;
   color: var(--Primary-600, #d71149);
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: 140.5%; /* 43.555px */
+  text-transform: capitalize;
 }
 
 /*
@@ -80,10 +81,11 @@
   text-align: center;
   color: var(--Primary-600, #d71149);
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: 140.5%; /* 43.555px */
+  text-transform: capitalize;
 }
 
 .sectionAboutSmartnationTeamProfileImage {
@@ -123,7 +125,109 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 19.2px */
+  line-height: 24px; /* 19.2px */
+}
+
+/* 
+  Section program
+*/
+.sectionAboutSmartnationProgram {
+  width: 100%;
+  height: auto;
+  background: var(--Primary-800, #fff);
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+/* AboutProgramItem */
+.aboutProgramItem {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  /* margin-bottom: 10px; */
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+
+.aboutProgramItemBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 4px;
+  padding-top: 20px;
+  /* padding-bottom: 20px; */
+  position: relative;
+}
+.aboutProgramItemBodyImageMascot {
+  width: 200px;
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  border-radius: 0;
+  margin: 0 auto;
+}
+
+.aboutProgramItemBodyHeading {
+  color: var(--Font-600, #5d5d5d);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  padding-top: 13px;
+}
+
+.aboutProgramItemBodyDescription {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+  color: var(--Font-600, #5d5d5d);
+  text-overflow: ellipsis;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 24px */
+  text-align: left;
+}
+.aboutProgramItemBodyAction {
+  padding-top: 20px;
+  position: relative;
+  bottom: 0;
+  height: auto;
+}
+.aboutProgramItemBodyActionBtn {
+  width: 100%;
+  height: 44px;
+  text-align: center;
+  border: none;
+  border-radius: 8px !important;
+  background-size: 300% 100%;
+  background-color: #d71149 !important;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+
+  overflow: hidden;
+  color: var(--Font-600, #fff) !important;
+  text-overflow: ellipsis;
+  font-family: Poppins;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: capitalize;
+}
+.aboutProgramItemBodyActionBtn:focus {
+  outline: none;
 }
 
 @media (min-width: 1200px) {
