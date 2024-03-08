@@ -52,3 +52,39 @@ body {
   height: auto;
   margin: 0 auto;
 }
+
+.search-empty {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.search-empty__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.search-empty__content-logo {
+  width: 342px;
+  height: 342px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.search-empty__content-heading {
+  color: var(--Font-800, #454545);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 30px */
+  text-transform: capitalize;
+}

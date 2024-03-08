@@ -7,6 +7,7 @@ import {
 import SearchBar from '../searchBar/SearchBar';
 import DropdownButtonSelectLanguange from '../button/DropdownButtonSelectLanguange';
 import '@/assets/styles/top-navigation.css';
+import { programCategory } from '../../../utils/data/programsData';
 
 export default function TopNavigation() {
   return (
@@ -70,12 +71,26 @@ export default function TopNavigation() {
               </Dropdown.Menu>
             </Dropdown>
 
-            <Link
-              className="nav-link custom-app-top-navigation__link mx-xl-3 mx-md-2"
-              to="/"
+            <NavDropdown
+              className="custom-app-top-navigation__link-dropdown  mx-xl-3 mx-md-2"
+              title="Program"
+              id="basic-nav-dropdown"
+              autoClose="outside"
+              renderMenuOnMount={true}
             >
-              Program
-            </Link>
+              <div className="d-flex flex-column justify-content-start g-3 pt-3">
+                {programCategory.map((program) => (
+                  <Link
+                    key={program.id}
+                    className="dropdown-item mb-2"
+                    to={`/program/${program.slug}`}
+                    aria-label="Berita kategori"
+                  >
+                    {program.name}
+                  </Link>
+                ))}
+              </div>
+            </NavDropdown>
             <Link
               className="nav-link custom-app-top-navigation__link mx-xl-3 mx-md-2"
               to="/podcasts"

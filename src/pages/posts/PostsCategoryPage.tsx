@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from '@/assets/styles/modules/posts.module.css';
 import { Col, Container, Row } from 'react-bootstrap';
-import PopularPostItemList from '../../components/modules/articles/RelatePosts/PopularPostItemList';
 import { useParams } from 'react-router-dom';
-import PostsRowItemList from '../../components/modules/posts/PostsRowItemList';
 import { posts } from '../../utils/data/postsData';
 import { categories } from '../../utils/data/categoryPostsData';
+import PopularPostItemList from '../../components/modules/articles/RelatePosts/PopularPostItemList';
+import PostsRowItemList from '../../components/modules/posts/PostsRowItemList';
 
 const PostsCategoryPage: React.FC = () => {
   const { categoryId } = useParams();
