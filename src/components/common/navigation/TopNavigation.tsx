@@ -1,15 +1,19 @@
-import { Navbar, Nav, Container, NavDropdown, Dropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
+import { Link, useLocation } from 'react-router-dom';
 import {
   parentCategories,
   categories,
 } from '../../../utils/data/categoryPostsData';
 import SearchBar from '../searchBar/SearchBar';
 import DropdownButtonSelectLanguange from '../button/DropdownButtonSelectLanguange';
-import '@/assets/styles/top-navigation.css';
 import { programCategory } from '../../../utils/data/programsData';
+import '@/assets/styles/top-navigation.css';
 
 export default function TopNavigation() {
+  const location = useLocation();
+  const pathParts = location.pathname.split('/');
+  const postName = pathParts[pathParts.length - 1];
+
   return (
     <Navbar expand="lg" fixed="top" className="custom-app-top-navigation">
       <Container>
@@ -29,7 +33,11 @@ export default function TopNavigation() {
           {/* Show navigation link on screen large or high */}
           <Nav className=" d-flex justify-content-arround g-2 d-none d-lg-flex d-xl-flex">
             <Link
-              className="nav-link custom-app-top-navigation__link custom-app-top-navigation__link-active  mx-xl-3 mx-md-2 "
+              className={`nav-link custom-app-top-navigation__link  mx-xl-3 mx-md-2 ${
+                location.pathname === '/'
+                  ? 'custom-app-top-navigation__link-active '
+                  : ''
+              }`}
               to="/"
             >
               Beranda
@@ -38,7 +46,12 @@ export default function TopNavigation() {
             <Dropdown className="d-inline mx-2">
               <Dropdown.Toggle
                 id="dropdown-autoclose-true"
-                className="custom-dropdown-toggle"
+                className={`custom-dropdown-toggle ${
+                  location.pathname === '/posts' ||
+                  location.pathname === `/posts/${postName}`
+                    ? 'active'
+                    : ''
+                }`}
               >
                 Berita
               </Dropdown.Toggle>
@@ -57,7 +70,7 @@ export default function TopNavigation() {
                           .map((cat) => (
                             <Link
                               key={cat.id}
-                              className="custom-dropdown-megamenu__item"
+                              className={`custom-dropdown-megamenu__item`}
                               to={`/posts/${cat.slug}`}
                               aria-label="Berita kategori"
                             >
@@ -71,60 +84,84 @@ export default function TopNavigation() {
               </Dropdown.Menu>
             </Dropdown>
 
-            <NavDropdown
-              className="custom-app-top-navigation__link-dropdown  mx-xl-3 mx-md-2"
-              title="Program"
-              id="basic-nav-dropdown"
-            >
-              <div className="d-flex flex-column justify-content-start g-3 pt-3">
-                {programCategory.map((program) => (
-                  <Link
-                    key={program.id}
-                    className="dropdown-item mb-2"
-                    to={`/program/${program.slug}`}
-                    aria-label="Berita kategori"
-                  >
-                    {program.name}
-                  </Link>
-                ))}
-              </div>
-            </NavDropdown>
+            <Dropdown className="d-inline mx-2">
+              <Dropdown.Toggle
+                id="dropdown-autoclose-true"
+                className={`custom-dropdown-toggle ${
+                  location.pathname === '/program' ||
+                  location.pathname === `/program/${postName}`
+                    ? 'active'
+                    : ''
+                }`}
+              >
+                Program
+              </Dropdown.Toggle>
+              <Dropdown.Menu className="custom-dropdown-menu ">
+                <div className="d-flex flex-column justify-content-start g-3 pt-3">
+                  {programCategory.map((program) => (
+                    <Link
+                      key={program.id}
+                      className={`custom-dropdown-menu__item mb-3  `}
+                      to={`/program/${program.slug}`}
+                      aria-label="Berita kategori"
+                    >
+                      {program.name}
+                    </Link>
+                  ))}
+                </div>
+              </Dropdown.Menu>
+            </Dropdown>
+
             <Link
-              className="nav-link custom-app-top-navigation__link mx-xl-3 mx-md-2"
+              className={`nav-link custom-app-top-navigation__link mx-xl-3 mx-md-2 ${
+                location.pathname === '/podcast'
+                  ? 'custom-app-top-navigation__link-active '
+                  : ''
+              }`}
               to="/podcast"
             >
               Podcast
             </Link>
-            <NavDropdown
-              className="custom-app-top-navigation__link-dropdown  mx-xl-3 mx-md-2"
-              title="Lainnya"
-              id="basic-nav-dropdown"
-              autoClose="outside"
-            >
-              <div className="d-flex flex-column justify-content-start g-3 pt-3">
-                <Link
-                  className="dropdown-item mb-2"
-                  to="/about"
-                  aria-label="Berita kategori"
-                >
-                  Tentang Kami
-                </Link>
-                <Link
-                  className="dropdown-item mb-2"
-                  to="/contact"
-                  aria-label="Berita kategori"
-                >
-                  Hubungi Kami
-                </Link>
-                <Link
-                  className="dropdown-item mb-2"
-                  to="/contact"
-                  aria-label="Berita kategori"
-                >
-                  Daftar Pertanyaan (FAQ)
-                </Link>
-              </div>
-            </NavDropdown>
+            <Dropdown className="d-inline mx-2">
+              <Dropdown.Toggle
+                id="dropdown-autoclose-true"
+                className={`custom-dropdown-toggle ${
+                  location.pathname === '/about'
+                    ? 'active'
+                    : '' || location.pathname === '/contact'
+                    ? 'active'
+                    : ''
+                }`}
+              >
+                Lainnya
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu className="custom-dropdown-menu">
+                <div className="d-flex flex-column justify-content-start g-3 pt-3">
+                  <Link
+                    className="custom-dropdown-menu__item mb-3"
+                    to="/about"
+                    aria-label="Berita kategori"
+                  >
+                    Tentang Kami
+                  </Link>
+                  <Link
+                    className="custom-dropdown-menu__item mb-3"
+                    to="/contact"
+                    aria-label="Berita kategori"
+                  >
+                    Hubungi Kami
+                  </Link>
+                  <Link
+                    className="custom-dropdown-menu__item mb-3"
+                    to="/contact"
+                    aria-label="Berita kategori"
+                  >
+                    Daftar Pertanyaan (FAQ)
+                  </Link>
+                </div>
+              </Dropdown.Menu>
+            </Dropdown>
           </Nav>
 
           {/* Show navigation link on screen small  */}
