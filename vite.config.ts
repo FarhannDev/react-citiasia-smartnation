@@ -1,11 +1,27 @@
+/* eslint-disable prefer-const */
 import { defineConfig } from 'vite';
+import { optimizeCssModules } from 'vite-plugin-optimize-css-modules';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import react from '@vitejs/plugin-react';
 import imagemin from 'vite-plugin-imagemin';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // Konfigurasi pengembangan (development)
+  server: {
+    port: 3000, // Port server pengembangan
+    open: true, // Buka browser otomatis saat server berjalan
+    hmr: true, // Aktifkan Hot Module Replacement
+    proxy: {
+      // Konfigurasi proxy jika Anda membutuhkannya
+      // '/api': 'http://localhost:8080/api'
+    },
+  },
+
   plugins: [
     react(),
+    ViteImageOptimizer(),
+    optimizeCssModules(),
     imagemin({
       gifsicle: { optimizationLevel: 3 },
       optipng: { optimizationLevel: 5 },
@@ -18,7 +34,6 @@ export default defineConfig({
     alias: {
       '@': '/src', // Alias untuk direktori src
       components: '/src/components', // Alias untuk direktori komponen
-      // Tambahkan alias tambahan di sini sesuai kebutuhan Anda
     },
   },
 });
