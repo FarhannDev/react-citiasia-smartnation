@@ -25,7 +25,7 @@
 
 .app-search-bar-items .app-search-bar-item__input,
 input[type='search'] {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--Font-600, #5d5d5d);
   background-image: url('/icons/search.svg');
   background-repeat: no-repeat;
   background-size: 20px 20px;
@@ -41,4 +41,5 @@ input[type='search'] {
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  text-transform: capitalize;
 }

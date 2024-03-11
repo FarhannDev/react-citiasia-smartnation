@@ -1,18 +1,41 @@
+import { useState } from 'react';
 import { Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
-import { Link, useLocation } from 'react-router-dom';
+import {
+  Link,
+  NavigateFunction,
+  useLocation,
+  useNavigate,
+} from 'react-router-dom';
 import {
   parentCategories,
   categories,
 } from '../../../utils/data/categoryPostsData';
 import SearchBar from '../searchBar/SearchBar';
 import DropdownButtonSelectLanguange from '../button/DropdownButtonSelectLanguange';
-import { programCategory } from '../../../utils/data/programsData';
 import '@/assets/styles/top-navigation.css';
+import { programCategory } from '../../../utils/data/programsData';
+import SearchBarResult from '../searchBar/SearchBarResult';
 
 export default function TopNavigation() {
   const location = useLocation();
-  const pathParts = location.pathname.split('/');
-  const postName = pathParts[pathParts.length - 1];
+  const pathParts: string | string[] = location.pathname.split('/');
+  const postName: string | string[] = pathParts[pathParts.length - 1];
+  const navigate: NavigateFunction = useNavigate();
+
+  const [keyword, setKeyword] = useState<string>('');
+  const handleKeywordChange: (keyword: string) => void = (keyword: string) =>
+    setKeyword(keyword);
+  const onSubmitKeyword = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (keyword.length) {
+      setTimeout(() => {
+        navigate(`/search?keyword=${keyword.trim()}`);
+      }, 300);
+
+      setKeyword('');
+    }
+  };
 
   return (
     <Navbar expand="lg" fixed="top" className="custom-app-top-navigation">
@@ -199,7 +222,16 @@ export default function TopNavigation() {
           </Nav>
 
           <Nav className=" d-flex justify-content-arround align-items-center g-2 d-none d-lg-flex d-xl-flex ">
-            <SearchBar placeholderText="Mau cari berita apa?" />
+            <div className="position-relative">
+              <SearchBar
+                placeholderText="Mau cari berita apa?"
+                keyword={keyword}
+                keywordChange={handleKeywordChange}
+                onSubmitKeyword={onSubmitKeyword}
+              />
+
+              {keyword.length ? <SearchBarResult keyword={keyword} /> : null}
+            </div>
             <DropdownButtonSelectLanguange />
           </Nav>
         </Navbar.Collapse>

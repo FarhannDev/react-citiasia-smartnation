@@ -233,3 +233,36 @@ Section styling posts article list
     margin: 0 auto !important;
   }
 }
+
+/* 
+  search post section
+  
+*/
+.searchPostSection {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  padding-top: 7em;
+  padding-bottom: 5em;
+}
+.searchPostContainer {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+}
+.searchPostHeading {
+  color: var(--Font-600, #5d5d5d);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 28.8px */
+}
+@media (min-width: 1200px) {
+  .searchPostContainer {
+    width: 1200px !important;
+    margin: 0 auto !important;
+    height: auto;
+  }
+}
