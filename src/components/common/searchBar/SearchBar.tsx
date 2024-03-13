@@ -18,10 +18,7 @@ export default function SearchBar({
   return (
     <>
       <div className="position-relative">
-        <Form
-          onSubmit={onSubmitKeyword}
-          className=" app-search-bar-items d-none d-lg-block"
-        >
+        <Form onSubmit={onSubmitKeyword} className=" app-search-bar-items">
           <Form.Control
             value={keyword}
             onChange={(e) => keywordChange(e.target.value)}
