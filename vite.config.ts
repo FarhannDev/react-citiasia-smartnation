@@ -3,9 +3,9 @@ import { defineConfig } from 'vite';
 import { optimizeCssModules } from 'vite-plugin-optimize-css-modules';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { VitePWA } from 'vite-plugin-pwa';
-import { ViteMinifyPlugin } from 'vite-plugin-minify'
+import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 import imagemin from 'vite-plugin-imagemin';
 
 // https://vitejs.dev/config/
