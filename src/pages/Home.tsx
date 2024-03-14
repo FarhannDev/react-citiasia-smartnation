@@ -58,7 +58,7 @@ export default function Home() {
                   />
                 </Col>
                 <Col xl={7} lg={12} md={12}>
-                  <ArticleFigureColumnItemList posts={postsData} />
+                  <ArticleFigureColumnItemList posts={postsData.slice(2, 6)} />
                 </Col>
               </Row>
             </Container>

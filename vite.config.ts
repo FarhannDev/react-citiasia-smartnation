@@ -2,6 +2,9 @@
 import { defineConfig } from 'vite';
 import { optimizeCssModules } from 'vite-plugin-optimize-css-modules';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import { VitePWA } from 'vite-plugin-pwa';
+import { ViteMinifyPlugin } from 'vite-plugin-minify'
+
 import react from '@vitejs/plugin-react';
 import imagemin from 'vite-plugin-imagemin';
 
@@ -29,6 +32,8 @@ export default defineConfig({
       mozjpeg: { quality: 80 },
       webp: { quality: 75 },
     }),
+    VitePWA(),
+    ViteMinifyPlugin({}),
   ],
   resolve: {
     alias: {

@@ -4,6 +4,7 @@ import { teams } from '../../utils/data/teamsData';
 import { programCategory } from '../../utils/data/programsData';
 import styles from '@/assets/styles/modules/about.module.css';
 import MyComponent from '../../components/MyComponent';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function AboutIndexPage() {
   const programCategoryData: ProgramCategory[] = programCategory?.sort(
@@ -15,11 +16,10 @@ function AboutIndexPage() {
         <Container className={styles.sectionAboutSmartnationContainer}>
           <Row className="justify-content-start g-4 align-content-center">
             <Col xl={4} lg={5} md={12}>
-              <img
-                src="https://smartnation.id/wp-content/uploads/2021/10/imageedit_1_5835502938-300x167.png"
-                alt=""
-                loading="lazy"
+              <LazyLoadImage
+                alt="Citiasia Center for Smart Nation (CCSN)"
                 className={styles.aboutSmartnationLogo}
+                src="/images/smartnation/logo/sn_logo_2.png"
               />
             </Col>
             <Col xl={6} lg={7} md={12}>

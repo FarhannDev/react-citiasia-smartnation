@@ -10,7 +10,6 @@ const PostsArticleColumnItemList: React.FC<PostsArticleColumnItemListProps> = ({
     {posts.map((post) => (
       <MyComponent.PostsArticleColumnItem key={post.id} {...post} />
     ))}
-    ;
   </React.Suspense>
 );
 

@@ -79,7 +79,7 @@ export default function TopNavigation() {
 
             <Dropdown className="d-inline mx-2">
               <Dropdown.Toggle
-                id="dropdown-autoclose-true"
+                id="dropdown-autoclose-true-1"
                 className={`custom-dropdown-toggle ${
                   location.pathname === '/posts' ||
                   location.pathname === `/posts/${postName}`
@@ -121,7 +121,7 @@ export default function TopNavigation() {
 
             <Dropdown className="d-inline mx-2">
               <Dropdown.Toggle
-                id="dropdown-autoclose-true"
+                id="dropdown-autoclose-true-2"
                 className={`custom-dropdown-toggle ${
                   location.pathname === '/program' ||
                   location.pathname === `/program/${postName}`
@@ -159,7 +159,7 @@ export default function TopNavigation() {
             </Link>
             <Dropdown className="d-inline mx-2">
               <Dropdown.Toggle
-                id="dropdown-autoclose-true"
+                id="dropdown-autoclose-true-3"
                 className={`custom-dropdown-toggle ${
                   location.pathname === '/about'
                     ? 'active'

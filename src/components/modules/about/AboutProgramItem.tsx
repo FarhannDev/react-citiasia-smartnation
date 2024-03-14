@@ -21,7 +21,7 @@ const AboutProgramItem: React.FC<AboutProgramItemProps> = ({
           className={`${styles.aboutProgramItemBodyImageMascot} img-fluid`}
         />
 
-        <h3 className={styles.aboutProgramItemBodyHeading}>{parse(name)}</h3>
+        <div className={styles.aboutProgramItemBodyHeading}>{parse(name)}</div>
         <div className={styles.aboutProgramItemBodyDescription}>
           {parse(description)}
         </div>

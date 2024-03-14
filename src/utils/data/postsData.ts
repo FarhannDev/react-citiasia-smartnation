@@ -21,8 +21,7 @@ const posts: Posts[] = [
     ],
     comment_status: 'close',
     status: 'publish',
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-27-at-12.30.07.jpeg',
+    sourceImageUrl: '/images/smartnation/content/content_1.png',
     excerpt: `
       <p>Pemerintah Provinsi Jawa Barat resmi luncurkan Smart Jabar, sebuah ekosistem teknologi untuk Jabar yang terdiri dari E–Office, Dashboard Jabar dan Jabar Skytrek. Launching aplikasi ini diresmikan langsung oleh Sekretaris Daerah Provinsi Jawa Barat, Setiawan Wangsaatmaja, bertempat di Jabar Command Center, Gedung Sate, Kota Bandung, Rabu (5/4/2023).</p>
     `,
@@ -40,8 +39,7 @@ const posts: Posts[] = [
       'Smart City: Standar Nasional Indonesia (SNI) untuk Kota Cerdas'
     ),
     publishDate: new Date('21 December 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/12/21_Des-01-01-1536x896.png',
+    sourceImageUrl: '/images/smartnation/content/content_2.png',
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -67,8 +65,8 @@ const posts: Posts[] = [
       'Terapkan Smart Fisheries Village (SFV) pada Industri Kelautan di Indonesia'
     ),
     publishDate: new Date('20 December 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/12/WEB-20-1536x896.jpg',
+    sourceImageUrl: '/images/smartnation/content/content_3.png',
+
     categories: [
       {
         name: 'Artikel',
@@ -101,8 +99,8 @@ const posts: Posts[] = [
       'Teknologi VAR dalam Pertandingan Sepak Bola Piala Dunia 2022'
     ),
     publishDate: new Date('16 December 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/12/artikel16-1536x896.jpg',
+    sourceImageUrl: '/images/smartnation/content/content_4.png',
+
     comment_status: 'open',
     status: 'publish',
     categories: [
@@ -132,8 +130,8 @@ const posts: Posts[] = [
       'Wamenkes Ingin Mendorong Inovasi Teknologi di Bidang Kesehatan'
     ),
     publishDate: new Date('16 December 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/12/Artikel-16-Desember-1-1536x896.png',
+    sourceImageUrl: '/images/smartnation/content/content_5.png',
+
     comment_status: 'open',
     status: 'publish',
     categories: [
@@ -170,8 +168,8 @@ const posts: Posts[] = [
     title: 'Uang Digital RI Akan Rilis Tahun Depan',
     slug: generateCreateSlug('Uang Digital RI Akan Rilis Tahun Depan'),
     publishDate: new Date('13 December 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/12/14_Des-01-01-1-1536x896.png',
+    sourceImageUrl: '/images/smartnation/content/content_6.png',
+
     comment_status: 'open',
     status: 'publish',
     categories: [
@@ -200,8 +198,8 @@ const posts: Posts[] = [
       'Tingkatkan SDM Daerah Melalui Seminar Smart City 2022'
     ),
     publishDate: new Date('13 December 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/12/Artikel13-1536x896.jpg',
+    sourceImageUrl: '/images/smartnation/content/content_7.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -238,8 +236,8 @@ const posts: Posts[] = [
       'KPK ingin Menekan Korupsi dengan Digitalisasi Sistem Pemerintahan'
     ),
     publishDate: new Date('10 December 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/12/09_Desember-01-01-01-1536x896.png',
+    sourceImageUrl: '/images/smartnation/content/content_8.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -271,8 +269,8 @@ const posts: Posts[] = [
       'Gunakan Teknologi RFID Untuk Mendeteksi Plat Nomor Kendaraan'
     ),
     publishDate: new Date('8 December 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/12/8-des-web-1024x597.png',
+    sourceImageUrl: '/images/smartnation/content/content_9.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -308,8 +306,8 @@ const posts: Posts[] = [
       'Kominfo Ingin Dunia Usaha Ikut Mendorong Kolaborasi dalam Inisiatif Smart City'
     ),
     publishDate: new Date('8 December 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/12/08_des-01-1536x896.png',
+    sourceImageUrl: '/images/smartnation/content/content_10.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -346,8 +344,8 @@ const posts: Posts[] = [
       'Dalam Kenalkan Energi Terbarukan, Indonesia Gelar Pameran Teknologi Smart City'
     ),
     publishDate: new Date('7 December 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/12/webITE-05-780x450.jpg',
+    sourceImageUrl: '/images/smartnation/content/content_11.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -383,8 +381,8 @@ const posts: Posts[] = [
       'Konsep Smart Living, Mengedepankan Keamanan dan Kenyamanan'
     ),
     publishDate: new Date('8 December 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/12/Desain_Web_Artikel_02_Des-01-01-780x450.png',
+    sourceImageUrl: '/images/smartnation/content/content_12.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -421,8 +419,8 @@ const posts: Posts[] = [
       'IMPLEMENTASI SPONGE CITY DALAM PEMBANGUNAN IBU KOTA NUSANTARA (IKN)'
     ),
     publishDate: new Date('1 December 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/12/spongecity-1-2-1536x896.png',
+    sourceImageUrl: '/images/smartnation/content/content_13.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -461,8 +459,8 @@ const posts: Posts[] = [
     title: 'Qatar Gunakan Serba AI di Piala Dunia 2022',
     slug: generateCreateSlug('Qatar Gunakan Serba AI di Piala Dunia 2022'),
     publishDate: new Date('30 November 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/11/desain_29_Nov-01-1536x896.png',
+    sourceImageUrl: '/images/smartnation/content/content_14.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -495,8 +493,8 @@ const posts: Posts[] = [
       'Implementasi Smart Branding, Tidak Hanya Soal Wisata'
     ),
     publishDate: new Date('25 November 2022'),
-    sourceImageUrl:
-      'https://drive.google.com/uc?export=download&id=1LDmsUjoKixpG_yDD9vV5afobbW9VsWtG',
+    sourceImageUrl: '/images/smartnation/content/content_15.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -530,8 +528,8 @@ const posts: Posts[] = [
       'Siap-siap, di Pertengahan November Tahun Ini, ISNA 2022 Akan Digelar!'
     ),
     publishDate: new Date('25 November 2022'),
-    sourceImageUrl:
-      'https://drive.google.com/uc?export=download&id=1cDzj6ZUrHyGEAeXzh2P-3AjWwUonmtqc',
+    sourceImageUrl: '/images/smartnation/content/content_16.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -568,8 +566,8 @@ const posts: Posts[] = [
       'Inovasi Layanan Drive Thru Kabupaten Batang Sebagai Pemenang ISNA 2020'
     ),
     publishDate: new Date('7 October 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/10/web7okt-1536x896.jpg',
+    sourceImageUrl: '/images/smartnation/content/content_17.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -611,8 +609,8 @@ const posts: Posts[] = [
       'Inovasi Cek Bantuan Sosial Covid-19 Banyuwangi Raih Indonesia Smart Nation Award 2020'
     ),
     publishDate: new Date('12 October 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2020/10/ilustrasi-cek-bantuan-sosial-dalam-penanganan-covid-19-di-banyuwangi-360x220-1.jpg',
+    sourceImageUrl: '/images/smartnation/content/content_18.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -648,8 +646,8 @@ const posts: Posts[] = [
       'DPMPTSP Kabupaten Blitar Raih Penghargaan “Smart Branding” 2020'
     ),
     publishDate: new Date('12 October 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2020/10/Smart-Branding-1000x520-750x460-1-750x450.jpeg',
+    sourceImageUrl: '/images/smartnation/content/content_19.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -684,8 +682,8 @@ const posts: Posts[] = [
       'PENGUATAN KAMPUNG TANGGUH DI KOTA PROBOLINGGO MENDAPAT APRESIASI ISNA 2020'
     ),
     publishDate: new Date('12 October 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2020/10/IMG-20201005-WA0036-750x460-1-750x450.jpg',
+    sourceImageUrl: '/images/smartnation/content/content_20.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [],
@@ -703,8 +701,8 @@ const posts: Posts[] = [
       'Pemkot Parepare Raih Penghargaan Smart Nation Award 2020'
     ),
     publishDate: new Date('12 October 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2020/10/IMG-20201005-WA0115-750x460-1-750x450.jpg',
+    sourceImageUrl: '/images/smartnation/content/content_21.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [],
@@ -721,8 +719,8 @@ const posts: Posts[] = [
       'KONSEP FOREST SMART CITY MENJADI ENERGI TERBARUKAN DI IKN'
     ),
     publishDate: new Date('3 November 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/11/web2-780x450.png',
+    sourceImageUrl: '/images/smartnation/content/content_22.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -746,8 +744,8 @@ const posts: Posts[] = [
       'PLATFORM DIGITAL JAGAT NUSANTARA MEMBANGUN KOTA MENJADI LEBIH MODERN'
     ),
     publishDate: new Date('3 November 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/11/JAGAT-780x450.jpg',
+    sourceImageUrl: '/images/smartnation/content/content_23.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
@@ -774,8 +772,8 @@ const posts: Posts[] = [
       'Konsep Smart Mobility Sebagai Upaya Pengembangan Transportasi di DKI Jakarta'
     ),
     publishDate: new Date('7 November 2022'),
-    sourceImageUrl:
-      'https://smartnation.id/wp-content/uploads/2022/11/web4-04-04-780x450.jpg',
+    sourceImageUrl: '/images/smartnation/content/content_24.png',
+
     status: 'publish',
     comment_status: 'open',
     categories: [
