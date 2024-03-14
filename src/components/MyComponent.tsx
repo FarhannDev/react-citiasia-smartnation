@@ -1,6 +1,14 @@
 import loadable from '@loadable/component';
 
 const MyComponent = (() => {
+  const FooterNavigation = loadable(
+    () => import('../components/common/navigation/FooterNavigation')
+  );
+
+  const TopNavigation = loadable(
+    () => import('../components/common/navigation/TopNavigation')
+  );
+
   const HeroBackgroundSwipe = loadable(
     () => import('./common/heroBackground/HeroBackgroundSwiper')
   );
@@ -243,6 +251,8 @@ const MyComponent = (() => {
   );
 
   return {
+    TopNavigation,
+    FooterNavigation,
     HeroBackgroundSwipe,
     PostsArticleRowItem,
     PostsArticleRowItemList,
