@@ -4,6 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { program, programCategory } from '../../utils/data/programsData';
 import styles from '@/assets/styles/modules/programs.module.css';
 import MyComponent from '../../components/MyComponent';
+import { Helmet } from 'react-helmet';
 
 const ProgramIndexPage = () => {
   const { categoryId } = useParams();
@@ -55,6 +56,18 @@ const ProgramIndexPage = () => {
 
   return (
     <>
+      <Helmet
+        encodeSpecialCharacters={true}
+        title="Program"
+        titleTemplate="%s - Smartnation"
+        async
+      >
+        <meta
+          property="og:description"
+          content="Citiasia Center for Smart Nation (CCSN) merupakan salah satu sayap strategis dari Citiasia Inc. dalam menyebarkan semangat membangun bangsa menuju Indonesia Smart Nation"
+        />
+        <meta property="og:type" content="article" />
+      </Helmet>
       <section className={styles.sectionProgramSmartnation}>
         <Container className={styles.programSmartnationContainer}>
           <Row className="justify-content-between align-items-start g-5">

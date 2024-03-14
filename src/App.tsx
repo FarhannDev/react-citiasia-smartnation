@@ -10,10 +10,23 @@ import ProgramIndexPage from './pages/programs/ProgramIndexPage';
 import ProgramDetailPage from './pages/programs/ProgramDetailPage';
 import SearchTermIndexPage from './pages/searchTerm/SearchTermIndexPage';
 import PodcastDetailPage from './pages/podcasts/PodcastDetailPage';
+import { Helmet } from 'react-helmet';
 
 export default function App() {
   const publicRoutes = (
     <AppLayout>
+      <Helmet
+        encodeSpecialCharacters={true}
+        title="Beranda"
+        titleTemplate="%s - Smartnation"
+        async
+      >
+        <meta
+          property="og:description"
+          content="Citiasia Center for Smart Nation (CCSN) merupakan salah satu sayap strategis dari Citiasia Inc. dalam menyebarkan semangat membangun bangsa menuju Indonesia Smart Nation"
+        />
+        <meta property="og:type" content="article" />
+      </Helmet>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<PostsDetailsPage />} />

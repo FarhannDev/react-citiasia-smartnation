@@ -2,10 +2,24 @@ import { Col, Container, Row } from 'react-bootstrap';
 import appStyles from '@/assets/styles/modules/app.module.css';
 import styles from '@/assets/styles/modules/contact.module.css';
 import MyComponent from '../../components/MyComponent';
+import { Helmet } from 'react-helmet';
 
 const ContactIndexPage = () => {
   return (
     <>
+      <Helmet
+        encodeSpecialCharacters={true}
+        title="Hubungi kami"
+        titleTemplate="%s - Smartnation"
+        async
+      >
+        <meta
+          property="og:description"
+          content="Citiasia Center for Smart Nation (CCSN) merupakan salah satu sayap strategis dari Citiasia Inc. dalam menyebarkan semangat membangun bangsa menuju Indonesia Smart Nation"
+        />
+        <meta property="og:type" content="article" />
+      </Helmet>
+
       <section className={styles.sectionContactSmartnation}>
         <Container className={styles.contactSmartnationContainer}>
           {/* <h1 className={styles.contactSmartnationHeading}>Hubungi Kami</h1> */}

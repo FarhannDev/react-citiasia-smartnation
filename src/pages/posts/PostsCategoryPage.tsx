@@ -5,6 +5,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { posts } from '../../utils/data/postsData';
 import { categories } from '../../utils/data/categoryPostsData';
+import { Helmet } from 'react-helmet';
 
 const PopularPostItemList = loadable(
   () =>
@@ -35,6 +36,19 @@ const PostsCategoryPage: React.FC = () => {
 
   return (
     <>
+      <Helmet
+        encodeSpecialCharacters={true}
+        title="Berita"
+        titleTemplate="%s - Smartnation"
+        async
+      >
+        <meta
+          property="og:description"
+          content="Citiasia Center for Smart Nation (CCSN) merupakan salah satu sayap strategis dari Citiasia Inc. dalam menyebarkan semangat membangun bangsa menuju Indonesia Smart Nation"
+        />
+        <meta property="og:type" content="article" />
+      </Helmet>
+
       <section className={styles.sectionPostSmartnation}>
         <Container className={styles.postSmartnationContainer}>
           <Row className="justify-content-between align-items-start g-5">

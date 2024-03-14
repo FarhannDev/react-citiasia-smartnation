@@ -1,10 +1,11 @@
 import { Col, Container, Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import { partners } from '../../utils/data/partnerData';
 import { teams } from '../../utils/data/teamsData';
 import { programCategory } from '../../utils/data/programsData';
-import styles from '@/assets/styles/modules/about.module.css';
-import MyComponent from '../../components/MyComponent';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import MyComponent from '../../components/MyComponent';
+import styles from '@/assets/styles/modules/about.module.css';
 
 function AboutIndexPage() {
   const programCategoryData: ProgramCategory[] = programCategory?.sort(
@@ -12,6 +13,11 @@ function AboutIndexPage() {
   );
   return (
     <>
+      <Helmet>
+        <title>Citiasia Center for Smart Nation (CCSN)</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
+
       <section className={styles.sectionAboutSmartnation}>
         <Container className={styles.sectionAboutSmartnationContainer}>
           <Row className="justify-content-start g-4 align-content-center">
