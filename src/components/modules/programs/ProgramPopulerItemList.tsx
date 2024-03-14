@@ -1,7 +1,7 @@
 import { Col, Row } from 'react-bootstrap';
 import styles from '@/assets/styles/modules/popular-posts.module.css';
 import React from 'react';
-import ProgramPopulerItem from './ProgramPopulerItem';
+import MyComponent from '../../MyComponent';
 
 type ProgramPopulerItemListProps = {
   heading: string;
@@ -18,7 +18,11 @@ const ProgramPopulerItemList: React.FC<ProgramPopulerItemListProps> = ({
         <h1 className={styles.popularPostsItemHeading}>{heading}</h1>
         <div className="d-flex flex-column pt-3">
           {programs?.map((program, idx) => (
-            <ProgramPopulerItem key={program.id} index={idx + 1} {...program} />
+            <MyComponent.ProgramPopulerItem
+              key={program.id}
+              index={idx + 1}
+              {...program}
+            />
           ))}
         </div>
       </Col>

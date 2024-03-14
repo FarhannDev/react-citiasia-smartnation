@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from '@/assets/styles/modules/posts.module.css';
-import PostDetailsCommentItemInput from './PostDetailsCommentItemInput';
-import PostDetailsUsersCommentItemList from './PostDetailsUsersCommentItemList';
+import MyComponent from '../../../MyComponent';
 
 const PostDetailsCommentItem: React.FC = () => {
   return (
@@ -10,10 +9,10 @@ const PostDetailsCommentItem: React.FC = () => {
         <h3 className={styles.postDetailsCommentItemFormHeading}>
           Komentar (3)
         </h3>
-        <PostDetailsCommentItemInput />
+        <MyComponent.PostDetailsCommentItemInput />
       </div>
 
-      <PostDetailsUsersCommentItemList />
+      <MyComponent.PostDetailsUsersCommentItemList />
     </div>
   );
 };

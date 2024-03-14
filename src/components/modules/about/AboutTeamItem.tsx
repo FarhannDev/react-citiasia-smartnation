@@ -19,7 +19,6 @@ function AboutTeamItem({
     <Figure className="mb-5">
       <LazyLoadImage
         alt={name}
-        loading="lazy"
         effect="blur"
         src={sourceImageUrl}
         className={`${styles.sectionAboutSmartnationTeamProfileImage} img-fluid`}

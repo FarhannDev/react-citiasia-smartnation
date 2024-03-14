@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgramRowItem from './ProgramRowItem';
+import MyComponent from '../../MyComponent';
 
 type ProgramRowItemListProps = {
   programs: Program[];
@@ -13,7 +13,11 @@ const ProgramRowItemList: React.FC<ProgramRowItemListProps> = ({
   return (
     <div className="d-flex flex-column py-5">
       {programs?.map((program) => (
-        <ProgramRowItem key={program.id} {...program} catLabel={ctaLabel} />
+        <MyComponent.ProgramRowItem
+          key={program.id}
+          {...program}
+          catLabel={ctaLabel}
+        />
       ))}
     </div>
   );

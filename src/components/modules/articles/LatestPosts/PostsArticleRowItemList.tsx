@@ -1,7 +1,5 @@
 import React from 'react';
-import loadable from '@loadable/component';
-
-const PostsArticleRowItem = loadable(() => import('./PostsArticleRowItem'));
+import MyComponent from '../../../MyComponent';
 
 type PostsArticleRowItemListProps = {
   posts: Posts[];
@@ -10,7 +8,9 @@ type PostsArticleRowItemListProps = {
 const PostsArticleRowItemList: React.FC<PostsArticleRowItemListProps> = ({
   posts,
 }) => {
-  return posts.map((post) => <PostsArticleRowItem key={post.id} {...post} />);
+  return posts.map((post) => (
+    <MyComponent.PostsArticleRowItem key={post.id} {...post} />
+  ));
 };
 
 export default PostsArticleRowItemList;

@@ -20,7 +20,7 @@ const ArticleFigureColumnItem: React.FC<ArticleFigureColumnItemProps> = ({
       <Link to={`/${slug}`} aria-label="Baca selengkapnya">
         <LazyLoadImage
           className={`${styles.articleFigureColumnItemImage}  img-fluid`}
-          alt="171x180"
+          alt={title}
           effect="blur"
           src={sourceImageUrl}
         />

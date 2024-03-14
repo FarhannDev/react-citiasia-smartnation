@@ -2,24 +2,8 @@ import { useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';
 import { program, programCategory } from '../../utils/data/programsData';
-import loadable from '@loadable/component';
 import styles from '@/assets/styles/modules/programs.module.css';
-
-const ProgramIntroduction = loadable(
-  () => import('../../components/modules/programs/ProgramIntroduction')
-);
-const ProgramRowItemList = loadable(
-  () => import('../../components/modules/programs/ProgramRowItemList')
-);
-const ProgramPopulerItemList = loadable(
-  () => import('../../components/modules/programs/ProgramPopulerItemList')
-);
-const SearchItem = loadable(
-  () => import('../../components/common/search/SearchItem')
-);
-const SearchEmpty = loadable(
-  () => import('../../components/common/empty/SearchEmpty')
-);
+import MyComponent from '../../components/MyComponent';
 
 const ProgramIndexPage = () => {
   const { categoryId } = useParams();
@@ -78,7 +62,7 @@ const ProgramIndexPage = () => {
               <h1 className={styles.programSmartnationHeadingPrimary}>
                 Tentang Kegiatan {programCategoryData?.name}
               </h1>
-              <ProgramIntroduction
+              <MyComponent.ProgramIntroduction
                 progHeading={`Apa itu ${programCategoryData?.name}?`}
                 progDescription={programCategoryData?.description}
               />
@@ -88,7 +72,7 @@ const ProgramIndexPage = () => {
                   Postingan terkait {programCategoryData?.name}
                 </h4>
 
-                <SearchItem
+                <MyComponent.SearchItem
                   placeholder={`Cari kegiatan ${programCategoryData?.name}...`}
                   keyword={keyword}
                   keywordChange={onKeywordChangeHandler}
@@ -100,13 +84,13 @@ const ProgramIndexPage = () => {
                 ) : (
                   <>
                     {keyword && !programListData.length && (
-                      <SearchEmpty title="Pencarian tidak ditemukan." />
+                      <MyComponent.SearchEmpty title="Pencarian tidak ditemukan." />
                     )}
 
                     {!keyword && !programData.length && (
-                      <SearchEmpty title="Belum ada postingan." />
+                      <MyComponent.SearchEmpty title="Belum ada postingan." />
                     )}
-                    <ProgramRowItemList
+                    <MyComponent.ProgramRowItemList
                       programs={programListData}
                       ctaLabel={programCategoryData?.name}
                     />
@@ -115,7 +99,7 @@ const ProgramIndexPage = () => {
               </div>
             </Col>
             <Col lg={12} xl={4}>
-              <ProgramPopulerItemList
+              <MyComponent.ProgramPopulerItemList
                 programs={popularProgramData}
                 heading="Terpopuler"
               />

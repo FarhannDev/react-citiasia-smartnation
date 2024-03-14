@@ -12,8 +12,7 @@ const AboutTeamPartnerItem = ({
       <LazyLoadImage
         width={90}
         height={90}
-        loading="lazy"
-        // effect="black-and-white"
+        effect="blur"
         alt={name}
         title={name}
         src={sourceImageUrl}

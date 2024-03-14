@@ -1,9 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import styles from '@/assets/styles/modules/podcasts.module.css';
 import loadable from '@loadable/component';
-
-import PodcastRowItemList from '../../components/modules/podcasts/PodcastRowItemList';
-import PodcastPopulerItemList from '../../components/modules/podcasts/PodcastPopulerItemList';
+import MyComponent from '../../components/MyComponent';
 
 const PodcastSearchBar = loadable(
   () => import('../../components/modules/podcasts/PodcastSearchBar')
@@ -27,11 +25,11 @@ const PodcastsIndexPage = () => {
             </Row>
             {/* Search Item End */}
 
-            <PodcastRowItemList />
+            <MyComponent.PodcastRowItemList />
           </Col>
 
           <Col xl={4} lg={4} md>
-            <PodcastPopulerItemList />
+            <MyComponent.PodcastPopulerItemList />
           </Col>
         </Row>
 

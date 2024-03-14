@@ -1,10 +1,7 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import PostDetailsCommentItem from './PostDetailsCommentItem';
-import PostDetailsItem from './PostDetailsItem';
-import PopularPostItemList from '../../articles/RelatePosts/PopularPostItemList';
-import PostDetailsItemRecomendation from './postDetailsItemRecomendation';
 import { posts } from '../../../../utils/data/postsData';
+import MyComponent from '../../../MyComponent';
 
 type PostsDetailsProps = { post: Posts | undefined };
 
@@ -16,12 +13,15 @@ const PostsDetails: React.FC<PostsDetailsProps> = ({ post }) => {
   return (
     <Row className="justify-content-start align-content-start g-5">
       <Col xl={8} lg={12}>
-        <PostDetailsItem post={post} />
-        <PostDetailsItemRecomendation />
-        <PostDetailsCommentItem />
+        <MyComponent.PostDetailsItem post={post} />
+        <MyComponent.PostDetailsItemRecomendation />
+        <MyComponent.PostDetailsCommentItem />
       </Col>
       <Col xl={4} lg={12}>
-        <PopularPostItemList posts={popularPostData} heading="Terpopuler" />
+        <MyComponent.PopularPostItemList
+          posts={popularPostData}
+          heading="Terpopuler"
+        />
       </Col>
     </Row>
   );

@@ -4,7 +4,7 @@ import { posts } from '../../utils/data/postsData';
 import styles from '@/assets/styles/modules/app.module.css';
 import PostsRowItemList from '../../components/modules/posts/PostsRowItemList';
 import PopularPostItemList from '../../components/modules/articles/RelatePosts/PopularPostItemList';
-import SearchEmpty from '../../components/common/empty/SearchEmpty';
+import MyComponent from '../../components/MyComponent';
 
 const SearchTermIndexPage = () => {
   const location = useLocation();
@@ -40,7 +40,7 @@ const SearchTermIndexPage = () => {
             {postsData.length ? (
               <PostsRowItemList posts={postsData} ctaLabel="Berita" />
             ) : (
-              <SearchEmpty title="Pencarian tidak ditemukan." />
+              <MyComponent.SearchEmpty title="Pencarian tidak ditemukan." />
             )}
           </Col>
           <Col lg={12} xl={4}>

@@ -1,7 +1,7 @@
 import { Col, Row } from 'react-bootstrap';
-import ArticleCategoryRowItem from './ArticleCategoryRowItem';
 import styles from '@/assets/styles/modules/ArticleCategoryRowItem.module.css';
 import React from 'react';
+import MyComponent from '../../../MyComponent';
 
 type ArticleCategoryRowItemListProps = {
   posts: Posts[];
@@ -23,7 +23,11 @@ const ArticleCategoryRowItemList: React.FC<ArticleCategoryRowItemListProps> = ({
               <div className={styles.articleCategoryRowItemHeadingUnderline} />
             </div>
             {posts.slice(0, 4).map((post, idx) => (
-              <ArticleCategoryRowItem key={post.id} index={idx + 1} {...post} />
+              <MyComponent.ArticleCategoryRowItem
+                key={post.id}
+                index={idx + 1}
+                {...post}
+              />
             ))}
           </div>
         </Col>

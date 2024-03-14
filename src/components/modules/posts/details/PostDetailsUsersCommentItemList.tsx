@@ -1,12 +1,12 @@
 import styles from '@/assets/styles/modules/posts.module.css';
-import PostDetailsUsersCommentItem from './PostDetailsUsersCommentItem';
+import MyComponent from '../../../MyComponent';
 
 const PostDetailsUsersCommentItemList = () => {
   return (
     <div className={styles.postDetailsCommentItemUserList}>
-      <PostDetailsUsersCommentItem />
-      <PostDetailsUsersCommentItem />
-      <PostDetailsUsersCommentItem />
+      <MyComponent.PostDetailsUsersCommentItem />
+      <MyComponent.PostDetailsUsersCommentItem />
+      <MyComponent.PostDetailsUsersCommentItem />
     </div>
   );
 };

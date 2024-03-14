@@ -2,6 +2,7 @@
 .sectionAboutSmartnation {
   width: 100%;
   height: auto;
+  overflow: hidden;
   background: var(--Primary-800, #a60b40);
   padding-top: 7em;
   padding-bottom: 5em;
@@ -11,6 +12,7 @@
   width: 100%;
   margin: 0 auto;
   height: auto;
+  overflow: hidden;
 }
 
 .aboutSmartnationHeading {

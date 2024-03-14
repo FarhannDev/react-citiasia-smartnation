@@ -1,7 +1,6 @@
 import styles from '@/assets/styles/modules/posts.module.css';
-import ArticleCategoryRowItem from '../../articles/categoryArticle/ArticleCategoryRowItem';
-import PostsPopulerFigureColumnItem from '../PostsPopulerFigureColumnItem';
 import { posts } from '../../../../utils/data/postsData';
+import MyComponent from '../../../MyComponent';
 
 const PostDetailsItemRecomendation = () => {
   const popularPostData: Posts[] = posts
@@ -22,7 +21,10 @@ const PostDetailsItemRecomendation = () => {
           <div className="row justify-content-start g-3 pt-4">
             {popularPostData.map((post, index) => (
               <div key={post.id} className="col-lg-6 col-xl-6 col-md-12">
-                <ArticleCategoryRowItem index={index + 1} {...post} />
+                <MyComponent.ArticleCategoryRowItem
+                  index={index + 1}
+                  {...post}
+                />
               </div>
             ))}
           </div>
@@ -35,7 +37,7 @@ const PostDetailsItemRecomendation = () => {
           <div className="row justify-content-start g-3 align-content-start pt-4">
             {postsData.map((post) => (
               <div key={post.id} className="col-lg-4 col-xl-4 col-md-6">
-                <PostsPopulerFigureColumnItem {...post} />
+                <MyComponent.PostsPopulerFigureColumnItem {...post} />
               </div>
             ))}
           </div>

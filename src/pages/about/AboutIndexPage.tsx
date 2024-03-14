@@ -1,20 +1,9 @@
-import loadable from '@loadable/component';
 import { Col, Container, Row } from 'react-bootstrap';
 import { partners } from '../../utils/data/partnerData';
 import { teams } from '../../utils/data/teamsData';
 import { programCategory } from '../../utils/data/programsData';
 import styles from '@/assets/styles/modules/about.module.css';
-
-const AboutProgramItemList = loadable(
-  () => import('../../components/modules/about/AboutProgramItemList')
-);
-
-const AboutTeamItemList = loadable(
-  () => import('../../components/modules/about/AboutTeamItemList')
-);
-const AboutTeamPartnerItemList = loadable(
-  () => import('../../components/modules/about/AboutTeamPartnerItemList')
-);
+import MyComponent from '../../components/MyComponent';
 
 function AboutIndexPage() {
   const programCategoryData: ProgramCategory[] = programCategory?.sort(
@@ -67,7 +56,7 @@ function AboutIndexPage() {
             Program unggulan smart nation
           </h1>
 
-          <AboutProgramItemList programs={programCategoryData} />
+          <MyComponent.AboutProgramItemList programs={programCategoryData} />
         </Container>
       </section>
 
@@ -79,7 +68,7 @@ function AboutIndexPage() {
                 Mitra Publik Kami
               </h1>
 
-              <AboutTeamPartnerItemList
+              <MyComponent.AboutTeamPartnerItemList
                 partners={partners.filter(
                   (partner) => partner.type === 'mitra_public'
                 )}
@@ -92,7 +81,7 @@ function AboutIndexPage() {
                 Mitra Swasta Kami
               </h1>
 
-              <AboutTeamPartnerItemList
+              <MyComponent.AboutTeamPartnerItemList
                 partners={partners.filter(
                   (partner) => partner.type === 'mitra_swasta'
                 )}
@@ -108,7 +97,7 @@ function AboutIndexPage() {
             Tim Smart Nation
           </h1>
 
-          <AboutTeamItemList teams={teams} />
+          <MyComponent.AboutTeamItemList teams={teams} />
         </Container>
       </section>
     </>

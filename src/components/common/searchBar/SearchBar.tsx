@@ -1,7 +1,5 @@
 import { Form } from 'react-bootstrap';
 import '@/assets/styles/search-bar.css';
-// import SearchBarResult from './SearchBarResult';
-
 interface SearchBarProps {
   placeholderText: string;
   keyword: string;
@@ -28,8 +26,6 @@ export default function SearchBar({
             aria-label="Search"
           />
         </Form>
-
-        {/* <SearchBarResult /> */}
       </div>
     </>
   );

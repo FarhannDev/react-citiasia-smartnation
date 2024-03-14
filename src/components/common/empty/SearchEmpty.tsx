@@ -12,7 +12,7 @@ const SearchEmpty: React.FC<SearchEmptyProps> = ({
       <div className="search-empty__content ">
         <LazyLoadImage
           alt="sn_icon_emptypage"
-          loading="lazy"
+          effect="blur"
           src={iconEmptyPage}
           className="search-empty__content-logo img-fluid"
         />

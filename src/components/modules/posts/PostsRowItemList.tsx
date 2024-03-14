@@ -1,5 +1,5 @@
 import React from 'react';
-import PostsRowItem from './PostsRowItem';
+import MyComponent from '../../MyComponent';
 
 type PostsRowItemListProps = {
   posts: Posts[];
@@ -13,7 +13,7 @@ const PostsRowItemList: React.FC<PostsRowItemListProps> = ({
   return (
     <div className="d-flex flex-column py-4">
       {posts?.map((post) => (
-        <PostsRowItem key={post.id} {...post} catLabel={ctaLabel} />
+        <MyComponent.PostsRowItem key={post.id} {...post} catLabel={ctaLabel} />
       ))}
     </div>
   );

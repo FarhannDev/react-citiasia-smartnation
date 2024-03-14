@@ -1,14 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap';
-import loadable from '@loadable/component';
 import appStyles from '@/assets/styles/modules/app.module.css';
 import styles from '@/assets/styles/modules/contact.module.css';
-
-const ContactItemInput = loadable(
-  () => import('../../components/modules/contacts/ContactItemInput')
-);
-const NewsLetterItem = loadable(
-  () => import('../../components/modules/Newsletter/NewsLetterItem')
-);
+import MyComponent from '../../components/MyComponent';
 
 const ContactIndexPage = () => {
   return (
@@ -18,7 +11,7 @@ const ContactIndexPage = () => {
           {/* <h1 className={styles.contactSmartnationHeading}>Hubungi Kami</h1> */}
 
           <Row className="justify-content-start align-items-center g-4">
-            <Col xl={6} lg={6} md>
+            <Col xl={6} lg={6} md={12}>
               <div className="d-flex flex-column">
                 <h2 className={styles.contactItemHeading}>Mari Berbincang!</h2>
                 <p className={styles.contactItemSubHeading}>
@@ -29,8 +22,8 @@ const ContactIndexPage = () => {
                 </p>
               </div>
             </Col>
-            <Col xl={6} lg={6} md>
-              <ContactItemInput />
+            <Col xl={6} lg={6} md={12}>
+              <MyComponent.ContactItemInput />
             </Col>
           </Row>
         </Container>
@@ -41,7 +34,7 @@ const ContactIndexPage = () => {
         id={appStyles.sectionNewsletterSubscribe}
       >
         <Container className={appStyles.sectionNewsletterSubscribeContainer}>
-          <NewsLetterItem />
+          <MyComponent.NewsLetterItem />
         </Container>
       </section>
     </>

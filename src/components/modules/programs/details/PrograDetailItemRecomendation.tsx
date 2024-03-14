@@ -1,7 +1,6 @@
 import { program } from '../../../../utils/data/programsData';
 import styles from '@/assets/styles/modules/posts.module.css';
-import ProgramPopulerFigureColumnItem from './ProgramPopulerFigureColumnItem';
-import ProgramCategoryRowItem from './ProgramCategoryRowItem';
+import MyComponent from '../../../MyComponent';
 
 const ProgramDetailItemRecomendation = () => {
   const popularPostData: Program[] = program
@@ -22,7 +21,10 @@ const ProgramDetailItemRecomendation = () => {
           <div className="row justify-content-start g-3 pt-4">
             {popularPostData.map((program, index) => (
               <div key={program.id} className="col-lg-6 col-xl-6 col-md-12">
-                <ProgramCategoryRowItem index={index + 1} {...program} />
+                <MyComponent.ProgramCategoryRowItem
+                  index={index + 1}
+                  {...program}
+                />
               </div>
             ))}
           </div>
@@ -35,7 +37,7 @@ const ProgramDetailItemRecomendation = () => {
           <div className="row justify-content-start g-3 align-content-start pt-4">
             {postsData.map((post) => (
               <div key={post.id} className="col-lg-4 col-xl-4 col-md-6">
-                <ProgramPopulerFigureColumnItem {...post} />
+                <MyComponent.ProgramPopulerFigureColumnItem {...post} />
               </div>
             ))}
           </div>

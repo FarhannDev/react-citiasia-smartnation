@@ -26,7 +26,6 @@ const ArticleCategoryRowItem: React.FC<
           <LazyLoadImage
             alt=""
             effect="blur"
-            loading="lazy"
             className={styles.articleCategoryRowItemImage}
             src={sourceImageUrl}
           />

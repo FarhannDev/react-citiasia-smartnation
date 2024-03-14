@@ -1,8 +1,6 @@
 import styles from '@/assets/styles/modules/NewsLetterItem.module.css';
 import api from '../../../utils/api/api';
-import loadable from '@loadable/component';
-
-const NewsLetterFormInput = loadable(() => import('./NewsLetterFormInput'));
+import MyComponent from '../../MyComponent';
 
 function NewsLetterItem() {
   const handleNewsLetterSubscribe = (email: string) => {
@@ -19,7 +17,9 @@ function NewsLetterItem() {
         <h3 className={styles.newsLetterSubcribeSubheading}>
           Dapatkan pembaruan terbaru kami dengan info terbaru
         </h3>
-        <NewsLetterFormInput subscribe={handleNewsLetterSubscribe} />
+        <MyComponent.NewsLetterFormInput
+          subscribe={handleNewsLetterSubscribe}
+        />
       </div>
     </>
   );

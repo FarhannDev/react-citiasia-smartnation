@@ -11,10 +11,9 @@ import {
   categories,
 } from '../../../utils/data/categoryPostsData';
 import { programCategory } from '../../../utils/data/programsData';
-import SearchBar from '../searchBar/SearchBar';
-import DropdownButtonSelectLanguange from '../button/DropdownButtonSelectLanguange';
-import SearchBarResult from '../searchBar/SearchBarResult';
 import '@/assets/styles/top-navigation.css';
+import DropdownButtonSelectLanguange from '../button/DropdownButtonSelectLanguange';
+import MyComponent from '../../MyComponent';
 
 export default function TopNavigation() {
   const [expanded, setExpanded] = useState(false);
@@ -104,6 +103,7 @@ export default function TopNavigation() {
                           .filter((category) => category.parentId === parent.id)
                           .map((cat) => (
                             <Link
+                              onClick={closeNavbar}
                               key={cat.id}
                               className={`custom-dropdown-megamenu__item`}
                               to={`/posts/${cat.slug}`}
@@ -304,7 +304,7 @@ export default function TopNavigation() {
             </Link>
 
             <div className="position-relative py-3">
-              <SearchBar
+              <MyComponent.SearchBar
                 placeholderText="Mau cari berita apa?"
                 keyword={keyword}
                 keywordChange={handleKeywordChange}
@@ -315,14 +315,16 @@ export default function TopNavigation() {
 
           <Nav className=" d-flex justify-content-arround align-items-center g-2 d-none d-lg-flex d-xl-flex ">
             <div className="position-relative">
-              <SearchBar
+              <MyComponent.SearchBar
                 placeholderText="Mau cari berita apa?"
                 keyword={keyword}
                 keywordChange={handleKeywordChange}
                 onSubmitKeyword={onSubmitKeyword}
               />
 
-              {keyword.length ? <SearchBarResult keyword={keyword} /> : null}
+              {keyword.length ? (
+                <MyComponent.SearchBarResult keyword={keyword} />
+              ) : null}
             </div>
             <DropdownButtonSelectLanguange />
           </Nav>

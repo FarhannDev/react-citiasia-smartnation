@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import PodcastRowItem from './PodcastRowItem';
+import MyComponent from '../../MyComponent';
 
 // type PodcastRowItemListProps = {
 //   podcasts: Podcasts[];
@@ -11,28 +11,28 @@ const PodcastRowItemList: React.FC = () => {
     <>
       <Row className="justify-content-start align-content-start g-4">
         <Col lg={6} xl={6} md={12}>
-          <PodcastRowItem />
+          <MyComponent.PodcastRowItem />
         </Col>
         <Col lg={6} xl={6} md={12}>
-          <PodcastRowItem />
+          <MyComponent.PodcastRowItem />
         </Col>
         <Col lg={6} xl={6} md={12}>
-          <PodcastRowItem />
+          <MyComponent.PodcastRowItem />
         </Col>
         <Col lg={6} xl={6} md={12}>
-          <PodcastRowItem />
+          <MyComponent.PodcastRowItem />
         </Col>
         <Col lg={6} xl={6} md={12}>
-          <PodcastRowItem />
+          <MyComponent.PodcastRowItem />
         </Col>
         <Col lg={6} xl={6} md={12}>
-          <PodcastRowItem />
+          <MyComponent.PodcastRowItem />
         </Col>
         <Col lg={6} xl={6} md={12}>
-          <PodcastRowItem />
+          <MyComponent.PodcastRowItem />
         </Col>
         <Col lg={6} xl={6} md={12}>
-          <PodcastRowItem />
+          <MyComponent.PodcastRowItem />
         </Col>
       </Row>
     </>

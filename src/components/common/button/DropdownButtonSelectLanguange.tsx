@@ -27,9 +27,7 @@ export default function DropdownButtonSelectLanguange() {
           className="app-dropdown-select-languange "
           title={<img src="/icons/language.svg" />}
         >
-          <DropdownHeader className="text-start">
-            Pilihan menu bahasa
-          </DropdownHeader>
+          <DropdownHeader className="text-start">Bahasa</DropdownHeader>
           <Dropdown.Divider />
           <Stack direction="vertical" gap={3}>
             {language.map((lang, index) => (

@@ -1,15 +1,7 @@
 import React, { type ReactNode } from 'react';
-import loadable from '@loadable/component';
-
-// const TopNavigation = loadable(
-//   () => import('../components/common/navigation/TopNavigation')
-// );
-const FooterNavigation = loadable(
-  () => import('../components/common/navigation/FooterNavigation')
-);
-
 import styles from '../assets/styles/modules/app.module.css';
 import TopNavigation from '../components/common/navigation/TopNavigation';
+import FooterNavigation from '../components/common/navigation/FooterNavigation';
 
 interface AppLayoutProps {
   children: ReactNode;

@@ -2,11 +2,7 @@ import { useParams } from 'react-router-dom';
 import { program } from '../../utils/data/programsData';
 import { Container } from 'react-bootstrap';
 import styles from '@/assets/styles/modules/programs.module.css';
-import loadable from '@loadable/component';
-
-const ProgramDetail = loadable(
-  () => import('../../components/modules/programs/details/ProgramDetail')
-);
+import MyComponent from '../../components/MyComponent';
 
 const ProgramDetailPage = () => {
   const { programId } = useParams();
@@ -19,7 +15,7 @@ const ProgramDetailPage = () => {
     <>
       <section className={styles.sectionProgramSmartnation}>
         <Container className={styles.programSmartnationContainer}>
-          <ProgramDetail programs={programs} />
+          <MyComponent.ProgramDetail programs={programs} />
         </Container>
       </section>
     </>
