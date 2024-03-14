@@ -9,6 +9,7 @@ import ContactIndexPage from './pages/contact/ContactIndexPage';
 import ProgramIndexPage from './pages/programs/ProgramIndexPage';
 import ProgramDetailPage from './pages/programs/ProgramDetailPage';
 import SearchTermIndexPage from './pages/searchTerm/SearchTermIndexPage';
+import PodcastDetailPage from './pages/podcasts/PodcastDetailPage';
 
 export default function App() {
   const publicRoutes = (
@@ -25,6 +26,8 @@ export default function App() {
           <Route path=":categoryId" element={<PostsCategoryPage />} />
         </Route>
         <Route path="/podcast" element={<PodcastsIndexPage />} />
+        <Route path="/podcast/:id" element={<PodcastDetailPage />} />
+
         <Route path="/about" element={<AboutIndexPage />} />
         <Route path="/contact" element={<ContactIndexPage />} />
       </Routes>

@@ -181,6 +181,26 @@
   line-height: 120%; /* 30px */
 }
 
+.podcastVideo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 0px;
+  margin-bottom: 50px;
+}
+
+.podcastVideoSource {
+  background: #000;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: auto;
+}
+
 @media (min-width: 1200px) {
   .podcastSmartnationContainer {
     width: 1200px !important;
