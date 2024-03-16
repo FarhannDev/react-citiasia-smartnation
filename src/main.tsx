@@ -5,9 +5,12 @@ import ScrollToTop from './components/common/button/ScrollToTop.tsx';
 import App from './App.tsx';
 
 // import assets
+import '@/assets/themes/dark-mode.theme.css';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import '@/assets/styles/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import ThemeProvider from './contexts/ThemeContext';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -17,8 +20,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         v7_relativeSplatPath: true,
       }}
     >
-      <ScrollToTop />
-      <App />
+      <ThemeProvider>
+        <ScrollToTop />
+        <App />
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

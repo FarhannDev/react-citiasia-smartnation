@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState, ReactNode } from 'react';
 
 type Theme = 'light' | 'dark';
 
-interface ThemeContextProps {
+export interface ThemeContextProps {
   theme: Theme;
   toggleTheme: () => void;
 }
@@ -28,6 +28,8 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       const newTheme: Theme = prevTheme === 'light' ? 'dark' : 'light';
 
       localStorage.setItem('local-smartnation-theme', newTheme);
+
+      console.info(`Thema updated: ${newTheme}`);
       return newTheme;
     });
   };

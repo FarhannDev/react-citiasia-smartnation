@@ -24,7 +24,7 @@ export default function DropdownButtonSelectLanguange() {
           aria-label="Button select languange"
           drop="down-centered"
           id="dropdown-basic-button"
-          className="app-dropdown-select-languange "
+          className="app-dropdown-select-languange"
           title={<img src="/icons/language.svg" alt="Logo bahasa" />}
         >
           <DropdownHeader className="text-start">Bahasa</DropdownHeader>

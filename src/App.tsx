@@ -15,12 +15,7 @@ import { Helmet } from 'react-helmet';
 export default function App() {
   const publicRoutes = (
     <AppLayout>
-      <Helmet
-        encodeSpecialCharacters={true}
-        title="Beranda"
-        titleTemplate="%s - Smartnation"
-        async
-      >
+      <Helmet encodeSpecialCharacters={true} title="Beranda" async>
         <meta
           property="og:description"
           content="Citiasia Center for Smart Nation (CCSN) merupakan salah satu sayap strategis dari Citiasia Inc. dalam menyebarkan semangat membangun bangsa menuju Indonesia Smart Nation"
@@ -34,7 +29,6 @@ export default function App() {
         <Route path="/program/r/:programId/" element={<ProgramDetailPage />} />
 
         <Route path="/search" element={<SearchTermIndexPage />} />
-
         <Route path="/posts">
           <Route path=":categoryId" element={<PostsCategoryPage />} />
         </Route>

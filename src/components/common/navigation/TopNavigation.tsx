@@ -14,6 +14,7 @@ import { programCategory } from '../../../utils/data/programsData';
 import '@/assets/styles/top-navigation.css';
 import DropdownButtonSelectLanguange from '../button/DropdownButtonSelectLanguange';
 import MyComponent from '../../MyComponent';
+import ToggleColorMode from '../button/ToggleColorMode';
 
 export default function TopNavigation() {
   const [expanded, setExpanded] = useState(false);
@@ -326,6 +327,8 @@ export default function TopNavigation() {
                 <MyComponent.SearchBarResult keyword={keyword} />
               ) : null}
             </div>
+
+            <ToggleColorMode />
             <DropdownButtonSelectLanguange />
           </Nav>
         </Navbar.Collapse>

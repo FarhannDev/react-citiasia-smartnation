@@ -2,7 +2,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  background-color: #fff;
   margin-bottom: 30px;
 }
 
@@ -75,5 +74,18 @@
   .articleCategoryFigureColumnItemImage {
     width: 100%;
     height: 250px;
+  }
+}
+
+[data-theme='dark'] {
+  .articleCategoryFigureColumnItemBodyTitle {
+    color: #fafafa;
+  }
+
+  .articleCategoryFigureColumnItemBodyContentDate {
+    color: #fafafa;
+  }
+  .articleCategoryFigureColumnItemBodyContent {
+    color: #ededed;
   }
 }

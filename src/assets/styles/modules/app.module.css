@@ -266,3 +266,21 @@ Section styling posts article list
     height: auto;
   }
 }
+
+[data-theme='dark'] {
+  .sectionArticleLists {
+    background-color: #262626;
+  }
+
+  .sectionArticleListsHeading {
+    color: #d71149;
+  }
+
+  .sectionEventsArticle {
+    background-color: #262626;
+  }
+
+  .sectionCategoryArticle {
+    background-color: #262626;
+  }
+}

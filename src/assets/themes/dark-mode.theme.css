@@ -1,0 +1,37 @@
+[data-theme='dark'] {
+  .custom-app-top-navigation {
+    background-color: #262626;
+    color: #fff;
+  }
+
+  .custom-app-top-navigation__link {
+    color: var(--Font-600, #fff);
+  }
+
+  .custom-dropdown-toggle {
+    color: var(--Font-600, #fff) !important;
+  }
+  .custom-dropdown-toggle.active {
+    color: var(--Danger-600, #ce2f2f) !important;
+    border-bottom: 1.833px solid var(--Primary-600, #d71149) !important;
+  }
+
+  .custom-dropdown-toggle:hover {
+    color: var(--Danger-600, #ce2f2f) !important;
+  }
+  .custom-dropdown-toggle:focus {
+    color: var(--Danger-600, #ce2f2f) !important;
+  }
+  .custom-dropdown-toggle:active {
+    color: var(--Danger-600, #ce2f2f) !important;
+  }
+
+  .custom-dropdown-megamenu {
+    background-color: #262626;
+    color: #fff !important;
+  }
+  .custom-dropdown-megamenu .custom-dropdown-menu__item {
+    color: #fff !important;
+    display: none !;
+  }
+}
