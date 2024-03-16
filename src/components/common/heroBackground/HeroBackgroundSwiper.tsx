@@ -50,10 +50,7 @@ type Props = { posts: Posts[] };
 
 export default function HeroBackgroundSwiper({ posts }: Props) {
   return (
-    <section
-      className={styles.backgroundHeroSection}
-      id={styles.backgroundHeroSection}
-    >
+    <section className={styles.backgroundHeroSection}>
       <Swiper
         slidesPerView={1}
         centeredSlides

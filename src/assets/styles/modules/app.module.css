@@ -267,6 +267,12 @@ Section styling posts article list
   }
 }
 
+.errorPageLayout {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
 [data-theme='dark'] {
   .sectionArticleLists {
     background-color: #262626;

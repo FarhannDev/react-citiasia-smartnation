@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import { posts } from '../../utils/data/postsData';
 import { categories } from '../../utils/data/categoryPostsData';
 import { Helmet } from 'react-helmet';
+import SearchEmpty from '../../components/common/empty/SearchEmpty';
 
 const PopularPostItemList = loadable(
   () =>
@@ -36,12 +37,7 @@ const PostsCategoryPage: React.FC = () => {
 
   return (
     <>
-      <Helmet
-        encodeSpecialCharacters={true}
-        title="Berita"
-        titleTemplate="%s - Smartnation"
-        async
-      >
+      <Helmet encodeSpecialCharacters={true} title="Berita" async>
         <meta
           property="og:description"
           content="Citiasia Center for Smart Nation (CCSN) merupakan salah satu sayap strategis dari Citiasia Inc. dalam menyebarkan semangat membangun bangsa menuju Indonesia Smart Nation"
@@ -56,10 +52,15 @@ const PostsCategoryPage: React.FC = () => {
               <h1 className={styles.postsSmartnationCategoryHeading}>
                 {heading}
               </h1>
-              <PostsRowItemList
-                posts={postsData}
-                ctaLabel={categoriesData?.name}
-              />
+
+              {postsData.length ? (
+                <PostsRowItemList
+                  posts={postsData}
+                  ctaLabel={categoriesData?.name}
+                />
+              ) : (
+                <SearchEmpty title="Belum ada postingan." />
+              )}
             </Col>
             <Col lg={12} xl={4}>
               <PopularPostItemList

@@ -11,6 +11,7 @@ import ProgramDetailPage from './pages/programs/ProgramDetailPage';
 import SearchTermIndexPage from './pages/searchTerm/SearchTermIndexPage';
 import PodcastDetailPage from './pages/podcasts/PodcastDetailPage';
 import { Helmet } from 'react-helmet';
+import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
   const publicRoutes = (
@@ -37,6 +38,7 @@ export default function App() {
 
         <Route path="/about" element={<AboutIndexPage />} />
         <Route path="/contact" element={<ContactIndexPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </AppLayout>
   );

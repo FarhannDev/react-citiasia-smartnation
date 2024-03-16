@@ -2,7 +2,7 @@ import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import iconEmptyPage from '/images/smartnation/icons/sn_icon_emptypage.png';
 
-type SearchEmptyProps = { title: string };
+type SearchEmptyProps = { title?: string };
 
 const SearchEmpty: React.FC<SearchEmptyProps> = ({
   title = 'Pencarian Tidak Ditemukan',
