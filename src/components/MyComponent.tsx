@@ -250,6 +250,14 @@ const MyComponent = (() => {
     () => import('../components/modules/posts/details/PostsDetails')
   );
 
+  const AuthRegisterInput = loadable(
+    () => import('../components/modules/auth/AuthRegisterInput')
+  );
+
+  const AuthLoginInput = loadable(
+    () => import('../components/modules/auth/AuthLoginInput')
+  );
+
   return {
     TopNavigation,
     FooterNavigation,
@@ -311,6 +319,8 @@ const MyComponent = (() => {
     PostDetailsUsersCommentItem,
     PostDetailsUsersCommentItemList,
     PostsDetails,
+    AuthRegisterInput,
+    AuthLoginInput,
   };
 })();
 

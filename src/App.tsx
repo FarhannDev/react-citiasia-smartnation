@@ -12,6 +12,8 @@ import SearchTermIndexPage from './pages/searchTerm/SearchTermIndexPage';
 import PodcastDetailPage from './pages/podcasts/PodcastDetailPage';
 import { Helmet } from 'react-helmet';
 import NotFoundPage from './pages/NotFoundPage';
+import LoginPage from './pages/auth/LoginPage';
+import RegisterPage from './pages/auth/RegisterPage';
 
 export default function App() {
   const publicRoutes = (
@@ -38,6 +40,10 @@ export default function App() {
 
         <Route path="/about" element={<AboutIndexPage />} />
         <Route path="/contact" element={<ContactIndexPage />} />
+
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </AppLayout>
