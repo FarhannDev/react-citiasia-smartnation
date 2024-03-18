@@ -130,6 +130,6 @@ input {
   .contactItemInputContentEditable {
     background-color: #262626 !important;
     border: 0.917px solid var(--Font-400, #888) !important;
-    color: #fff;
+    color: #fff !important;
   }
 }

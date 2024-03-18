@@ -1,57 +1,71 @@
-import React, { useState, FormEvent } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 import { Form, Button } from 'react-bootstrap';
-import ContentEditable, { ContentEditableEvent } from 'react-contenteditable';
 import styles from '@/assets/styles/modules/contact.module.css';
-import useInput from '../../../hooks/useInput';
 
-const ContactItemInput: React.FC = () => {
-  const [inputName, handleChangeInputName] = useInput('');
-  const [inputEmail, handleChangeInputEmail] = useInput('');
-  const [inputBody, setInputBody] = useState<string>('');
-  const handleChangeInputBody: (e: ContentEditableEvent) => void = (
-    e: ContentEditableEvent
-  ) => setInputBody(e.target.value);
+interface Contacts {
+  name: string;
+  email: string;
+  message: string;
+}
 
-  const disabledButton: boolean = Boolean(
-    inputName.length && inputEmail.length && inputBody.length
-  );
+type ContactItemInputProps = { contacts: (data: Contacts) => void };
 
-  const handleSubmit: (e: FormEvent<HTMLFormElement>) => void = (
-    e: FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault();
+const ContactItemInput: React.FC<ContactItemInputProps> = ({ contacts }) => {
+  const {
+    register,
+    resetField,
+    formState: { errors },
+    handleSubmit,
+  } = useForm<Contacts>();
 
-    disabledButton ? alert('Berhasil') : null;
+  const onSubmitForm: (data: Contacts) => void = (data: Contacts) => {
+    contacts(data);
+
+    resetField('name');
+    resetField('email');
+    resetField('message');
   };
 
   return (
     <div className="d-flex flex-column mx-lg-3">
-      <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+      <Form onSubmit={handleSubmit(onSubmitForm)}>
+        <Form.Group className="mb-3" controlId="validationCustom01">
           <Form.Label className={styles.contactItemInputLabelText}>
             Nama
           </Form.Label>
           <Form.Control
-            value={inputName}
-            onChange={handleChangeInputName}
+            {...register('name', { required: true })}
             className={styles.contactItemInput}
             type="text"
-            placeholder="Nama anda"
+            placeholder="Masukan Nama"
             autoComplete="name"
           />
+
+          {errors.name && errors.name.message}
         </Form.Group>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Group className="mb-3" controlId="validationCustom02">
           <Form.Label className={styles.contactItemInputLabelText}>
             Email
           </Form.Label>
           <Form.Control
-            value={inputEmail}
-            onChange={handleChangeInputEmail}
-            className={styles.contactItemInput}
+            {...register('email', {
+              required: true,
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: 'Email tidak valid',
+              },
+            })}
+            className={`${styles.contactItemInput}`}
             type="email"
-            placeholder="Email"
+            placeholder="Masukan Alamat Email"
             autoComplete="email"
           />
+          {errors.email && (
+            <Form.Control.Feedback type="invalid">
+              {errors.email.message}
+            </Form.Control.Feedback>
+          )}
         </Form.Group>
 
         <Form.Group>
@@ -59,19 +73,22 @@ const ContactItemInput: React.FC = () => {
             Pesan
           </Form.Label>
 
-          <ContentEditable
-            html={inputBody}
-            onChange={handleChangeInputBody}
+          <Form.Control
+            {...register('message', {
+              required: true,
+              max: 1000,
+              maxLength: 1000,
+            })}
+            as="textarea"
+            rows={3}
             className={styles.contactItemInputContentEditable}
-            title="Buat Pertanyaan Baru "
-            autoCorrect=""
-            tagName="article"
+            placeholder="Tuliskan isi pesan"
           />
         </Form.Group>
 
         <Button
+          // disabled={Object.keys(errors).length > 0}
           type="submit"
-          // disabled={!disabledButton}
           className={styles.contactItemInputButton}
         >
           Kirimkan

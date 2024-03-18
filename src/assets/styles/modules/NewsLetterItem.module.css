@@ -67,4 +67,7 @@
   .newsLetterSubcribeSubheading {
     color: #fff;
   }
+  .newsLetterSubcribeFormInput {
+    color: #5d5d5d !important;
+  }
 }

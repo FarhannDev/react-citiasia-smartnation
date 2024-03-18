@@ -1,11 +1,35 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Helmet } from 'react-helmet';
 import { Col, Container, Row } from 'react-bootstrap';
 import appStyles from '@/assets/styles/modules/app.module.css';
 import styles from '@/assets/styles/modules/contact.module.css';
 import MyComponent from '../../components/MyComponent';
 import ContentLayoutFull from '../../layouts/ContentLayoutFull';
+import Swal from 'sweetalert2';
+interface Contacts {
+  name: string;
+  email: string;
+  message: string;
+}
+
+type ContactProps = Contacts;
 
 const ContactIndexPage = () => {
+  const onContactsHandler = (data: ContactProps) => {
+    console.log({ data });
+    const textResponse = `Terima kasih atas pesan Anda! Kami telah menerima pesan Anda dengan sukses. Tim kami akan segera meninjau pesan Anda dan akan menghubungi Anda melalui email dalam waktu singkat.`;
+
+    Swal.fire({
+      title: 'Berhasil!',
+      text: textResponse,
+      icon: 'success',
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText: 'Selesai',
+      confirmButtonColor: '#295B19',
+    });
+  };
   return (
     <>
       <ContentLayoutFull>
@@ -39,7 +63,7 @@ const ContactIndexPage = () => {
                 </div>
               </Col>
               <Col xl={6} lg={6} md={12}>
-                <MyComponent.ContactItemInput />
+                <MyComponent.ContactItemInput contacts={onContactsHandler} />
               </Col>
             </Row>
           </Container>
