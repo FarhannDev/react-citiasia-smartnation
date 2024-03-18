@@ -3,6 +3,7 @@ import { program } from '../../utils/data/programsData';
 import { Container } from 'react-bootstrap';
 import styles from '@/assets/styles/modules/programs.module.css';
 import MyComponent from '../../components/MyComponent';
+import ContentLayout from '../../layouts/ContentLayout';
 
 const ProgramDetailPage = () => {
   const { programId } = useParams();
@@ -13,11 +14,13 @@ const ProgramDetailPage = () => {
 
   return (
     <>
-      <section className={styles.sectionProgramSmartnation}>
-        <Container className={styles.programSmartnationContainer}>
-          <MyComponent.ProgramDetail programs={programs} />
-        </Container>
-      </section>
+      <ContentLayout>
+        <section className={styles.sectionProgramSmartnation}>
+          <Container className={styles.programSmartnationContainer}>
+            <MyComponent.ProgramDetail programs={programs} />
+          </Container>
+        </section>
+      </ContentLayout>
     </>
   );
 };

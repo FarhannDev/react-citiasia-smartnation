@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
+import ContentEditable, { ContentEditableEvent } from 'react-contenteditable';
 import { Button, Form } from 'react-bootstrap';
 import { BiSend } from 'react-icons/bi';
-
-import ContentEditable, { ContentEditableEvent } from 'react-contenteditable';
 import styles from '@/assets/styles/modules/posts.module.css';
 
 const PostDetailsCommentItemInput: React.FC = () => {
-  const [input, setInput] = useState<string>('Tuliskan komentar');
+  const [input, setInput] = useState<string>('');
 
   const handleChangeInput: (e: ContentEditableEvent) => void = (
     e: ContentEditableEvent
@@ -20,7 +19,6 @@ const PostDetailsCommentItemInput: React.FC = () => {
           onChange={handleChangeInput}
           className={styles.postDetailsCommentItemFormInputUser}
           title="Tuliskan Komentar "
-          autoCorrect=""
           tagName="article"
         />
 

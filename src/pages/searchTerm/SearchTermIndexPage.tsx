@@ -1,10 +1,9 @@
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { posts } from '../../utils/data/postsData';
 import styles from '@/assets/styles/modules/app.module.css';
-import PostsRowItemList from '../../components/modules/posts/PostsRowItemList';
-import PopularPostItemList from '../../components/modules/articles/RelatePosts/PopularPostItemList';
 import MyComponent from '../../components/MyComponent';
+import ContentLayout from '../../layouts/ContentLayout';
 
 const SearchTermIndexPage = () => {
   const location = useLocation();
@@ -31,24 +30,30 @@ const SearchTermIndexPage = () => {
   );
 
   return (
-    <section className={styles.searchPostSection}>
-      <Container className={styles.searchPostContainer}>
+    <ContentLayout>
+      <section className={styles.searchPostSection}>
         <Row className="justify-content-between align-items-start g-5">
           <Col lg={12} xl={8} md>
             <Heading />
 
             {postsData.length ? (
-              <PostsRowItemList posts={postsData} ctaLabel="Berita" />
+              <MyComponent.PostsRowItemList
+                posts={postsData}
+                ctaLabel="Berita"
+              />
             ) : (
               <MyComponent.SearchEmpty title="Pencarian tidak ditemukan." />
             )}
           </Col>
           <Col lg={12} xl={4}>
-            <PopularPostItemList posts={popularPostData} heading="Terpopuler" />
+            <MyComponent.PopularPostItemList
+              posts={popularPostData}
+              heading="Terpopuler"
+            />
           </Col>
         </Row>
-      </Container>
-    </section>
+      </section>
+    </ContentLayout>
   );
 };
 

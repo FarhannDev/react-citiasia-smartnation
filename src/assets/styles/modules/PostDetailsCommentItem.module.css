@@ -1,0 +1,56 @@
+/* postDetailsCommentItem */
+.postDetailsCommentItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-top: 30px;
+}
+.postDetailsCommentItemForm {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 0.837px solid var(--Font-200, #d1d1d1);
+  padding: 20px;
+}
+.postDetailsCommentItemFormHeading {
+  color: var(--Font-700, #4f4f4f);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+}
+
+.postDetailsCommentItemFormInput {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  /* background-color: #fff; */
+  margin-bottom: 30px;
+}
+.postDetailsCommentItemFormInputUser {
+  height: 100px;
+  padding: 12px;
+  overflow: auto;
+  border-radius: 8px;
+  color: var(--Font-800, #454545);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+}
+.postDetailsCommentItemFormInputLabel {
+  color: var(--Font-800, #454545);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+}

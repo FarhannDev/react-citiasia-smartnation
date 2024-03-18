@@ -51,15 +51,15 @@
   text-decoration: none;
 }
 .searchBarResultItemListTitle:hover {
-  color: var(--Danger-600, #ce2f2f);
+  color: var(--Danger-600, #ce2f2f) !important;
   text-decoration: underline;
 }
 .searchBarResultItemListTitle:focus {
-  color: var(--Danger-600, #ce2f2f);
+  color: var(--Danger-600, #ce2f2f) !important;
   text-decoration: underline;
 }
 .searchBarResultItemListTitle:active {
-  color: var(--Danger-600, #ce2f2f);
+  color: var(--Danger-600, #ce2f2f) !important;
   text-decoration: underline;
 }
 
@@ -71,4 +71,22 @@
   font-weight: 600;
   line-height: 120%;
   text-decoration: none;
+}
+
+/*
+   Set dark theme
+ */
+[data-theme='dark'] {
+  .searchBarResultItem {
+    background-color: #262626;
+    color: #fff;
+  }
+
+  .searchBarResultItemListTitle {
+    color: #fff;
+  }
+
+  .searchBarResultItemListIconLink {
+    color: #fff;
+  }
 }

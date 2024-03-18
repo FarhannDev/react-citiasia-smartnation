@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from '@/assets/styles/modules/posts.module.css';
+import parse from 'html-react-parser';
+import styles from '@/assets/styles/modules/PostDetailsItem.module.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   FaRegClock,
@@ -7,9 +8,8 @@ import {
   FaRegEye,
   FaRegShareSquare,
 } from 'react-icons/fa';
-import ArticleButtonDetailCategory from '../../../common/button/ArticleButtonDetailCategory';
-import parse from 'html-react-parser';
 import { postedAt } from '../../../../utils/common/generateFormattedDate';
+import ArticleButtonDetailCategory from '../../../common/button/ArticleButtonDetailCategory';
 
 type PostDetailsItemProps = { post: Posts | undefined };
 

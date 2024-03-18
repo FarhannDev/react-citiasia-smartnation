@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/assets/styles/modules/posts.module.css';
+import styles from '@/assets/styles/modules/PostsPopulerFigureColumnItem.module.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 import { postedAt } from '../../../utils/common/generateFormattedDate';
@@ -13,8 +13,8 @@ const PostsPopulerFigureColumnItem: React.FC<
     <div className={styles.postsPopulerFigureColumnItem}>
       <Link to="/" aria-label="Baca selengkapnya">
         <LazyLoadImage
+          alt={title}
           className={`${styles.postsPopulerFigureColumnItemImage} img-fluid`}
-          alt=""
           effect="blur"
           src={sourceImageUrl}
         />

@@ -39,7 +39,7 @@
 }
 
 .articleCategoryFigureColumnItemBodyTitle:hover {
-  color: var(--Danger-600, #ce2f2f);
+  color: var(--Danger-600, #ce2f2f) !important;
   text-decoration: underline;
 }
 

@@ -3,7 +3,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  background: #fff;
   padding-top: 7em;
   padding-bottom: 5em;
 }
@@ -328,7 +327,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  background: #fff;
   padding-top: 7em;
   padding-bottom: 5em;
 }
@@ -338,7 +336,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  background-color: #fff;
 }
 .postDetailsItemHeading {
   color: var(--Danger-600, #ce2f2f);
@@ -381,7 +378,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  background-color: #fff;
   width: 100%;
   height: auto;
   padding-top: 30px;
@@ -403,7 +399,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  background-color: #fff;
   padding-top: 30px;
 }
 .postDetailsCommentItemForm {
@@ -413,7 +408,6 @@
   flex-shrink: 0;
   border-radius: 8px;
   border: 0.837px solid var(--Font-200, #d1d1d1);
-  background: #f6f6f6;
   padding: 20px;
 }
 .postDetailsCommentItemFormHeading {
@@ -439,7 +433,6 @@
   padding: 12px;
   overflow: auto;
   border-radius: 8px;
-  background: var(--Background, #fff);
   color: var(--Font-800, #454545);
   font-family: Poppins;
   font-size: 16px;
@@ -576,7 +569,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  background-color: #fff;
   padding-top: 50px;
 }
 .postDetailsItemRecomendationHeading {
@@ -616,4 +608,18 @@
   .postsSmartnationCategoryHeading {
     font-size: 22px;
   }
+}
+
+[data-theme='dark'] .postDetailsCommentItem {
+  background-color: transparent !important;
+}
+
+[data-theme='dark'] .postDetailsCommentItemFormHeading {
+  color: #fff;
+}
+[data-theme='dark'] .postDetailsCommentItemFormInputUser {
+  color: #fff;
+}
+[data-theme='dark'] .postDetailsCommentItemFormInputLabel {
+  color: #fff;
 }

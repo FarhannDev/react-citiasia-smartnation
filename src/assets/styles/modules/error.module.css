@@ -61,3 +61,9 @@
   transition: ease 300ms;
   text-transform: capitalize;
 }
+
+[data-theme='dark'] {
+  .errorPageItemHeading {
+    color: #fff;
+  }
+}

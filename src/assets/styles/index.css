@@ -117,3 +117,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #262626;
   color: #fff;
 }
+
+[data-theme='dark'] .search-empty__content-heading {
+  color: #fff;
+}

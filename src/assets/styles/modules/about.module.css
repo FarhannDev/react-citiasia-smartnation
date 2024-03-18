@@ -53,7 +53,6 @@
 .sectionAboutSmartnationMitra {
   width: 100%;
   height: auto;
-  background: var(--Primary-800, #fff);
   padding-top: 5em;
   padding-bottom: 5em;
 }
@@ -75,7 +74,6 @@
 .sectionAboutSmartnationTeam {
   width: 100%;
   height: auto;
-  background: var(--Primary-800, #fff);
   padding-top: 5em;
   padding-bottom: 5em;
 }
@@ -136,7 +134,6 @@
 .sectionAboutSmartnationProgram {
   width: 100%;
   height: auto;
-  background: var(--Primary-800, #fff);
   padding-top: 5em;
   padding-bottom: 5em;
 }
@@ -147,7 +144,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  background-color: #fff;
   border-radius: 12px;
   padding: 30px;
   /* margin-bottom: 10px; */
@@ -237,5 +233,30 @@
     width: 1200px !important;
     margin: 0 auto !important;
     height: auto;
+  }
+}
+
+[data-theme='dark'] {
+  .aboutProgramItem {
+    background: #2b2b2b;
+  }
+  .aboutProgramItemBodyHeading {
+    color: #fff;
+  }
+
+  .aboutProgramItemBodyDescription {
+    color: #fff;
+  }
+}
+
+[data-theme='dark'] {
+  .sectionAboutSmartnationTeamProfileName {
+    color: #fff;
+  }
+  .sectionAboutSmartnationTeamProfileJob {
+    color: #fff;
+  }
+  .sectionAboutSmartnationTeamProfileDescription {
+    color: #fff;
   }
 }

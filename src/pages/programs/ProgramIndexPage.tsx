@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { Col, Container, Row } from 'react-bootstrap';
 import { program, programCategory } from '../../utils/data/programsData';
 import styles from '@/assets/styles/modules/programs.module.css';
 import MyComponent from '../../components/MyComponent';
-import { Helmet } from 'react-helmet';
+import ContentLayout from '../../layouts/ContentLayout';
 
 const ProgramIndexPage = () => {
   const { categoryId } = useParams();
@@ -56,70 +57,72 @@ const ProgramIndexPage = () => {
 
   return (
     <>
-      <Helmet
-        encodeSpecialCharacters={true}
-        title="Program"
-        titleTemplate="%s - Smartnation"
-        async
-      >
-        <meta
-          property="og:description"
-          content="Citiasia Center for Smart Nation (CCSN) merupakan salah satu sayap strategis dari Citiasia Inc. dalam menyebarkan semangat membangun bangsa menuju Indonesia Smart Nation"
-        />
-        <meta property="og:type" content="article" />
-      </Helmet>
-      <section className={styles.sectionProgramSmartnation}>
-        <Container className={styles.programSmartnationContainer}>
-          <Row className="justify-content-between align-items-start g-5">
-            <Col lg={12} xl={8} md={12}>
-              <h1 className={styles.programSmartnationHeadingPrimary}>
-                Tentang Kegiatan {programCategoryData?.name}
-              </h1>
-              <MyComponent.ProgramIntroduction
-                progHeading={`Apa itu ${programCategoryData?.name}?`}
-                progDescription={programCategoryData?.description}
-              />
-
-              <div className="d-flex flex-column pt-4">
-                <h4 className={`${styles.programSmartnationHeading} mb-4`}>
-                  Postingan terkait {programCategoryData?.name}
-                </h4>
-
-                <MyComponent.SearchItem
-                  placeholder={`Cari kegiatan ${programCategoryData?.name}...`}
-                  keyword={keyword}
-                  keywordChange={onKeywordChangeHandler}
-                  isDisabled={!programData.length}
+      <ContentLayout>
+        <Helmet
+          encodeSpecialCharacters={true}
+          title="Program"
+          titleTemplate="%s - Smartnation"
+          async
+        >
+          <meta
+            property="og:description"
+            content="Citiasia Center for Smart Nation (CCSN) merupakan salah satu sayap strategis dari Citiasia Inc. dalam menyebarkan semangat membangun bangsa menuju Indonesia Smart Nation"
+          />
+          <meta property="og:type" content="article" />
+        </Helmet>
+        <section className={styles.sectionProgramSmartnation}>
+          <Container className={styles.programSmartnationContainer}>
+            <Row className="justify-content-between align-items-start g-5">
+              <Col lg={12} xl={8} md={12}>
+                <h1 className={styles.programSmartnationHeadingPrimary}>
+                  Tentang Kegiatan {programCategoryData?.name}
+                </h1>
+                <MyComponent.ProgramIntroduction
+                  progHeading={`Apa itu ${programCategoryData?.name}?`}
+                  progDescription={programCategoryData?.description}
                 />
 
-                {isLoading ? (
-                  'Sedang Memuat...'
-                ) : (
-                  <>
-                    {keyword && !programListData.length && (
-                      <MyComponent.SearchEmpty title="Pencarian tidak ditemukan." />
-                    )}
+                <div className="d-flex flex-column pt-4">
+                  <h4 className={`${styles.programSmartnationHeading} mb-4`}>
+                    Postingan terkait {programCategoryData?.name}
+                  </h4>
 
-                    {!keyword && !programData.length && (
-                      <MyComponent.SearchEmpty title="Belum ada postingan." />
-                    )}
-                    <MyComponent.ProgramRowItemList
-                      programs={programListData}
-                      ctaLabel={programCategoryData?.name}
-                    />
-                  </>
-                )}
-              </div>
-            </Col>
-            <Col lg={12} xl={4}>
-              <MyComponent.ProgramPopulerItemList
-                programs={popularProgramData}
-                heading="Terpopuler"
-              />
-            </Col>
-          </Row>
-        </Container>
-      </section>
+                  <MyComponent.SearchItem
+                    placeholder={`Cari kegiatan ${programCategoryData?.name}...`}
+                    keyword={keyword}
+                    keywordChange={onKeywordChangeHandler}
+                    isDisabled={!programData.length}
+                  />
+
+                  {isLoading ? (
+                    'Sedang Memuat...'
+                  ) : (
+                    <>
+                      {keyword && !programListData.length && (
+                        <MyComponent.SearchEmpty title="Pencarian tidak ditemukan." />
+                      )}
+
+                      {!keyword && !programData.length && (
+                        <MyComponent.SearchEmpty title="Belum ada postingan." />
+                      )}
+                      <MyComponent.ProgramRowItemList
+                        programs={programListData}
+                        ctaLabel={programCategoryData?.name}
+                      />
+                    </>
+                  )}
+                </div>
+              </Col>
+              <Col lg={12} xl={4}>
+                <MyComponent.ProgramPopulerItemList
+                  programs={popularProgramData}
+                  heading="Terpopuler"
+                />
+              </Col>
+            </Row>
+          </Container>
+        </section>
+      </ContentLayout>
     </>
   );
 };

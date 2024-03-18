@@ -12,11 +12,15 @@ import {
 } from '../../../utils/data/categoryPostsData';
 import { programCategory } from '../../../utils/data/programsData';
 import '@/assets/styles/top-navigation.css';
-import DropdownButtonSelectLanguange from '../button/DropdownButtonSelectLanguange';
+// import DropdownButtonSelectLanguange from '../button/DropdownButtonSelectLanguange';
 import MyComponent from '../../MyComponent';
 import ToggleColorMode from '../button/ToggleColorMode';
+import { BiChevronDown } from 'react-icons/bi';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import { useTheme } from '../../../hooks/useTheme';
 
 export default function TopNavigation() {
+  const { theme } = useTheme();
   const [expanded, setExpanded] = useState(false);
   const location = useLocation();
   const pathParts: string | string[] = location.pathname.split('/');
@@ -59,7 +63,12 @@ export default function TopNavigation() {
           onClick={() => setExpanded(expanded ? false : true)}
           aria-controls="navbarScroll"
           className="custom-button"
-        />
+        >
+          <RxHamburgerMenu
+            fontSize={26}
+            color={`${theme === 'dark' ? 'fff' : '5d5d5d'} `}
+          />
+        </Navbar.Toggle>
 
         <Navbar.Collapse
           className="  justify-content-arround g-2"
@@ -88,13 +97,22 @@ export default function TopNavigation() {
                     : ''
                 }`}
               >
-                Berita
+                <div className="d-flex justify-content-start align-items-center g-3">
+                  Berita <BiChevronDown fontSize={16} />
+                </div>
               </Dropdown.Toggle>
 
-              <Dropdown.Menu className="custom-dropdown-megamenu">
+              <Dropdown.Menu
+                renderOnMount
+                show={false}
+                className="custom-dropdown-megamenu mt-4"
+              >
                 <div className="row justify-content-start align-content-start g-3">
                   {parentCategories?.map((parent) => (
-                    <div key={parent.id} className="col-xl-4 col-lg-4 col-md">
+                    <div
+                      key={parent.id}
+                      className="col-xl-4 col-lg-4 col-md py-4"
+                    >
                       <div className="custom-dropdown-megamenu__heading">
                         {parent.name}
                       </div>
@@ -106,7 +124,11 @@ export default function TopNavigation() {
                             <Link
                               onClick={closeNavbar}
                               key={cat.id}
-                              className={`custom-dropdown-megamenu__item`}
+                              className={`custom-dropdown-megamenu__item ${
+                                location.pathname === `/posts/${cat.slug}`
+                                  ? 'custom-dropdown-menu__active'
+                                  : ''
+                              }`}
                               to={`/posts/${cat.slug}`}
                               aria-label="Berita kategori"
                             >
@@ -130,14 +152,23 @@ export default function TopNavigation() {
                     : ''
                 }`}
               >
-                Program
+                <div className="d-flex justify-content-start align-items-center g-3">
+                  Program <BiChevronDown fontSize={16} />
+                </div>
               </Dropdown.Toggle>
-              <Dropdown.Menu className="custom-dropdown-menu ">
-                <div className="d-flex flex-column justify-content-start g-3 pt-3">
+              <Dropdown.Menu
+                renderOnMount
+                className="custom-dropdown-menu mt-4"
+              >
+                <div className="d-flex flex-column justify-content-start g-3 pt-2">
                   {programCategory.map((program) => (
                     <Link
                       key={program.id}
-                      className={`custom-dropdown-menu__item mb-3  `}
+                      className={`custom-dropdown-menu__item ${
+                        location.pathname === `/program/${program.slug}`
+                          ? 'custom-dropdown-menu__active'
+                          : ''
+                      } mb-2 `}
                       to={`/program/${program.slug}`}
                       aria-label="Berita kategori"
                     >
@@ -169,31 +200,36 @@ export default function TopNavigation() {
                     : ''
                 }`}
               >
-                Lainnya
+                <div className="d-flex justify-content-start align-items-center g-3">
+                  Lainnya <BiChevronDown fontSize={16} />
+                </div>
               </Dropdown.Toggle>
 
-              <Dropdown.Menu className="custom-dropdown-menu">
-                <div className="d-flex flex-column justify-content-start g-3 pt-3">
+              <Dropdown.Menu
+                renderOnMount
+                className="custom-dropdown-menu mt-4"
+              >
+                <div className="d-flex flex-column justify-content-start g-3 pt-2">
                   <Link
-                    className="custom-dropdown-menu__item mb-3"
+                    className="custom-dropdown-menu__item mb-2"
                     to="/about"
                     aria-label="Berita kategori"
                   >
                     Tentang Kami
                   </Link>
                   <Link
-                    className="custom-dropdown-menu__item mb-3"
+                    className="custom-dropdown-menu__item mb-2"
                     to="/contact"
                     aria-label="Berita kategori"
                   >
                     Hubungi Kami
                   </Link>
                   <Link
-                    className="custom-dropdown-menu__item mb-3"
+                    className="custom-dropdown-menu__item mb-2"
                     to="/contact"
                     aria-label="Berita kategori"
                   >
-                    Daftar Pertanyaan (FAQ)
+                    FAQ
                   </Link>
                 </div>
               </Dropdown.Menu>
@@ -204,7 +240,7 @@ export default function TopNavigation() {
           <Nav className="d-flex flex-column justify-content-center d-lg-none d-xl-none py-3">
             <Link
               onClick={closeNavbar}
-              className="nav-link  custom-app-top-navigation__link "
+              className="nav-link custom-app-top-navigation__link "
               to="/"
             >
               Beranda
@@ -223,8 +259,8 @@ export default function TopNavigation() {
                 Berita
               </Dropdown.Toggle>
 
-              <Dropdown.Menu className="custom-dropdown-megamenu">
-                <div className="row justify-content-start align-content-start g-3">
+              <Dropdown.Menu className="custom-dropdown-megamenu ">
+                <div className="row justify-content-start align-content-start g-3 pt-2">
                   {parentCategories?.map((parent) => (
                     <div key={parent.id} className="col-xl-4 col-lg-4 col-md">
                       <div className="custom-dropdown-megamenu__heading">
@@ -238,7 +274,11 @@ export default function TopNavigation() {
                             <Link
                               onClick={closeNavbar}
                               key={cat.id}
-                              className={`custom-dropdown-megamenu__item`}
+                              className={`custom-dropdown-megamenu__item mb-2 ${
+                                location.pathname === `/posts/${cat.slug}`
+                                  ? 'custom-dropdown-menu__active'
+                                  : ''
+                              }`}
                               to={`/posts/${cat.slug}`}
                               aria-label="Berita kategori"
                             >
@@ -271,7 +311,11 @@ export default function TopNavigation() {
                     <Link
                       onClick={closeNavbar}
                       key={program.id}
-                      className={`custom-dropdown-menu__item mb-3  `}
+                      className={`custom-dropdown-menu__item mb-2 ${
+                        location.pathname === `/program/${program.slug}`
+                          ? 'custom-dropdown-menu__active'
+                          : ''
+                      }`}
                       to={`/program/${program.slug}`}
                       aria-label="Berita kategori"
                     >
@@ -329,7 +373,7 @@ export default function TopNavigation() {
             </div>
 
             <ToggleColorMode />
-            <DropdownButtonSelectLanguange />
+            {/* <DropdownButtonSelectLanguange /> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

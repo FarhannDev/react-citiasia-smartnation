@@ -1,6 +1,5 @@
 /* PodcastSearchBar */
 .searchItemInput {
-  background-color: #fff !important;
   height: 50px;
   border-radius: 12px 0 0px 12px !important;
   border: 0.917px solid var(--Font-400, #888) !important;
@@ -18,4 +17,15 @@
   border-radius: 0 12px 12px 0 !important;
   border: 0.917px solid var(--Font-400, #888) !important;
   border-left: 0 !important;
+}
+
+/* Dark mode */
+[data-theme='dark'] {
+  .searchItemInput {
+    background-color: transparent;
+    color: #fff;
+  }
+  .searchItemInput::placeholder {
+    color: #fff;
+  }
 }

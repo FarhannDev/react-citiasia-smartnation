@@ -1,6 +1,5 @@
 .app-search-bar-items {
   width: auto;
-  /* margin-left: 30px; */
 }
 
 .app-search-bar-items .app-search-bar-item__input {
@@ -47,5 +46,21 @@ input[type='search'] {
 @media (min-width: 1200px) {
   .app-search-bar-items .app-search-bar-item__input {
     width: 300px;
+  }
+}
+
+[data-theme='dark'] {
+  .app-search-bar-item__input {
+    background-color: #262626;
+    color: #fff;
+  }
+
+  .app-search-bar-item__input,
+  input[type='search'] {
+    color: #fff !important;
+  }
+
+  .app-search-bar-item__input::placeholder {
+    color: #fff;
   }
 }

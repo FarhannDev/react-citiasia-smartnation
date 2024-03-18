@@ -192,10 +192,10 @@
   width: auto;
   height: 250px;
   overflow: auto;
+  overflow-x: hidden;
   flex-shrink: 0;
   border-radius: 4px;
   background: var(--Background, #fff);
-  /* padding: 30px !important; */
 }
 .custom-dropdown-megamenu__heading {
   color: var(--Danger-600, #ce2f2f);
@@ -208,7 +208,7 @@
   text-transform: capitalize;
 }
 .custom-dropdown-megamenu__item {
-  color: var(--Font-600, #5d5d5d) !important;
+  color: var(--Font-600, #5d5d5d);
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -219,19 +219,19 @@
   padding: 10px;
 }
 .custom-dropdown-megamenu__item:hover {
-  color: var(--Danger-600, #ce2f2f);
+  color: var(--Danger-600, #ce2f2f) !important;
   background-color: #fff0f2;
   border-radius: 4px;
   border-bottom: none;
 }
 .custom-dropdown-megamenu__item:focus {
-  color: var(--Danger-600, #ce2f2f);
+  color: var(--Danger-600, #ce2f2f) !important;
   background-color: #fff0f2;
   border-radius: 4px;
   border-bottom: none;
 }
 .custom-dropdown-megamenu__item:active {
-  color: var(--Danger-600, #ce2f2f);
+  color: var(--Danger-600, #ce2f2f) !important;
   background-color: #fff0f2;
   border-radius: 4px;
   border-bottom: none;
@@ -254,6 +254,13 @@
   background: var(--Background, #fff);
 }
 
+.custom-dropdown-menu__active {
+  color: var(--Danger-600, #ce2f2f) !important;
+  background-color: #fff0f2;
+  border-radius: 4px;
+  border-bottom: none;
+}
+
 .custom-dropdown-menu__item {
   color: var(--Font-600, #5d5d5d);
   font-family: Poppins;
@@ -262,30 +269,24 @@
   font-weight: 600;
   line-height: 120%;
   text-decoration: none;
+  padding: 6px;
 }
 
 .custom-dropdown-menu__item:hover {
-  color: var(--Danger-600, #ce2f2f);
+  color: var(--Danger-600, #ce2f2f) !important;
   background-color: #fff0f2;
   border-radius: 4px;
   border-bottom: none;
 }
 
 .custom-dropdown-menu__item:focus {
-  color: var(--Danger-600, #ce2f2f);
-  /* background-color: #fff0f2; */
-  background-color: transparent !important;
-  border-radius: 4px;
-  border-bottom: none;
-}
-.custom-dropdown-menu__item:active {
   color: var(--Danger-600, #ce2f2f) !important;
   background-color: #fff0f2;
   border-radius: 4px;
   border-bottom: none;
 }
-.custom-dropdown-menu__item.active {
-  color: var(--Danger-600, #ce2f2f) !important;
+.custom-dropdown-menu__item:active {
+  color: var(--Danger-600, #ce2f2f);
   background-color: #fff0f2;
   border-radius: 4px;
   border-bottom: none;
@@ -328,9 +329,9 @@
   outline: none !important;
 }
 
+/* Responsive */
 @media (min-width: 1200px) {
   .custom-dropdown-megamenu {
-    margin-top: 30px !important;
     width: 624px;
     height: 400px;
     overflow: auto;
@@ -340,7 +341,6 @@
     padding: 30px !important;
   }
   .custom-dropdown-menu {
-    margin-top: 30px !important;
     width: 200px;
     height: auto;
     overflow: auto;
@@ -349,4 +349,73 @@
     background: var(--Background, #fff);
     padding: 30px !important;
   }
+}
+
+/* Dark Mode */
+[data-theme='dark'] {
+  .custom-dropdown-megamenu {
+    background: #2b2b2b !important;
+  }
+  .custom-dropdown-megamenu__item {
+    color: #fff;
+  }
+
+  .custom-dropdown-menu {
+    background: #2b2b2b !important;
+  }
+
+  .custom-dropdown-menu__item {
+    color: #fff;
+  }
+}
+
+/*
+ Custom scroll bar
+*/
+.custom-dropdown-menu::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  transition: ease 300ms;
+  scroll-behavior: smooth;
+}
+
+.custom-dropdown-menu::-webkit-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  width: 8px;
+  height: 50px;
+  background-color: #fff;
+}
+
+.custom-dropdown-menu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #a7a7a7;
+  height: 50px;
+}
+
+.custom-dropdown-menu::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  transition: ease 300ms;
+  scroll-behavior: smooth;
+}
+
+.custom-dropdown-megamenu::-webkit-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  width: 8px;
+  height: 50px;
+  background-color: #fff;
+}
+
+.custom-dropdown-megamenu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #a7a7a7;
+  height: 50px;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
 }

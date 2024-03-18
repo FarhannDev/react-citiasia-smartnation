@@ -3,7 +3,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  background: #fff;
   padding-top: 7em;
   padding-bottom: 5em;
 }
@@ -107,5 +106,30 @@ input {
     width: 1200px !important;
     margin: 0 auto !important;
     height: auto;
+  }
+}
+
+/*
+ Dark mode
+*/
+[data-theme='dark'] {
+  .contactItemSubHeading {
+    color: #fff;
+  }
+  .contactItemInput {
+    background-color: #262626 !important;
+    border: 0.917px solid var(--Font-400, #888) !important;
+    color: #fff;
+  }
+  .contactItemInput::placeholder {
+    color: #fff;
+  }
+  .contactItemInputLabelText {
+    color: #fff;
+  }
+  .contactItemInputContentEditable {
+    background-color: #262626 !important;
+    border: 0.917px solid var(--Font-400, #888) !important;
+    color: #fff;
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import parse from 'html-react-parser';
-import styles from '@/assets/styles/modules/posts.module.css';
+import styles from '@/assets/styles/modules/PostsRowItem.module.css';
 import { Col, Row } from 'react-bootstrap';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';

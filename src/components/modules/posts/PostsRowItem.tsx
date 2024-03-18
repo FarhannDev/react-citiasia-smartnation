@@ -1,10 +1,10 @@
 import React from 'react';
 import parse from 'html-react-parser';
-import styles from '@/assets/styles/modules/posts.module.css';
 import { Col, Row } from 'react-bootstrap';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 import { postedAt } from '../../../utils/common/generateFormattedDate';
+import styles from '@/assets/styles/modules/PostsRowItem.module.css';
 
 type PostsRowItemProps = Posts;
 type CategoryHeadingProps = { catLabel: string | undefined };

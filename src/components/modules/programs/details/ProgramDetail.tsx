@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { program } from '../../../../utils/data/programsData';
-import PostDetailsCommentItem from '../../posts/details/PostDetailsCommentItem';
 import MyComponent from '../../../MyComponent';
 
 type ProgramDetailProps = { programs: Program | undefined };
@@ -16,7 +15,7 @@ const ProgramDetail: React.FC<ProgramDetailProps> = ({ programs }) => {
       <Col xl={8} lg={12}>
         <MyComponent.ProgramDetailsItem program={programs} />
         <MyComponent.ProgramDetailItemRecomendation />
-        <PostDetailsCommentItem />
+        <MyComponent.PostDetailsCommentItem />
       </Col>
       <Col xl={4} lg={12}>
         <MyComponent.ProgramPopulerItemList

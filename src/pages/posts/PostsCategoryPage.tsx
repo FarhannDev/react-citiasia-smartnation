@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from '@/assets/styles/modules/posts.module.css';
 import loadable from '@loadable/component';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { posts } from '../../utils/data/postsData';
 import { categories } from '../../utils/data/categoryPostsData';
 import { Helmet } from 'react-helmet';
 import SearchEmpty from '../../components/common/empty/SearchEmpty';
+import ContentLayout from '../../layouts/ContentLayout';
 
 const PopularPostItemList = loadable(
   () =>
@@ -33,20 +34,20 @@ const PostsCategoryPage: React.FC = () => {
     ?.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime())
     .slice(0, 10);
 
-  const heading: string = `Kategori Berita ${categoriesData?.name}`;
+  const heading: string = `Berita ${categoriesData?.name}`;
 
   return (
     <>
-      <Helmet encodeSpecialCharacters={true} title="Berita" async>
-        <meta
-          property="og:description"
-          content="Citiasia Center for Smart Nation (CCSN) merupakan salah satu sayap strategis dari Citiasia Inc. dalam menyebarkan semangat membangun bangsa menuju Indonesia Smart Nation"
-        />
-        <meta property="og:type" content="article" />
-      </Helmet>
+      <ContentLayout>
+        <Helmet encodeSpecialCharacters={true} title="Berita" async>
+          <meta
+            property="og:description"
+            content="Citiasia Center for Smart Nation (CCSN) merupakan salah satu sayap strategis dari Citiasia Inc. dalam menyebarkan semangat membangun bangsa menuju Indonesia Smart Nation"
+          />
+          <meta property="og:type" content="article" />
+        </Helmet>
 
-      <section className={styles.sectionPostSmartnation}>
-        <Container className={styles.postSmartnationContainer}>
+        <section className={styles.sectionPostSmartnation}>
           <Row className="justify-content-between align-items-start g-5">
             <Col lg={12} xl={8} md>
               <h1 className={styles.postsSmartnationCategoryHeading}>
@@ -69,8 +70,8 @@ const PostsCategoryPage: React.FC = () => {
               />
             </Col>
           </Row>
-        </Container>
-      </section>
+        </section>
+      </ContentLayout>
     </>
   );
 };

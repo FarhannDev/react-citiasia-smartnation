@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import AppLayout from './layouts/AppLayout';
 import Home from './pages/Home';
 import PostsDetailsPage from './pages/posts/PostsDetailsPage';
@@ -10,7 +11,6 @@ import ProgramIndexPage from './pages/programs/ProgramIndexPage';
 import ProgramDetailPage from './pages/programs/ProgramDetailPage';
 import SearchTermIndexPage from './pages/searchTerm/SearchTermIndexPage';
 import PodcastDetailPage from './pages/podcasts/PodcastDetailPage';
-import { Helmet } from 'react-helmet';
 import NotFoundPage from './pages/NotFoundPage';
 import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';

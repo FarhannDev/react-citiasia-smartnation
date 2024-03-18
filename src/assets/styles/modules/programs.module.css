@@ -2,7 +2,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  background: #fff;
   padding-top: 7em;
   padding-bottom: 5em;
 }
@@ -30,66 +29,18 @@
   line-height: 120%;
 }
 
-/* Introduction */
-.programIntroduction {
-}
-
-.programIntroductionImage {
-  display: none;
-  width: 285px;
-  height: 304px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  object-fit: cover;
-  object-position: center;
-  border: 0px;
-  border-radius: 0px;
-}
-
-.programIntroductionDetails {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-}
-.programIntroductionDetailsHeading {
-  overflow: hidden;
-  color: var(--Font-600, #5d5d5d);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%; /* 19.2px */
-  text-transform: capitalize;
-}
-.programIntroductionDetailsDescription {
-  overflow: hidden;
-  color: var(--Font-600, #5d5d5d);
-  text-align: justify;
-  text-overflow: ellipsis;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  padding-top: 13px;
-}
-
+/* Responsive */
 @media (min-width: 1200px) {
   .programSmartnationContainer {
     width: 1200px !important;
     margin: 0 auto !important;
     height: auto;
   }
+}
 
-  .programIntroductionImage {
-    display: block;
-    width: 285px;
-    height: 304px;
+/* Dark mode */
+[data-theme='dark'] {
+  .programSmartnationHeading {
+    color: #fff;
   }
 }

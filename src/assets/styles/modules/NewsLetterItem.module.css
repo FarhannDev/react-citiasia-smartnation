@@ -59,3 +59,12 @@
     padding-top: 20px;
   }
 }
+
+[data-theme='dark'] {
+  .newsLetterSubcribeHeading {
+    color: #fff;
+  }
+  .newsLetterSubcribeSubheading {
+    color: #fff;
+  }
+}

@@ -22,15 +22,15 @@
 }
 
 .postsArticleRowitemsTitle:hover {
-  color: var(--Danger-600, #ce2f2f);
+  color: var(--Danger-600, #ce2f2f) !important;
   text-decoration: underline;
 }
 .postsArticleRowitemsTitle:focus {
-  color: var(--Danger-600, #ce2f2f);
+  color: var(--Danger-600, #ce2f2f) !important;
   text-decoration: underline;
 }
 .postsArticleRowitemsTitle:active {
-  color: var(--Danger-600, #ce2f2f);
+  color: var(--Danger-600, #ce2f2f) !important;
   text-decoration: underline;
 }
 
@@ -53,4 +53,16 @@
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 12px */
+}
+
+[data-theme='dark'] {
+  .postsArticleRowitems {
+    border-bottom: 1px solid #363535 !important;
+  }
+  .postsArticleRowitemsTitle {
+    color: #fafafa;
+  }
+  .postsArticleRowitemsDate {
+    color: #fafafa;
+  }
 }

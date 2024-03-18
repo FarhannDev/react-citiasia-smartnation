@@ -71,7 +71,7 @@ const ContactItemInput: React.FC = () => {
 
         <Button
           type="submit"
-          disabled={!disabledButton}
+          // disabled={!disabledButton}
           className={styles.contactItemInputButton}
         >
           Kirimkan

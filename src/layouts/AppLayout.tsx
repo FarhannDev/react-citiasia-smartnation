@@ -10,11 +10,7 @@ interface AppLayoutProps {
 const AppLayout: React.FC<AppLayoutProps> = ({ children }) => (
   <>
     <TopNavigation />
-    <div className={styles.appContentWrapper}>
-      {children}
-      {/* Ini adalah di mana Anda memasukkan komponen anak */}
-    </div>
-
+    <div className={styles.appContentWrapper}>{children}</div>
     <FooterNavigation />
   </>
 );

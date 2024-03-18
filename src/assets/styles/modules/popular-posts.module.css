@@ -34,7 +34,7 @@
   transition: ease 300ms;
 }
 .popularPostsItemTitle:hover {
-  color: var(--Primary-600, #d71149);
+  color: var(--Primary-600, #d71149) !important;
   text-decoration: underline;
 }
 
@@ -46,4 +46,10 @@
   font-weight: 600;
   line-height: 120%; /* 19.2px */
   text-decoration-line: underline;
+}
+
+[data-theme='dark'] {
+  .popularPostsItemTitle {
+    color: #fafafa;
+  }
 }

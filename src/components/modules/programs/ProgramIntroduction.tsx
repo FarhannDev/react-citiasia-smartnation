@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import styles from '@/assets/styles/modules/programs.module.css';
+import styles from '@/assets/styles/modules/ProgramIntroduction.module.css';
 import mascotIcons from '/images/smartnation/icons/sn_icon_event.png';
 
 type ProgramIntroductionProps = {

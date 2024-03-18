@@ -1,4 +1,4 @@
-import styles from '@/assets/styles/modules/posts.module.css';
+import styles from '@/assets/styles/modules/PostDetailsUsersCommentItem.module.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { IoThumbsUpOutline, IoThumbsDownOutline } from 'react-icons/io5';
 
