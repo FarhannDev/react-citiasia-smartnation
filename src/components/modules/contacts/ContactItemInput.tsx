@@ -20,6 +20,7 @@ const ContactItemInput: React.FC<ContactItemInputProps> = ({ contacts }) => {
   } = useForm<Contacts>();
 
   const onSubmitForm: (data: Contacts) => void = (data: Contacts) => {
+    console.log(data);
     contacts(data);
 
     resetField('name');
@@ -68,7 +69,7 @@ const ContactItemInput: React.FC<ContactItemInputProps> = ({ contacts }) => {
           )}
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group controlId="validationCustom03">
           <Form.Label className={styles.contactItemInputLabelText}>
             Pesan
           </Form.Label>
@@ -87,7 +88,7 @@ const ContactItemInput: React.FC<ContactItemInputProps> = ({ contacts }) => {
         </Form.Group>
 
         <Button
-          // disabled={Object.keys(errors).length > 0}
+          disabled={Object.keys(errors).length > 0}
           type="submit"
           className={styles.contactItemInputButton}
         >

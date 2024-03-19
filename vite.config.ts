@@ -1,4 +1,5 @@
-/* eslint-disable prefer-const */
+/// <reference types="vitest" />
+
 import { defineConfig } from 'vite';
 import { optimizeCssModules } from 'vite-plugin-optimize-css-modules';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
@@ -10,6 +11,8 @@ import imagemin from 'vite-plugin-imagemin';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  optimizeDeps: { exclude: ['jsdom'] },
+  test: { environment: 'jsdom' },
   // Konfigurasi pengembangan (development)
   server: {
     port: 3000, // Port server pengembangan
@@ -91,6 +94,7 @@ export default defineConfig({
     }),
     ViteMinifyPlugin({}),
   ],
+
   resolve: {
     alias: {
       '@': '/src', // Alias untuk direktori src

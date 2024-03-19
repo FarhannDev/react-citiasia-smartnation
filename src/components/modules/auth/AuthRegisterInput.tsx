@@ -2,6 +2,7 @@ import { Form, Button } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import styles from '@/assets/styles/modules/auth.module.css';
+import React from 'react';
 interface AuthRegisterInput {
   name: string;
   email: string;
@@ -9,18 +10,28 @@ interface AuthRegisterInput {
   passwordConfirm: string;
 }
 
-const AuthRegisterInput = () => {
+type AuthRegisterInputProps = { onRegister: (data: AuthRegisterInput) => void };
+
+const AuthRegisterInput: React.FC<AuthRegisterInputProps> = ({
+  onRegister,
+}) => {
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm<AuthRegisterInput>();
 
-  const onRegister = (data: AuthRegisterInput) => console.log(data);
+  const onSubmitHandler = (data: AuthRegisterInput) => {
+    console.log(data);
+    onRegister(data);
+  };
 
   return (
     <>
-      <Form onSubmit={handleSubmit(onRegister)} className={styles.authItemForm}>
+      <Form
+        onSubmit={handleSubmit(onSubmitHandler)}
+        className={styles.authItemForm}
+      >
         <Form.Group className="mb-3" controlId="exampleForm.name">
           <Form.Label className={styles.authItemInputLabelText}>
             Nama
@@ -68,7 +79,7 @@ const AuthRegisterInput = () => {
           <Form.Control
             {...register('passwordConfirm', { required: true })}
             type="password"
-            placeholder=" Konfirmasi Password"
+            placeholder="Konfirmasi Password"
             autoComplete="password"
             className={styles.authItemInput}
           />

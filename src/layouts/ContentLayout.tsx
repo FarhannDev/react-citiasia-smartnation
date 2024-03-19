@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Container } from 'react-bootstrap';
-import styles from '@/assets/styles/modules/app.module.css';
 import { useTheme } from '../hooks/useTheme';
+import styles from '@/assets/styles/modules/app.module.css';
 
 interface ContentLayoutProps {
   children: ReactNode;

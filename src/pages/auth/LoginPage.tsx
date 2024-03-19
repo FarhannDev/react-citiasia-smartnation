@@ -5,7 +5,17 @@ import styles from '@/assets/styles/modules/auth.module.css';
 import LogoMascot from '/images/smartnation/icons/sn_icon_mascot.png';
 import MyComponent from '../../components/MyComponent';
 
+interface Users {
+  email: string;
+  password: string;
+}
+
 const LoginPage = () => {
+  const onLoginHandler = ({ email, password }: Users) => {
+    console.log(email);
+    console.log(password);
+  };
+
   return (
     <AuthLayout>
       <div className={styles.authCardItem}>
@@ -34,7 +44,7 @@ const LoginPage = () => {
               akun Anda
             </div>
 
-            <MyComponent.AuthLoginInput />
+            <MyComponent.AuthLoginInput login={onLoginHandler} />
           </Col>
         </Row>
       </div>

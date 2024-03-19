@@ -1,24 +1,34 @@
+import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import styles from '@/assets/styles/modules/auth.module.css';
 
-const AuthLoginInput = () => {
+interface Users {
+  email: string;
+  password: string;
+}
+
+type AuthLoginInputProps = {
+  login: (data: Users) => void;
+};
+
+const AuthLoginInput: React.FC<AuthLoginInputProps> = ({ login }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    resetField,
-  } = useForm();
+  } = useForm<Users>();
+
+  const onLoginSubmit = (data: Users) => {
+    console.log(data);
+    // login();
+  };
 
   return (
     <>
       <Form
-        onSubmit={handleSubmit((data) => {
-          console.log(data);
-          resetField('email');
-          resetField('password');
-        })}
+        onSubmit={handleSubmit(onLoginSubmit)}
         className={styles.authItemForm}
       >
         <Form.Group className="mb-3" controlId="exampleForm.email">
@@ -27,7 +37,7 @@ const AuthLoginInput = () => {
           </Form.Label>
           <Form.Control
             type="email"
-            placeholder="Masukan Alamat Email"
+            placeholder="Email Address"
             autoComplete="email"
             className={styles.authItemInput}
             {...register('email', { required: true, pattern: /\d+/ })}
@@ -48,7 +58,11 @@ const AuthLoginInput = () => {
           {errors.password && <p>Password required.</p>}
         </Form.Group>
         <div className="d-flex justify-content-start pt-3">
-          <Button type="submit" className={styles.authItemInputButton}>
+          <Button
+            role="button"
+            type="submit"
+            className={styles.authItemInputButton}
+          >
             Masuk
           </Button>
         </div>
