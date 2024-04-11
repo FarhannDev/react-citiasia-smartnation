@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { categories } from '../utils/data/categoryPostsData';
 import { posts } from '../utils/data/postsData';
@@ -7,13 +7,20 @@ import MyComponent from '../components/MyComponent';
 import ArticleFigureColumnItemList from '../components/modules/articles/LatestArticle/ArticleFigureColumnItemList';
 
 export default function Home() {
-  const postsData = posts.sort(
-    (a, b) => b.timestamp.getTime() - a.timestamp.getTime()
-  );
+  const [postsLatest, setPostsLatest] = useState<Posts[]>(() => {
+    return posts.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
+  });
+
+  const [postsPopuler, setPostsPopuler] = useState(() => {
+    return posts
+      .filter((post) => post.views >= 100)
+      .sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
+  });
+
   return (
     <>
       <Suspense>
-        <MyComponent.HeroBackgroundSwipe posts={postsData.slice(0, 6)} />
+        <MyComponent.HeroBackgroundSwipe posts={postsLatest.slice(0, 6)} />
         {/* Section Article Start  */}
         <section className={styles.appArticleSection}>
           {/* Section Latest Posts Article Lists  */}
@@ -26,20 +33,20 @@ export default function Home() {
               <Row className="justify-content-start g-4 pt-4">
                 <Col xl={4} lg={12} md={12}>
                   <MyComponent.PostsArticleColumnItemList
-                    posts={postsData.slice(1, 2)}
+                    posts={postsLatest.slice(1, 2)}
                   />
                 </Col>
 
                 <Col xl={4} lg={6} md={12}>
                   <MyComponent.PostsArticleRowItemList
-                    posts={postsData.slice(1, 5)}
+                    posts={postsLatest.slice(1, 5)}
                   />
                 </Col>
 
                 <Col xl={4} lg={6} md={12}>
                   <MyComponent.PopularPostItemList
                     heading="Terpopuler"
-                    posts={postsData.slice(1, 6)}
+                    posts={postsPopuler.slice(1, 6)}
                   />
                 </Col>
               </Row>
@@ -54,11 +61,13 @@ export default function Home() {
               <Row className="justify-content-start g-4 pt-4">
                 <Col xl={5} lg={12} md={12}>
                   <MyComponent.ArticleColumnItemList
-                    posts={postsData.slice(0, 1)}
+                    posts={postsLatest.slice(0, 1)}
                   />
                 </Col>
                 <Col xl={7} lg={12} md={12}>
-                  <ArticleFigureColumnItemList posts={postsData.slice(2, 6)} />
+                  <ArticleFigureColumnItemList
+                    posts={postsLatest.slice(2, 6)}
+                  />
                 </Col>
               </Row>
             </Container>
@@ -68,7 +77,7 @@ export default function Home() {
             <Container className={styles.eventsArticleContainer}>
               <h1 className={styles.eventsArticleHeading}>Acara</h1>
               <MyComponent.EventFigureColumnItemList
-                posts={postsData.slice(0, 3)}
+                posts={postsLatest.slice(0, 3)}
               />
             </Container>
           </section>
@@ -77,10 +86,10 @@ export default function Home() {
             <Container className={styles.categoryArticleContainer}>
               <h1 className={styles.eventsArticleHeading}>Artikel</h1>
               <MyComponent.ArticleCategoryFigureColumnItemList
-                posts={postsData}
+                posts={postsLatest}
               />
               <MyComponent.ArticleCategoryRowItemList
-                posts={postsData}
+                posts={postsLatest}
                 categories={categories}
               />
             </Container>

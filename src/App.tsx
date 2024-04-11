@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import AppLayout from './layouts/AppLayout';
 import Home from './pages/Home';
 import PostsDetailsPage from './pages/posts/PostsDetailsPage';
@@ -18,13 +17,6 @@ import RegisterPage from './pages/auth/RegisterPage';
 export default function App() {
   const publicRoutes = (
     <AppLayout>
-      <Helmet encodeSpecialCharacters={true} title="Beranda" async>
-        <meta
-          property="og:description"
-          content="Citiasia Center for Smart Nation (CCSN) merupakan salah satu sayap strategis dari Citiasia Inc. dalam menyebarkan semangat membangun bangsa menuju Indonesia Smart Nation"
-        />
-        <meta property="og:type" content="article" />
-      </Helmet>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<PostsDetailsPage />} />

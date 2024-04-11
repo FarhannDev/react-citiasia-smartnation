@@ -10,11 +10,7 @@ interface AuthRegisterInput {
 }
 
 const AuthRegisterInput = () => {
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm<AuthRegisterInput>();
+  const { register, handleSubmit } = useForm<AuthRegisterInput>();
 
   const onRegister = (data: AuthRegisterInput) => console.log(data);
 
@@ -32,7 +28,6 @@ const AuthRegisterInput = () => {
             autoComplete="name"
             className={styles.authItemInput}
           />
-          {errors.name && 'Name required'}
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.email">
           <Form.Label className={styles.authItemInputLabelText}>
@@ -45,7 +40,6 @@ const AuthRegisterInput = () => {
             autoComplete="email"
             className={styles.authItemInput}
           />
-          {errors.email && 'Email required'}
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="exampleForm.password">
@@ -59,7 +53,6 @@ const AuthRegisterInput = () => {
             autoComplete="password"
             className={styles.authItemInput}
           />
-          {errors.password && 'Password required'}
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.confirmPass">
           <Form.Label className={styles.authItemInputLabelText}>
@@ -72,7 +65,6 @@ const AuthRegisterInput = () => {
             autoComplete="password"
             className={styles.authItemInput}
           />
-          {errors.passwordConfirm && 'Password confirm required'}
         </Form.Group>
         <div className="d-flex justify-content-start pt-3">
           <Button type="submit" className={styles.authItemInputButton}>

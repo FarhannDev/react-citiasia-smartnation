@@ -1,24 +1,33 @@
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { asyncSetAuthUser } from '../../../store/actions/authUserAction';
 import styles from '@/assets/styles/modules/auth.module.css';
 
+interface Login {
+  email: string;
+  password: string;
+}
+
 const AuthLoginInput = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    resetField,
-  } = useForm();
+  const { register, handleSubmit, resetField } = useForm<Login>();
+
+  const dispatch = useDispatch();
+  const onLoginHandler: SubmitHandler<Login> = async ({
+    email,
+    password,
+  }: Login) => {
+    dispatch(asyncSetAuthUser({ email, password }));
+
+    resetField('email');
+    resetField('password');
+  };
 
   return (
     <>
       <Form
-        onSubmit={handleSubmit((data) => {
-          console.log(data);
-          resetField('email');
-          resetField('password');
-        })}
+        onSubmit={handleSubmit(onLoginHandler)}
         className={styles.authItemForm}
       >
         <Form.Group className="mb-3" controlId="exampleForm.email">
@@ -45,7 +54,6 @@ const AuthLoginInput = () => {
             className={styles.authItemInput}
             {...register('password', { required: true })}
           />
-          {errors.password && <p>Password required.</p>}
         </Form.Group>
         <div className="d-flex justify-content-start pt-3">
           <Button type="submit" className={styles.authItemInputButton}>
