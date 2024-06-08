@@ -11,23 +11,19 @@ import '@/assets/styles/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import ThemeProvider from './contexts/ThemeContext';
-import { Provider } from 'react-redux';
-import store from './store/index.ts';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <BrowserRouter
-        future={{
-          v7_startTransition: true,
-          v7_relativeSplatPath: true,
-        }}
-      >
-        <ThemeProvider>
-          <ScrollToTop />
-          <App />
-        </ThemeProvider>
-      </BrowserRouter>
-    </React.StrictMode>
-  </Provider>
+  <React.StrictMode>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
+      <ThemeProvider>
+        <ScrollToTop />
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 );

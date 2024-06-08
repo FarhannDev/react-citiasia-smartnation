@@ -153,7 +153,7 @@ export default function TopNavigation() {
                 }`}
               >
                 <div className="d-flex justify-content-start align-items-center g-3">
-                  Program <BiChevronDown fontSize={16} />
+                  Kegiatan <BiChevronDown fontSize={16} />
                 </div>
               </Dropdown.Toggle>
               <Dropdown.Menu
@@ -189,6 +189,7 @@ export default function TopNavigation() {
             >
               Podcast
             </Link>
+
             <Dropdown className="d-inline mx-2">
               <Dropdown.Toggle
                 id="dropdown-autoclose-true-3"

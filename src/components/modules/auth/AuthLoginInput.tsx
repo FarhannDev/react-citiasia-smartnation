@@ -1,8 +1,6 @@
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import { asyncSetAuthUser } from '../../../store/actions/authUserAction';
 import styles from '@/assets/styles/modules/auth.module.css';
 
 interface Login {
@@ -13,13 +11,10 @@ interface Login {
 const AuthLoginInput = () => {
   const { register, handleSubmit, resetField } = useForm<Login>();
 
-  const dispatch = useDispatch();
   const onLoginHandler: SubmitHandler<Login> = async ({
     email,
     password,
   }: Login) => {
-    dispatch(asyncSetAuthUser({ email, password }));
-
     resetField('email');
     resetField('password');
   };
