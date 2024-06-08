@@ -7,11 +7,11 @@ import MyComponent from '../components/MyComponent';
 import ArticleFigureColumnItemList from '../components/modules/articles/LatestArticle/ArticleFigureColumnItemList';
 
 export default function Home() {
-  const [postsLatest, setPostsLatest] = useState<Posts[]>(() => {
+  const [postsLatest] = useState<Posts[]>(() => {
     return posts.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
   });
 
-  const [postsPopuler, setPostsPopuler] = useState(() => {
+  const [postsPopuler] = useState(() => {
     return posts
       .filter((post) => post.views >= 100)
       .sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());

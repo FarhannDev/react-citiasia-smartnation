@@ -9,7 +9,7 @@ interface RegisterResponse {
   status: string;
   message: string;
   data: {
-    user: any; // Sesuaikan tipe data pengguna dengan kebutuhan Anda
+    user: never; // Sesuaikan tipe data pengguna dengan kebutuhan Anda
   };
 }
 
@@ -18,13 +18,13 @@ interface LoginParams {
   password: string;
 }
 
-interface LoginResponse {
-  status: string;
-  message: string;
-  data: {
-    token: string;
-  };
-}
+// interface LoginResponse {
+//   status: string;
+//   message: string;
+//   data: {
+//     token: string;
+//   };
+// }
 
 const api = (() => {
   const base_url = import.meta.env.API_BASE_URL || 'http://localhost:3000/v1';

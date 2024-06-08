@@ -11,10 +11,7 @@ interface Login {
 const AuthLoginInput = () => {
   const { register, handleSubmit, resetField } = useForm<Login>();
 
-  const onLoginHandler: SubmitHandler<Login> = async ({
-    email,
-    password,
-  }: Login) => {
+  const onLoginHandler: SubmitHandler<Login> = async () => {
     resetField('email');
     resetField('password');
   };
