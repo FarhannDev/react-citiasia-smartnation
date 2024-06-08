@@ -1,0 +1,132 @@
+/*  */
+.postDetailsCommentItemUserList {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 60px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.postDetailsCommentItemUser {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 20px;
+}
+.postDetailsCommentItemUserCard {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
+  /* padding: 20px; */
+}
+.postDetailsCommentItemUserCardImage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50px;
+  width: 100%;
+  height: 50px;
+  margin-right: 50px;
+}
+.postDetailsCommentItemUserCardBody {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: start;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.postDetailsCommentItemUserCardBodyName {
+  color: var(--Font-800, #454545);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 12px */
+  margin-bottom: 8px;
+}
+.postDetailsCommentItemUserCardBodyDate {
+  color: var(--Font-400, #888);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 13px;
+}
+
+.postDetailsCommentItemUserCardBodyText {
+  color: var(--Font-900, #3d3d3d);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+.postDetailsCommentItemUserCardBodyAction {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+}
+
+.postDetailsCommentItemUserCardBodyActionLike {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  height: 40px;
+  width: 150px;
+  border-radius: 50px;
+  background: #f6f6f6;
+  /* gap: 8px; */
+}
+
+.postDetailsCommentItemUserCardBodyActionLikeBtn {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  position: relative;
+  color: var(--Font-800, #454545);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 12px */
+  margin-bottom: 8px;
+  padding-top: 8px;
+}
+
+[data-theme='dark'] .postDetailsCommentItemUser {
+  border-bottom: 1px solid #313131;
+}
+
+[data-theme='dark'] .postDetailsCommentItemUserCardBodyName {
+  color: #fff;
+}
+
+[data-theme='dark'] .postDetailsCommentItemUserCardBodyDate {
+  color: #fff;
+}
+[data-theme='dark'] .postDetailsCommentItemUserCardBodyText {
+  color: #fff;
+}
+
+[data-theme='dark'] .postDetailsCommentItemUserCardBodyActionLike {
+  background-color: #282828;
+}
+
+[data-theme='dark'] .postDetailsCommentItemUserCardBodyActionLikeBtn {
+  color: #fff;
+}

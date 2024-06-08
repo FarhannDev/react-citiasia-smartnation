@@ -1,0 +1,172 @@
+.authLayout {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+  padding-top: 5em;
+  position: relative;
+}
+
+.authLayoutContainer {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.authCardItem {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.authItemImage {
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
+}
+
+.authItemHeading {
+  color: var(--Primary-600, #d71149);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 24px */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.authItemSubHeading {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  overflow: hidden;
+  color: var(--Font-600, #5d5d5d);
+  text-overflow: ellipsis;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  padding-top: 13px;
+}
+
+.authItemInput {
+  display: flex;
+  height: 48px;
+  padding: 12px;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  border-radius: 12px !important;
+  border: 1px solid var(--Primary, #545f71) !important;
+  background: var(--Background, #fff);
+}
+.authItemInput,
+input {
+  color: var(--Font-800, #454545);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+}
+.authItemInput::placeholder {
+  color: var(--Font-800, #454545);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+}
+.authItemInputLabelText {
+  color: var(--Font-600, #5d5d5d);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  margin-bottom: 16px !important;
+}
+.authItemForm {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 30px;
+}
+
+.authItemInputButton {
+  width: 100%;
+  height: 48px;
+  border: 0px !important;
+  border-radius: 12px !important;
+  background: var(--Primary-600, #d71149) !important;
+  cursor: pointer;
+  color: var(--Background, #fff);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 24px */
+}
+
+@media (min-width: 1200px) {
+  .authLayoutContainer {
+    width: 1200px !important;
+    height: auto;
+  }
+  .authCardItem {
+    padding: 50px;
+  }
+
+  .authItemImage {
+    margin-top: 70px;
+  }
+}
+
+[data-theme='dark'] {
+  .authLayout {
+    background-color: #262626;
+  }
+
+  .authCardItem {
+    background: #2b2b2b;
+    /* background: var(--Font-950, #262626); */
+  }
+
+  .authItemSubHeading {
+    color: #fafafa;
+  }
+
+  .authItemInputLabelText {
+    color: #fafafa;
+  }
+
+  .authItemInput {
+    border: 0.837px solid #d1d1d1 !important;
+    background: #2b2b2b !important;
+  }
+
+  .authItemInput::placeholder {
+    color: #fafafa;
+  }
+  .authItemInput,
+  input {
+    color: var(--Font-800, #fff) !important;
+  }
+}

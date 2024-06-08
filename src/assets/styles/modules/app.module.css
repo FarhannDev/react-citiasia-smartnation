@@ -1,0 +1,316 @@
+.appContentWrapper {
+  width: 100%;
+  height: auto;
+  min-height: auto;
+}
+
+.appArticleSection {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.contentLayout {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+  /* padding-top: 7em; */
+  position: relative;
+}
+
+.contentLayoutContainer {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* 
+Section styling posts article list
+*/
+.sectionPostsArticlelists {
+  width: 100%;
+  height: auto;
+  padding-top: 4em;
+  padding-bottom: 5em;
+}
+.postsArticleListsHeading {
+  color: var(--Primary-600, #d71149);
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: capitalize;
+}
+.postsArticleListsContainer,
+.container {
+  width: 100%;
+  height: auto;
+}
+
+/* styling sectionArticleLists */
+.sectionArticleLists {
+  width: 100%;
+  overflow: hidden;
+  background: var(--Primary-800, #a60b40);
+  padding-top: 4em;
+  padding-bottom: 5em;
+}
+
+.sectionArticleListsHeading {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: capitalize;
+}
+
+.sectionArticleListsContainer,
+.container {
+  width: 100%;
+  height: auto;
+}
+/* 
+  Section styling Events Article
+*/
+.sectionEventsArticle {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+  padding-top: 4em;
+  padding-bottom: 5em;
+}
+
+.eventsArticleContainer,
+.container {
+  width: 100%;
+  height: auto;
+}
+
+.eventsArticleHeading {
+  color: var(--Primary-600, #d71149);
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: capitalize;
+}
+
+/* 
+  Section styling Category Article
+*/
+
+.sectionCategoryArticle {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+  padding-top: 4em;
+  padding-bottom: 5em;
+}
+
+/* 
+  Section styling  Newsletter Subscribe
+*/
+.sectionNewsletterSubscribe {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  background: var(--Primary-50, #fff0f2);
+}
+
+.newsLetterSubcribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+.newsLetterSubcribeHeading {
+  color: var(--Danger-600, #ce2f2f);
+
+  /* Font/Title 3 SemiBold */
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 24px */
+}
+.newsLetterSubcribeSubheading {
+  color: var(--Font-500, #6d6d6d);
+  text-align: center;
+
+  /* Font/Body 1 */
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 14.4px */
+}
+
+.newsLetterSubcribeForm {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.newsLetterSubcribeFormInput {
+  display: flex;
+  padding: 6.839px 9.575px;
+  align-items: center;
+  gap: 5.471px;
+  align-self: stretch;
+  border-radius: 5.471px;
+  border: 0.684px solid var(--Gray-300, #d0d5dd);
+  background: var(--Background, #fff);
+  box-shadow: 0px 0.684px 1.368px 0px rgba(16, 24, 40, 0.05);
+
+  color: var(--Gray-500, #667085);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 13.678px; /* 142.857% */
+}
+
+/*
+   Footer ssection
+*/
+.customfooterNavigation {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background: var(--Font-950, #262626);
+  overflow: hidden;
+}
+
+.customfooterNavigationContainer,
+.container {
+  width: 100%;
+  height: auto;
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .eventsArticleContainer,
+  .container {
+    width: 1200px !important;
+    height: auto;
+    margin: 0 auto !important;
+  }
+
+  .categoryArticleContainer,
+  .container {
+    width: 1200px !important;
+    height: auto;
+    margin: 0 auto !important;
+  }
+
+  .sectionNewsletterSubscribeContainer,
+  .container {
+    width: 1200px !important;
+    height: auto;
+    margin: 0 auto !important;
+  }
+
+  .newsLetterSubcribeForm {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .customfooterNavigationContainer,
+  .container {
+    width: 1200px !important;
+    height: auto;
+    margin: 0 auto !important;
+  }
+
+  .postsArticleListsContainer,
+  .container {
+    width: 1200px !important;
+    height: auto;
+    margin: 0 auto !important;
+  }
+
+  .sectionArticleListsContainer,
+  .container {
+    width: 1200px !important;
+    height: auto;
+    margin: 0 auto !important;
+  }
+}
+
+/* 
+  search post section
+  
+*/
+.searchPostSection {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-top: 7em;
+  padding-bottom: 5em;
+}
+.searchPostContainer {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+}
+.searchPostHeading {
+  color: var(--Font-600, #5d5d5d);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 28.8px */
+}
+@media (min-width: 1200px) {
+  .searchPostContainer {
+    width: 1200px !important;
+    margin: 0 auto !important;
+    height: auto;
+  }
+
+  .contentLayoutContainer {
+    width: 1200px !important;
+    height: auto;
+  }
+}
+
+.errorPageLayout {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+[data-theme='dark'] {
+  .sectionEventsArticle {
+    background-color: #262626;
+  }
+
+  .sectionCategoryArticle {
+    background-color: #262626;
+  }
+
+  .sectionNewsletterSubscribe {
+    background: var(--Font-900, #3d3d3d);
+  }
+}
+
+[data-theme='dark'] .contentLayout {
+  background-color: #262626;
+}
+
+[data-theme='dark'] .searchPostHeading {
+  color: #fff;
+}

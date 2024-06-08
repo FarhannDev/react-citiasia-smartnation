@@ -1,0 +1,75 @@
+.postDetailsItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.postDetailsItemHeading {
+  color: var(--Danger-600, #ce2f2f);
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 28.8px */
+}
+.postDetailsItemImage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  /* height: 450px; */
+  padding-top: 20px;
+}
+.postDetailsItemInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 13px;
+}
+.postDetailsItemInfoDate {
+  color: var(--Font-400, #888);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 8.992px */
+}
+
+.postDetailsItemBody {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+}
+.postDetailsItemBodyText {
+  color: var(--Font-800, #454545);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+
+/*
+  Dark mode
+*/
+[data-theme='dark'] .postDetailsItem {
+  background-color: #262626;
+}
+[data-theme='dark'] .postDetailsItemBodyText {
+  color: #fff;
+}
+
+[data-theme='dark'] .postDetailsItemInfoDate {
+  color: #fff;
+}

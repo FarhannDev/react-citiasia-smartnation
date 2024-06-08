@@ -1,0 +1,46 @@
+.sectionProgramSmartnation {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-top: 7em;
+  padding-bottom: 5em;
+}
+.programSmartnationContainer {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+}
+
+.programSmartnationHeadingPrimary {
+  color: var(--Primary-600, #d71149);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 36px */
+}
+
+.programSmartnationHeading {
+  color: var(--Font-600, #5d5d5d);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+/* Responsive */
+@media (min-width: 1200px) {
+  .programSmartnationContainer {
+    width: 1200px !important;
+    margin: 0 auto !important;
+    height: auto;
+  }
+}
+
+/* Dark mode */
+[data-theme='dark'] {
+  .programSmartnationHeading {
+    color: #fff;
+  }
+}

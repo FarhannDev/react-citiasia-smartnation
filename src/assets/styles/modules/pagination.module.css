@@ -1,0 +1,14 @@
+.paginationItem {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: none;
+  padding: 10px;
+}
+
+.paginationItem .paginationItemPrev {
+  background-color: none;
+  border: none !important;
+  color: red !important;
+}
