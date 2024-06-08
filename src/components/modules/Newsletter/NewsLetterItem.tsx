@@ -1,12 +1,9 @@
 import styles from '@/assets/styles/modules/NewsLetterItem.module.css';
-import api from '../../../utils/api/api';
 import MyComponent from '../../MyComponent';
 import Swal from 'sweetalert2';
 
 function NewsLetterItem() {
-  const handleNewsLetterSubscribe = (email: string) => {
-    api.createSubscribeNewsLetter(email);
-
+  const handleNewsLetterSubscribe = () => {
     const textResponse = `Terima kasih Sudah Berlangganan Buletin Kami Nantikan pembaruan terbaru kami dengan info terbaru.
     `;
 
